@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Best Motherfucking Website</title>
+<style>
+	@font-face{
+		font-family:"Atari ST";
+		src:url("AtariST8x16SystemFont.ttf");
+	}
+	html{
+		background-color:#60b7e7;
+	}
+	body{
+		margin:2em auto;
+		max-width:40em;
+		padding:0 .5em;
+	}
+	body,code{
+		font: 1em/1;
+		font-family:"Atari ST",monospace;
+		background-color:#005181;
+	}
+	body,a:link,a:visited,a:hover{
+		color:#60b7e7;
+	}
+	blink{
+		animation-duration:.66s;
+		animation-name:blink;
+		animation-iteration-count:infinite;
+		animation-timing-function:steps(2, start);
+	}
+	@keyframes blink{
+		100%{
+			visibility:hidden;
+		}
+	}
+	@media print{
+		body{
+			max-width:none
+		}
+	}
+</style>
+
+<article>
+<header>
+<h1>X65</h1>
+<aside>Modern 8-bit microcomputer</aside>
+</header>
+
+<h2>READY<br><blink>&#x2588;</blink></h2>
+<p><a href="https://x65.zone">X65</a> is an effort to build an 8-bit microcomputer for the modern era. It uses best of breed components and strives to keep 8-bit feeling, while being usable for daily basis computing activities.
+
+<h3 id="hardware">Components</h3>
+<ul>
+<li>CPU: <a href="https://en.wikipedia.org/wiki/WDC_65816">65816</a>
+<li>RAM: 16MB
+<li>Video: <a href="https://github.com/X65/mega65-core/blob/master/doc/viciv-modes.md">VIC-IV</a>
+<li>Sound: <a href="https://en.wikipedia.org/wiki/Yamaha_YMF278">YMF278</a>
+<li>Coprocessor: <a href="http://excamera.com/sphinx/gameduino/coprocessor.html">J1</a>
+<li>Input/Output:
+	<ul>
+	<li>2x <a href="https://en.wikipedia.org/wiki/MOS_Technology_CIA">8520 CIA</a>
+	<li><a href="http://6502.org/mini-projects/priority-interrupt-encoder/priority-interrupt-encoder.html">Prioritised interrupts</a> controller
+	<li>8-bit <a href="https://en.wikipedia.org/wiki/Industry_Standard_Architecture">ISA</a> expansion port
+	<li><a href="https://en.wikipedia.org/wiki/Clock_port">Clock port</a>
+	<li>2x <a href="http://wiki.icomp.de/wiki/DB9-Joystick">DB9 Joystick</a> port
+	<li>2x <a href="https://en.wikipedia.org/wiki/MIDI#Connectors">MIDI</a>/Serial
+	</ul>
+<li>Power supply: 12V DC power brick
+</ul>
+<p>As mentioned components are borderline unobtainium nowadays, the physical hardware is implemented in Intel Cyclone® V SE 5CSEBA6U23I7 FPGA chip.
+
+<h3 id="software">Software</h3>
+<p>Every new machine faces a lack of software, so it is best to tap into existing software library. For this reason X65 is fairly compatible with Commodore 64. It is not 100% backward compatible though and strives to keep the porting effort on a similiar level to <a href="http://singularcrew.hu/ide64warez/">porting C64 software for IDE64</a>.
+<h4 id="software-os">Operating System</h4>
+<p>On Power-On machine starts <a href="http://wingsos.org">WingsOS</a> from (flashable) ROM.
+
+<h2 id="why">Why?</h2>
+<p>Because we need <a href="https://www.youtube.com/watch?v=2H2mh8wLXco">"Understandable Computers" to make computers unstandable</a>.
+<p>Raspberry Pi is a step in right direction, but it is still a computer with layers and layers of abstraction separating the human from underlying machine.
+
+<h2 id="contact">Contact</h2>
+<p>Write to: <a href="mailto:contact@xiaoka.com?subject=X65">contact@xiaoka.com</a>
+
+<h2 id="FAQ">F.A.Q.</h2>
+<ul>
+<li>65816 is not 8-bit!<br>65_8/16 is a hybrid microprocessor allowing one to write software the same way as for 6502, but with a lot more memory available and ability to compute using 16bit numbers when needed.
+<li>Why no SID?<br>While understanding the sentiment, SID is not "best of breed". J1 subroutine will provide SID emulation on OPL3, when running C64 software.
+</ul>
+
+</article>
