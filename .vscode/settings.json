@@ -1,4 +1,6 @@
 {
     "editor.formatOnSave": false,
-    "editor.wordWrap": "wordWrapColumn"
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.formatOnPaste": false,
+    "editor.formatOnType": false
 }

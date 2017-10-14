@@ -43,34 +43,41 @@
 	}
 </style>
 
-<article>
 <header>
 <h1>X65</h1>
 <aside>Modern 8-bit microcomputer</aside>
 </header>
 
 <h2>READY<br><blink>&#x2588;</blink></h2>
-<p><a href="https://x65.zone">X65</a> is an effort to build an 8-bit microcomputer for the modern era. It uses best of breed components and strives to keep 8-bit feeling, while being usable for daily basis computing activities.
+<p><a href="http://x65.zone">X65</a> is an effort to build an 8-bit microcomputer for the modern era. It uses best of breed components and strives to keep 8-bit feeling, while being usable for daily basis computing activities.
 
 <h3 id="hardware">Components</h3>
 <ul>
-<li>CPU: <a href="https://en.wikipedia.org/wiki/WDC_65816">65816</a>
-<li>RAM: 16MB
-<li>Video: <a href="https://github.com/X65/mega65-core/blob/master/doc/viciv-modes.md">VIC-IV</a>
-<li>Sound: <a href="https://en.wikipedia.org/wiki/Yamaha_YMF278">YMF278</a>
-<li>Coprocessor: <a href="http://excamera.com/sphinx/gameduino/coprocessor.html">J1</a>
-<li>Input/Output:
+	<li>CPU: <a href="https://en.wikipedia.org/wiki/WDC_65816">65816</a>, 40MHz
+	<li>RAM: 16MB
+	<li>Video: <a href="https://github.com/X65/mega65-core/blob/master/doc/viciv-modes.md">VIC-IV</a>, DVI-I
+	<li>Sound: <a href="https://en.wikipedia.org/wiki/Yamaha_YMF278">YMF278</a>, Stereo RCA, S/PDIF
+	<li>Coprocessor: <a href="http://excamera.com/sphinx/gameduino/coprocessor.html">J1</a>, 2x CPU clock
+	<li>Input/Output:
 	<ul>
-	<li>2x <a href="https://en.wikipedia.org/wiki/MOS_Technology_CIA">8520 CIA</a>
-	<li><a href="http://6502.org/mini-projects/priority-interrupt-encoder/priority-interrupt-encoder.html">Prioritised interrupts</a> controller
-	<li>8-bit <a href="https://en.wikipedia.org/wiki/Industry_Standard_Architecture">ISA</a> expansion port
-	<li><a href="https://en.wikipedia.org/wiki/Clock_port">Clock port</a>
-	<li>2x <a href="http://wiki.icomp.de/wiki/DB9-Joystick">DB9 Joystick</a> port
-	<li>2x <a href="https://en.wikipedia.org/wiki/MIDI#Connectors">MIDI</a>/Serial
+		<li>2x <a href="https://en.wikipedia.org/wiki/MOS_Technology_CIA">8520 CIA</a>
+		<li><a href="http://6502.org/mini-projects/priority-interrupt-encoder/priority-interrupt-encoder.html">Prioritised interrupts</a> controller
 	</ul>
-<li>Power supply: 12V DC power brick
+	<li>Ports:
+	<ul>
+		<li>2x <a href="https://en.wikipedia.org/wiki/Secure_Digital">SD Card</a> slot
+		<li>2x <a href="http://wiki.icomp.de/wiki/DB9-Joystick">DB9 Joystick</a> port
+		<li>4x <a href="https://en.wikipedia.org/wiki/USB">USB</a> port
+		<li>2x <a href="https://en.wikipedia.org/wiki/MIDI#Connectors">MIDI</a>/Serial
+		<li><a href="https://en.wikipedia.org/wiki/Ethernet_over_twisted_pair">Ethernet</a> 1Gb RJ45 port
+		<li>8-bit <a href="https://en.wikipedia.org/wiki/Industry_Standard_Architecture">ISA</a> expansion port
+		<li><a href="https://en.wikipedia.org/wiki/Clock_port">Clock port</a>
+	</ul>
+	<li>Keyboard: 60% form-factor, mechanical, <a href="http://blog.komar.be/projects/gh60-programmable-keyboard/">programmable layout</a>
+	<li>Power supply: 12V DC power brick
 </ul>
-<p>As mentioned components are borderline unobtainium nowadays, the physical hardware is implemented in Intel Cyclone® V SE 5CSEBA6U23I7 FPGA chip.
+<p>Few of mentioned chips are borderline unobtainium nowadays and few others exist in HDL description only, thus physical hardware is implemented in Intel Cyclone® V SE 5CSEBA6U23I7 FPGA chip. Design and prototype is based on <a href="https://github.com/MiSTer-devel/Main_MiSTer/wiki">MiSTer</a> project.
+<p>Please mind, that specifications are not set in stone and will change during development. Interfaces for modern hardware ports are still in flux. You are welcome to challenge them, to make X65 even better. See contact details below.
 
 <h3 id="software">Software</h3>
 <p>Every new machine faces a lack of software, so it is best to tap into existing software library. For this reason X65 is fairly compatible with Commodore 64. It is not 100% backward compatible though and strives to keep the porting effort on a similiar level to <a href="http://singularcrew.hu/ide64warez/">porting C64 software for IDE64</a>.
@@ -88,6 +95,5 @@
 <ul>
 <li>65816 is not 8-bit!<br>65_8/16 is a hybrid microprocessor allowing one to write software the same way as for 6502, but with a lot more memory available and ability to compute using 16bit numbers when needed.
 <li>Why no SID?<br>While understanding the sentiment, SID is not "best of breed". J1 subroutine will provide SID emulation on OPL3, when running C64 software.
+<li>Why no DMA?<br>J1 is powerfull and flexible enough to serve as DMA, HDMA, display-list, blitter, etc.
 </ul>
-
-</article>
