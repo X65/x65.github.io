@@ -13,15 +13,16 @@
 	html{
 		background-color:#60b7e7;
 	}
-	body{
-		margin:2em auto;
-		max-width:40em;
-		padding:0 .5em;
-	}
-	body,code{
-		font: 1em/1;
+	body,code,pre{
 		font-family:"Atari ST",monospace;
+	}
+	body{
 		background-color:#005181;
+		line-height:1;
+		font-size:16px;
+		max-width:40em;
+		margin:2em auto;
+		padding:0 .5em;
 	}
 	body,a:link,a:visited,a:hover{
 		color:#60b7e7;
@@ -42,6 +43,14 @@
 			max-width:none
 		}
 	}
+	@media (min-width:800px){
+	body{
+		font-size:2.1vw;
+	}}
+	@media (max-width:600px){
+	body{
+		margin:1vi auto;
+	}}
 </style>
 
 <header>
