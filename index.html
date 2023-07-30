@@ -64,51 +64,32 @@
 </header>
 
 <h2>READY<br><blink>&#x2588;</blink></h2>
-<p><a href="http://x65.zone">X65</a> is an effort to build an 8-bit microcomputer for the modern era. It uses best of breed components and strives to keep 8-bit feeling, while being usable for daily basis computing activities.
+<p><a href="https://github.com/X65">X65</a> is an effort to build an 8-bit microcomputer for the modern era. It uses best of breed components and strives to keep 8-bit feeling, while being usable for daily basis computing activities.
+
+<p><a href="https://discord.gg/TuTe3kymgy"><img src="https://img.shields.io/discord/1135290734606557326?logo=discord&style=for-the-badge" alt="Discord Chat"></a></p>
 
 <h3 id="hardware">Components</h3>
 <ul>
-	<li>CPU: <a href="https://en.wikipedia.org/wiki/WDC_65816">65816</a>, 40MHz
-	<li>RAM: 16MB
-	<li>Video: <a href="https://github.com/X65/mega65-core/blob/master/doc/viciv-modes.md">VIC-IV</a>, DVI-I
-	<li>Sound: <a href="https://en.wikipedia.org/wiki/Yamaha_YMF278">YMF278</a>, Stereo RCA, S/PDIF
-	<li>Coprocessor: <a href="http://excamera.com/sphinx/gameduino/coprocessor.html">J1</a>, 2x CPU clock
+	<li>CPU: WDC <a href="https://en.wikipedia.org/wiki/WDC_65C816">65C816</a>, 10MHz
+	<li>RAM: 32MB (SDR SDRAM)
+	<li>Video: Atari <a href="https://en.wikipedia.org/wiki/ANTIC">CGIA</a> with CBM <a href="https://en.wikipedia.org/wiki/MOS_Technology_TED">TED</a> video modes, DVI-I
+	<li>Sound: Yamaha OPL3-L <a href="https://en.wikipedia.org/wiki/Yamaha_OPL#Yamaha_YMF289">YMF289</a>, Stereo RCA, S/PDIF
 	<li>Input/Output:
 	<ul>
-		<li>2x <a href="https://en.wikipedia.org/wiki/MOS_Technology_CIA">8520 CIA</a>
-		<li><a href="http://6502.org/mini-projects/priority-interrupt-encoder/priority-interrupt-encoder.html">Prioritised interrupts</a> controller
+		<li>WDC <a href="https://en.wikipedia.org/wiki/WDC_65C22">65C22</a> VIA
+		<li><a href="https://www.steckschwein.de/via-65c22-as-spi-master/">SPI</a>
 	</ul>
 	<li>Ports:
 	<ul>
-		<li>2x <a href="https://en.wikipedia.org/wiki/Secure_Digital">SD Card</a> slot
-		<li>2x <a href="http://wiki.icomp.de/wiki/DB9-Joystick">DB9 Joystick</a> port
+		<li><a href="https://en.wikipedia.org/wiki/Secure_Digital">SD Card</a> slot
+		<li>2x <a href="http://wiki.icomp.de/wiki/DE-9_Joystick">DE-9 Joystick</a> port (SEGA wiring)
 		<li>4x <a href="https://en.wikipedia.org/wiki/USB">USB</a> port
-		<li>2x <a href="https://en.wikipedia.org/wiki/MIDI#Connectors">MIDI</a>/Serial
-		<li><a href="https://en.wikipedia.org/wiki/Ethernet_over_twisted_pair">Ethernet</a> 1Gb RJ45 port
-		<li>2x 8-bit <a href="https://en.wikipedia.org/wiki/Industry_Standard_Architecture">ISA</a> expansion port
-		<li><a href="https://en.wikipedia.org/wiki/Clock_port">Clock port</a>
 	</ul>
-	<li>Keyboard: 60% form-factor, mechanical, <a href="http://blog.komar.be/projects/gh60-programmable-keyboard/">programmable layout</a>
-	<li>Power supply: 12V DC power brick
 </ul>
-<p>Few of mentioned chips are borderline unobtainium nowadays and few others exist in HDL only, thus physical hardware is implemented in Intel Cyclone® V FPGA chip. Design and prototype is based on <a href="https://github.com/MiSTer-devel/Main_MiSTer/wiki">MiSTer</a> project.
-<p>Please mind, that specifications are not set in stone and will change during development. Interfaces for modern hardware ports are still in flux. You are welcome to challenge them, to make X65 even better. See contact details below.
-
-<h3 id="software">Software</h3>
-<p>Every new machine faces a lack of software, so it is best to tap into existing software library. For this reason X65 is fairly compatible with Commodore 64. It is not 100% backward compatible though and strives to keep the porting effort on a similiar level to <a href="http://singularcrew.hu/ide64warez/">porting C64 software for IDE64</a>.
-<h4 id="software-os">Operating System</h4>
-<p>On Power-On machine starts <a href="http://wingsos.org">WingsOS</a> from (flashable) ROM.
+<p>Hardware is to be based on <a href="http://www.harbaum.org/till/mist/mist.html">MIST</a> design providing implementation of non-existing chips and glue to modern digital interfaces (USB, DVI, S/PDIF).
 
 <h2 id="why">Why?</h2>
 <p>Because we need <a href="https://www.youtube.com/watch?v=2H2mh8wLXco">"Understandable Computers" to make computers unstandable</a>.
-<p>Raspberry Pi is a step in right direction, but it is still a computer with layers and layers of abstraction separating the human from underlying machine.
 
 <h2 id="contact">Contact</h2>
-<p>Write to: <a href="mailto:contact@xiaoka.com?subject=X65">contact@xiaoka.com</a>
-
-<h2 id="FAQ">F.A.Q.</h2>
-<ul>
-<li>65816 is not 8-bit!<br>65_8/16 is a hybrid microprocessor allowing one to write software the same way as for 6502, but with a lot more memory available and ability to compute using 16bit numbers when needed.
-<li>Why no SID?<br>While understanding the sentiment, SID is not "best of breed". J1 subroutine will provide SID emulation on OPL3, when running C64 software.
-<li>Why no DMA?<br>J1 is powerfull and flexible enough to serve as DMA, HDMA, display-list, blitter, etc.
-</ul>
+<p>Write to: <a href="mailto:X65@xiaoka.com?subject=X65">X65@xiaoka.com</a>
