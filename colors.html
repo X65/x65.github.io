@@ -1,0 +1,601 @@
+<style>
+HTML,BODY {
+  font-family: monospace;
+}
+/* Generated using following {less} ( http://lesscss.org/less-preview/ )
+@whiteBias: 0.5;
+each(range(0, 1), #(@greenBlue) {
+  each(range(0, 1), #(@redBlue) {
+    each(range(0, 1), #(@green) {
+      each(range(0, 1), #(@red) {
+        @R: ((@red * 66.66 + @redBlue * 33.33) / 100 + @whiteBias);
+        @G: ((@green * 66.66 + @greenBlue * 33.33) / 100 + @whiteBias);
+        @B: ((@redBlue * 50 + @greenBlue * 50) / 100 + @whiteBias);
+        each(range(0, 7), #(@luma) {
+          @L: (100 / 7) * (@luma + 2);
+          @R2: (((@R * @L) * 255) / (100 * (1 + @whiteBias)));
+          @G2: (((@G * @L) * 255) / (100 * (1 + @whiteBias)));
+          @B2: (((@B * @L) * 255) / (100 * (1 + @whiteBias)));
+          .chroma-@{greenBlue}@{redBlue}@{green}@{red}-luma-@{luma} {
+            background-color: rgb(@R2, @G2, @B2);
+          }
+        });
+      });
+    });
+  });
+});
+*/
+.chroma-0000-luma-0 {
+  background-color: #181818;
+}
+.chroma-0000-luma-1 {
+  background-color: #242424;
+}
+.chroma-0000-luma-2 {
+  background-color: #313131;
+}
+.chroma-0000-luma-3 {
+  background-color: #3d3d3d;
+}
+.chroma-0000-luma-4 {
+  background-color: #494949;
+}
+.chroma-0000-luma-5 {
+  background-color: #555555;
+}
+.chroma-0000-luma-6 {
+  background-color: #616161;
+}
+.chroma-0000-luma-7 {
+  background-color: #6d6d6d;
+}
+.chroma-0001-luma-0 {
+  background-color: #391818;
+}
+.chroma-0001-luma-1 {
+  background-color: #552424;
+}
+.chroma-0001-luma-2 {
+  background-color: #713131;
+}
+.chroma-0001-luma-3 {
+  background-color: #8e3d3d;
+}
+.chroma-0001-luma-4 {
+  background-color: #aa4949;
+}
+.chroma-0001-luma-5 {
+  background-color: #c65555;
+}
+.chroma-0001-luma-6 {
+  background-color: #e36161;
+}
+.chroma-0001-luma-7 {
+  background-color: #ff6d6d;
+}
+.chroma-0010-luma-0 {
+  background-color: #183918;
+}
+.chroma-0010-luma-1 {
+  background-color: #245524;
+}
+.chroma-0010-luma-2 {
+  background-color: #317131;
+}
+.chroma-0010-luma-3 {
+  background-color: #3d8e3d;
+}
+.chroma-0010-luma-4 {
+  background-color: #49aa49;
+}
+.chroma-0010-luma-5 {
+  background-color: #55c655;
+}
+.chroma-0010-luma-6 {
+  background-color: #61e361;
+}
+.chroma-0010-luma-7 {
+  background-color: #6dff6d;
+}
+.chroma-0011-luma-0 {
+  background-color: #393918;
+}
+.chroma-0011-luma-1 {
+  background-color: #555524;
+}
+.chroma-0011-luma-2 {
+  background-color: #717131;
+}
+.chroma-0011-luma-3 {
+  background-color: #8e8e3d;
+}
+.chroma-0011-luma-4 {
+  background-color: #aaaa49;
+}
+.chroma-0011-luma-5 {
+  background-color: #c6c655;
+}
+.chroma-0011-luma-6 {
+  background-color: #e3e361;
+}
+.chroma-0011-luma-7 {
+  background-color: #ffff6d;
+}
+.chroma-0100-luma-0 {
+  background-color: #281831;
+}
+.chroma-0100-luma-1 {
+  background-color: #3d2449;
+}
+.chroma-0100-luma-2 {
+  background-color: #513161;
+}
+.chroma-0100-luma-3 {
+  background-color: #653d79;
+}
+.chroma-0100-luma-4 {
+  background-color: #794992;
+}
+.chroma-0100-luma-5 {
+  background-color: #8e55aa;
+}
+.chroma-0100-luma-6 {
+  background-color: #a261c2;
+}
+.chroma-0100-luma-7 {
+  background-color: #b66ddb;
+}
+.chroma-0101-luma-0 {
+  background-color: #491831;
+}
+.chroma-0101-luma-1 {
+  background-color: #6d2449;
+}
+.chroma-0101-luma-2 {
+  background-color: #923161;
+}
+.chroma-0101-luma-3 {
+  background-color: #b63d79;
+}
+.chroma-0101-luma-4 {
+  background-color: #db4992;
+}
+.chroma-0101-luma-5 {
+  background-color: #ff55aa;
+}
+.chroma-0101-luma-6 {
+  background-color: #ff61c2;
+}
+.chroma-0101-luma-7 {
+  background-color: #ff6ddb;
+}
+.chroma-0110-luma-0 {
+  background-color: #283931;
+}
+.chroma-0110-luma-1 {
+  background-color: #3d5549;
+}
+.chroma-0110-luma-2 {
+  background-color: #517161;
+}
+.chroma-0110-luma-3 {
+  background-color: #658e79;
+}
+.chroma-0110-luma-4 {
+  background-color: #79aa92;
+}
+.chroma-0110-luma-5 {
+  background-color: #8ec6aa;
+}
+.chroma-0110-luma-6 {
+  background-color: #a2e3c2;
+}
+.chroma-0110-luma-7 {
+  background-color: #b6ffdb;
+}
+.chroma-0111-luma-0 {
+  background-color: #493931;
+}
+.chroma-0111-luma-1 {
+  background-color: #6d5549;
+}
+.chroma-0111-luma-2 {
+  background-color: #927161;
+}
+.chroma-0111-luma-3 {
+  background-color: #b68e79;
+}
+.chroma-0111-luma-4 {
+  background-color: #dbaa92;
+}
+.chroma-0111-luma-5 {
+  background-color: #ffc6aa;
+}
+.chroma-0111-luma-6 {
+  background-color: #ffe3c2;
+}
+.chroma-0111-luma-7 {
+  background-color: #ffffdb;
+}
+.chroma-1000-luma-0 {
+  background-color: #182831;
+}
+.chroma-1000-luma-1 {
+  background-color: #243d49;
+}
+.chroma-1000-luma-2 {
+  background-color: #315161;
+}
+.chroma-1000-luma-3 {
+  background-color: #3d6579;
+}
+.chroma-1000-luma-4 {
+  background-color: #497992;
+}
+.chroma-1000-luma-5 {
+  background-color: #558eaa;
+}
+.chroma-1000-luma-6 {
+  background-color: #61a2c2;
+}
+.chroma-1000-luma-7 {
+  background-color: #6db6db;
+}
+.chroma-1001-luma-0 {
+  background-color: #392831;
+}
+.chroma-1001-luma-1 {
+  background-color: #553d49;
+}
+.chroma-1001-luma-2 {
+  background-color: #715161;
+}
+.chroma-1001-luma-3 {
+  background-color: #8e6579;
+}
+.chroma-1001-luma-4 {
+  background-color: #aa7992;
+}
+.chroma-1001-luma-5 {
+  background-color: #c68eaa;
+}
+.chroma-1001-luma-6 {
+  background-color: #e3a2c2;
+}
+.chroma-1001-luma-7 {
+  background-color: #ffb6db;
+}
+.chroma-1010-luma-0 {
+  background-color: #184931;
+}
+.chroma-1010-luma-1 {
+  background-color: #246d49;
+}
+.chroma-1010-luma-2 {
+  background-color: #319261;
+}
+.chroma-1010-luma-3 {
+  background-color: #3db679;
+}
+.chroma-1010-luma-4 {
+  background-color: #49db92;
+}
+.chroma-1010-luma-5 {
+  background-color: #55ffaa;
+}
+.chroma-1010-luma-6 {
+  background-color: #61ffc2;
+}
+.chroma-1010-luma-7 {
+  background-color: #6dffdb;
+}
+.chroma-1011-luma-0 {
+  background-color: #394931;
+}
+.chroma-1011-luma-1 {
+  background-color: #556d49;
+}
+.chroma-1011-luma-2 {
+  background-color: #719261;
+}
+.chroma-1011-luma-3 {
+  background-color: #8eb679;
+}
+.chroma-1011-luma-4 {
+  background-color: #aadb92;
+}
+.chroma-1011-luma-5 {
+  background-color: #c6ffaa;
+}
+.chroma-1011-luma-6 {
+  background-color: #e3ffc2;
+}
+.chroma-1011-luma-7 {
+  background-color: #ffffdb;
+}
+.chroma-1100-luma-0 {
+  background-color: #282849;
+}
+.chroma-1100-luma-1 {
+  background-color: #3d3d6d;
+}
+.chroma-1100-luma-2 {
+  background-color: #515192;
+}
+.chroma-1100-luma-3 {
+  background-color: #6565b6;
+}
+.chroma-1100-luma-4 {
+  background-color: #7979db;
+}
+.chroma-1100-luma-5 {
+  background-color: #8e8eff;
+}
+.chroma-1100-luma-6 {
+  background-color: #a2a2ff;
+}
+.chroma-1100-luma-7 {
+  background-color: #b6b6ff;
+}
+.chroma-1101-luma-0 {
+  background-color: #492849;
+}
+.chroma-1101-luma-1 {
+  background-color: #6d3d6d;
+}
+.chroma-1101-luma-2 {
+  background-color: #925192;
+}
+.chroma-1101-luma-3 {
+  background-color: #b665b6;
+}
+.chroma-1101-luma-4 {
+  background-color: #db79db;
+}
+.chroma-1101-luma-5 {
+  background-color: #ff8eff;
+}
+.chroma-1101-luma-6 {
+  background-color: #ffa2ff;
+}
+.chroma-1101-luma-7 {
+  background-color: #ffb6ff;
+}
+.chroma-1110-luma-0 {
+  background-color: #284949;
+}
+.chroma-1110-luma-1 {
+  background-color: #3d6d6d;
+}
+.chroma-1110-luma-2 {
+  background-color: #519292;
+}
+.chroma-1110-luma-3 {
+  background-color: #65b6b6;
+}
+.chroma-1110-luma-4 {
+  background-color: #79dbdb;
+}
+.chroma-1110-luma-5 {
+  background-color: #8effff;
+}
+.chroma-1110-luma-6 {
+  background-color: #a2ffff;
+}
+.chroma-1110-luma-7 {
+  background-color: #b6ffff;
+}
+.chroma-1111-luma-0 {
+  background-color: #494949;
+}
+.chroma-1111-luma-1 {
+  background-color: #6d6d6d;
+}
+.chroma-1111-luma-2 {
+  background-color: #929292;
+}
+.chroma-1111-luma-3 {
+  background-color: #b6b6b6;
+}
+.chroma-1111-luma-4 {
+  background-color: #dbdbdb;
+}
+.chroma-1111-luma-5 {
+  background-color: #ffffff;
+}
+.chroma-1111-luma-6 {
+  background-color: #ffffff;
+}
+.chroma-1111-luma-7 {
+  background-color: #ffffff;
+}
+</style>
+<table>
+    <tr>
+        <th></th>
+        <th>000</th>
+        <th>001</th>
+        <th>010</th>
+        <th>011</th>
+        <th>100</th>
+        <th>101</th>
+        <th>110</th>
+        <th>111</th>
+    </tr>
+    <tr>
+        <th>0000</th>
+        <td class="chroma-0000-luma-0"></td>
+        <td class="chroma-0000-luma-1"></td>
+        <td class="chroma-0000-luma-2"></td>
+        <td class="chroma-0000-luma-3"></td>
+        <td class="chroma-0000-luma-4"></td>
+        <td class="chroma-0000-luma-5"></td>
+        <td class="chroma-0000-luma-6"></td>
+        <td class="chroma-0000-luma-7"></td>
+    </tr>
+    <tr>
+        <th>0001</th>
+        <td class="chroma-0001-luma-0"></td>
+        <td class="chroma-0001-luma-1"></td>
+        <td class="chroma-0001-luma-2"></td>
+        <td class="chroma-0001-luma-3"></td>
+        <td class="chroma-0001-luma-4"></td>
+        <td class="chroma-0001-luma-5"></td>
+        <td class="chroma-0001-luma-6"></td>
+        <td class="chroma-0001-luma-7"></td>
+    </tr>
+    <tr>
+        <th>0010</th>
+        <td class="chroma-0010-luma-0"></td>
+        <td class="chroma-0010-luma-1"></td>
+        <td class="chroma-0010-luma-2"></td>
+        <td class="chroma-0010-luma-3"></td>
+        <td class="chroma-0010-luma-4"></td>
+        <td class="chroma-0010-luma-5"></td>
+        <td class="chroma-0010-luma-6"></td>
+        <td class="chroma-0010-luma-7"></td>
+    </tr>
+    <tr>
+        <th>0011</th>
+        <td class="chroma-0011-luma-0"></td>
+        <td class="chroma-0011-luma-1"></td>
+        <td class="chroma-0011-luma-2"></td>
+        <td class="chroma-0011-luma-3"></td>
+        <td class="chroma-0011-luma-4"></td>
+        <td class="chroma-0011-luma-5"></td>
+        <td class="chroma-0011-luma-6"></td>
+        <td class="chroma-0011-luma-7"></td>
+    </tr>
+    <tr>
+        <th>0100</th>
+        <td class="chroma-0100-luma-0"></td>
+        <td class="chroma-0100-luma-1"></td>
+        <td class="chroma-0100-luma-2"></td>
+        <td class="chroma-0100-luma-3"></td>
+        <td class="chroma-0100-luma-4"></td>
+        <td class="chroma-0100-luma-5"></td>
+        <td class="chroma-0100-luma-6"></td>
+        <td class="chroma-0100-luma-7"></td>
+    </tr>
+    <tr>
+        <th>0101</th>
+        <td class="chroma-0101-luma-0"></td>
+        <td class="chroma-0101-luma-1"></td>
+        <td class="chroma-0101-luma-2"></td>
+        <td class="chroma-0101-luma-3"></td>
+        <td class="chroma-0101-luma-4"></td>
+        <td class="chroma-0101-luma-5"></td>
+        <td class="chroma-0101-luma-6"></td>
+        <td class="chroma-0101-luma-7"></td>
+    </tr>
+    <tr>
+        <th>0110</th>
+        <td class="chroma-0110-luma-0"></td>
+        <td class="chroma-0110-luma-1"></td>
+        <td class="chroma-0110-luma-2"></td>
+        <td class="chroma-0110-luma-3"></td>
+        <td class="chroma-0110-luma-4"></td>
+        <td class="chroma-0110-luma-5"></td>
+        <td class="chroma-0110-luma-6"></td>
+        <td class="chroma-0110-luma-7"></td>
+    </tr>
+    <tr>
+        <th>0111</th>
+        <td class="chroma-0111-luma-0"></td>
+        <td class="chroma-0111-luma-1"></td>
+        <td class="chroma-0111-luma-2"></td>
+        <td class="chroma-0111-luma-3"></td>
+        <td class="chroma-0111-luma-4"></td>
+        <td class="chroma-0111-luma-5"></td>
+        <td class="chroma-0111-luma-6"></td>
+        <td class="chroma-0111-luma-7"></td>
+    </tr>
+    <tr>
+        <th>1000</th>
+        <td class="chroma-1000-luma-0"></td>
+        <td class="chroma-1000-luma-1"></td>
+        <td class="chroma-1000-luma-2"></td>
+        <td class="chroma-1000-luma-3"></td>
+        <td class="chroma-1000-luma-4"></td>
+        <td class="chroma-1000-luma-5"></td>
+        <td class="chroma-1000-luma-6"></td>
+        <td class="chroma-1000-luma-7"></td>
+    </tr>
+    <tr>
+        <th>1001</th>
+        <td class="chroma-1001-luma-0"></td>
+        <td class="chroma-1001-luma-1"></td>
+        <td class="chroma-1001-luma-2"></td>
+        <td class="chroma-1001-luma-3"></td>
+        <td class="chroma-1001-luma-4"></td>
+        <td class="chroma-1001-luma-5"></td>
+        <td class="chroma-1001-luma-6"></td>
+        <td class="chroma-1001-luma-7"></td>
+    </tr>
+    <tr>
+        <th>1010</th>
+        <td class="chroma-1010-luma-0"></td>
+        <td class="chroma-1010-luma-1"></td>
+        <td class="chroma-1010-luma-2"></td>
+        <td class="chroma-1010-luma-3"></td>
+        <td class="chroma-1010-luma-4"></td>
+        <td class="chroma-1010-luma-5"></td>
+        <td class="chroma-1010-luma-6"></td>
+        <td class="chroma-1010-luma-7"></td>
+    </tr>
+    <tr>
+        <th>1011</th>
+        <td class="chroma-1011-luma-0"></td>
+        <td class="chroma-1011-luma-1"></td>
+        <td class="chroma-1011-luma-2"></td>
+        <td class="chroma-1011-luma-3"></td>
+        <td class="chroma-1011-luma-4"></td>
+        <td class="chroma-1011-luma-5"></td>
+        <td class="chroma-1011-luma-6"></td>
+        <td class="chroma-1011-luma-7"></td>
+    </tr>
+    <tr>
+        <th>1100</th>
+        <td class="chroma-1100-luma-0"></td>
+        <td class="chroma-1100-luma-1"></td>
+        <td class="chroma-1100-luma-2"></td>
+        <td class="chroma-1100-luma-3"></td>
+        <td class="chroma-1100-luma-4"></td>
+        <td class="chroma-1100-luma-5"></td>
+        <td class="chroma-1100-luma-6"></td>
+        <td class="chroma-1100-luma-7"></td>
+    </tr>
+    <tr>
+        <th>1101</th>
+        <td class="chroma-1101-luma-0"></td>
+        <td class="chroma-1101-luma-1"></td>
+        <td class="chroma-1101-luma-2"></td>
+        <td class="chroma-1101-luma-3"></td>
+        <td class="chroma-1101-luma-4"></td>
+        <td class="chroma-1101-luma-5"></td>
+        <td class="chroma-1101-luma-6"></td>
+        <td class="chroma-1101-luma-7"></td>
+    </tr>
+    <tr>
+        <th>1110</th>
+        <td class="chroma-1110-luma-0"></td>
+        <td class="chroma-1110-luma-1"></td>
+        <td class="chroma-1110-luma-2"></td>
+        <td class="chroma-1110-luma-3"></td>
+        <td class="chroma-1110-luma-4"></td>
+        <td class="chroma-1110-luma-5"></td>
+        <td class="chroma-1110-luma-6"></td>
+        <td class="chroma-1110-luma-7"></td>
+    </tr>
+    <tr>
+        <th>1111</th>
+        <td class="chroma-1111-luma-0"></td>
+        <td class="chroma-1111-luma-1"></td>
+        <td class="chroma-1111-luma-2"></td>
+        <td class="chroma-1111-luma-3"></td>
+        <td class="chroma-1111-luma-4"></td>
+        <td class="chroma-1111-luma-5"></td>
+        <td class="chroma-1111-luma-6"></td>
+        <td class="chroma-1111-luma-7"></td>
+    </tr>
+</table>
