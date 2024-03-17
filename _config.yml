@@ -1,0 +1,21 @@
+plugins:
+  - jekyll-github-metadata
+  - jekyll-paginate
+  - jekyll-titles-from-headings
+  - jekyll-relative-links
+  - jekyll-readme-index
+
+highlighter: rouge
+markdown: kramdown
+
+readme_index:
+  enabled:          true
+  remove_originals: false
+  with_frontmatter: true
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"

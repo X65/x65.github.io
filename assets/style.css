@@ -1,0 +1,91 @@
+@font-face {
+  font-family: "Atari ST";
+  src: url("/assets/AtariST8x16SystemFont.ttf");
+}
+:root {
+  --main-bg-color: rgb(0, 73, 109);
+  --main-fg-color: rgb(73, 219, 255);
+}
+html {
+  background-color: var(--main-fg-color);
+}
+body,
+code,
+pre {
+  font-family: "Atari ST", monospace;
+}
+body {
+  background-color: var(--main-bg-color);
+  line-height: 1;
+  font-size: 16px;
+  max-width: 40em;
+  margin: 2em auto;
+  padding: 0 0.5em;
+}
+body,
+a:link,
+a:visited,
+a:hover {
+  color: var(--main-fg-color);
+}
+blink {
+  animation-duration: 0.66s;
+  animation-name: blink;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(2, start);
+}
+@keyframes blink {
+  100% {
+    visibility: hidden;
+  }
+}
+nav {
+  float: right;
+}
+nav a img {
+  vertical-align: middle;
+}
+ul {
+  padding-left: 2em;
+}
+li {
+  list-style-type: disc;
+}
+@media print {
+  body {
+    max-width: none;
+  }
+}
+@media (min-width: 800px) {
+  body {
+    font-size: 2.1vw;
+  }
+}
+@media (max-width: 600px) {
+  body {
+    margin: 1vi auto;
+  }
+}
+li img {
+  vertical-align: middle;
+}
+a[href*="/github.com/X65"]::after {
+  content: "";
+  width: 1em;
+  height: 1em;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' aria-hidden='true' fill='rgb(36, 219, 255)' viewBox='-2 -5 20 20'%3E%3Cpath d='M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z'/%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+}
+a[href*=".wikipedia.org/"]::after {
+  content: "";
+  width: 1em;
+  height: 1em;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' aria-hidden='true' fill='rgb(36, 219, 255)' viewBox='-10 -10 148 108'%3E%3Cpath d='M95.869 23.91v2.138c-2.822.501-4.957 1.388-6.407 2.66-2.077 1.888-4.525 4.778-6.132 8.67l-32.685 66.713H48.47L15.657 36.51c-1.528-3.468-3.606-5.588-4.233-6.358a10.28 10.28 0 0 0-3.614-2.804c-1.43-.675-3.36-1.108-5.79-1.3v-2.14h31.928v2.14c-3.683.346-5.44.963-6.537 1.849-1.097.886-1.645 2.023-1.645 3.41 0 1.928.9 4.934 2.703 9.019l24.233 45.959 23.692-45.38c1.842-4.471 3.37-7.574 3.37-9.308 0-1.118-.568-2.187-1.705-3.209-1.136-1.02-2.422-1.744-5.125-2.168a37.477 37.477 0 0 0-1-.173V23.91H95.87z'/%3E%3Cpath d='M123.98 23.91v2.138c-2.821.501-4.957 1.388-6.407 2.66-2.076 1.888-4.525 4.778-6.132 8.67l-28.685 66.713H80.58L50.268 36.51c-1.528-3.468-3.606-5.588-4.232-6.358a10.28 10.28 0 0 0-3.615-2.804c-1.43-.675-2.726-1.108-5.156-1.3v-2.14H68.56v2.14c-3.683.346-5.44.963-6.536 1.849-1.098.886-1.646 2.023-1.646 3.41 0 1.928.901 4.934 2.704 9.019l21.732 45.959 19.693-45.38c1.841-4.471 3.37-7.574 3.37-9.308 0-1.118-.569-2.187-1.705-3.209-1.137-1.02-3.057-1.744-5.76-2.168a37.474 37.474 0 0 0-1-.173V23.91h24.569z'/%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+}
