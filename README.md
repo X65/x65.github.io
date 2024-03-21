@@ -48,5 +48,3 @@ Because we need ["Understandable Computers" to make computers unstandable](https
 
 Write to: [contact@x65.zone](mailto:contact@x65.zone?subject=X65)
 or [join Discord](https://discord.gg/TuTe3kymgy) chat.
-
-&nbsp;
