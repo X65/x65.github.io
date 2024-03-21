@@ -4,6 +4,9 @@ plugins:
   - jekyll-titles-from-headings
   - jekyll-relative-links
   - jekyll-readme-index
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
 
 highlighter: rouge
 markdown: kramdown
@@ -14,6 +17,11 @@ readme_index:
   with_frontmatter: true
 
 defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
   -
     scope:
       path: ""
