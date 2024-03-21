@@ -1,0 +1,12 @@
+- link: /
+  content: Home
+- link: https://github.com/X65
+  content: Source
+- link: /news.html
+  content: News
+- link: https://discord.gg/TuTe3kymgy
+  content: >-
+    <img src="https://img.shields.io/discord/1135290734606557326?logo=discord&style=for-the-badge&logoColor=9f91e9&labelColor=606060&color=72c06f" alt="Discord Chat">
+- link: https://github.com/orgs/X65/discussions
+  content: >-
+    <img src="https://img.shields.io/github/discussions/X65/X65?logo=github&style=for-the-badge&labelColor=606060&color=72c06f" alt="GitHub Discussions">

@@ -45,6 +45,11 @@ nav {
 nav a img {
   vertical-align: middle;
 }
+nav a.nav-active {
+  background-color: var(--main-fg-color);
+  color: var(--main-bg-color);
+  text-decoration: none;
+}
 ul {
   padding-left: 2em;
 }
