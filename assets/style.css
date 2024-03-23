@@ -41,9 +41,9 @@ a:visited,
 a:hover {
   color: var(--main-fg-color);
 }
-body img {
+body img,
+body video {
   max-width: 100%;
-  height: auto;
 }
 blink {
   animation-duration: 0.66s;
