@@ -103,6 +103,15 @@ hgroup * {
 hgroup p {
   color: var(--secondary-fg-color);
 }
+.page-navigation {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+  color: var(--secondary-fg-color);
+}
+.page-navigation a {
+  margin-inline: 0.5em;
+}
 a[href*="/github.com/X65"]::after {
   content: "";
   width: 1em;

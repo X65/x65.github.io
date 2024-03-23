@@ -6,5 +6,14 @@ layout: default
 <h1 itemprop="name">{{ page.title }}</h1>
 <p><time itemprop="datePublished" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_string }}</time> - <span itemprop="author">{{ page.author }}</span></p>
 </hgroup>
+<div class="page-navigation">
+{% if page.next.url %}
+<a class="next" href="{{page.next.url}}">&laquo; {{page.next.title}}</a>
+{% endif %}
+{% if page.next.url and page.previous.url %}:{% endif %}
+{% if page.previous.url %}
+<a class="prev" href="{{page.previous.url}}">{{page.previous.title}} &raquo;</a>
+{% endif %}
+</div>
 {{ content }}
 </article>
