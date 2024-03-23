@@ -73,8 +73,11 @@ ul {
 li {
   list-style-type: disc;
 }
-code {
+code.language-plaintext {
   background-color: var(--secondary-bg-color);
+}
+pre.highlight {
+  color: rgb(182, 182, 182);
 }
 @media print {
   body {
