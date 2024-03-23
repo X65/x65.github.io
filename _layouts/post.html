@@ -1,7 +1,10 @@
 ---
 layout: default
 ---
-<h1>{{ page.title }}</h1>
-<p>{{ page.date | date_to_string }} - {{ page.author }}</p>
-
+<article itemscope itemtype="http://schema.org/Article">
+<hgroup>
+<h1 itemprop="name">{{ page.title }}</h1>
+<p><time itemprop="datePublished" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_string }}</time> - <span itemprop="author">{{ page.author }}</span></p>
+</hgroup>
 {{ content }}
+</article>

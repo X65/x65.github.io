@@ -5,6 +5,8 @@
 :root {
   --main-bg-color: rgb(0, 73, 109);
   --main-fg-color: rgb(73, 219, 255);
+  --secondary-bg-color: rgb(0, 36, 73);
+  --secondary-fg-color: rgb(0, 146, 182);
 }
 html {
   background-color: var(--main-fg-color);
@@ -12,7 +14,18 @@ html {
 body,
 code,
 pre {
-  font-family: "Atari ST", monospace;
+  font-family: 'Atari ST', 'Noto Emoji', monospace;
+}
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+h1, h2, h3 {
+  margin-bottom: 0.5em;
+}
+p {
+  margin: 1em 0;
 }
 body {
   background-color: var(--main-bg-color);
@@ -27,6 +40,10 @@ a:link,
 a:visited,
 a:hover {
   color: var(--main-fg-color);
+}
+body img {
+  max-width: 100%;
+  height: auto;
 }
 blink {
   animation-duration: 0.66s;
@@ -56,6 +73,9 @@ ul {
 li {
   list-style-type: disc;
 }
+code {
+  background-color: var(--secondary-bg-color);
+}
 @media print {
   body {
     max-width: none;
@@ -73,6 +93,12 @@ li {
 }
 li img {
   vertical-align: middle;
+}
+hgroup * {
+  margin: 0;
+}
+hgroup p {
+  color: var(--secondary-fg-color);
 }
 a[href*="/github.com/X65"]::after {
   content: "";
