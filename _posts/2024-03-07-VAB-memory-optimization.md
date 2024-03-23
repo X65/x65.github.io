@@ -8,7 +8,7 @@ This is going to be one weird clock… 😹
 
 ![PHI2 timings](/images/2024-03-07_PHI2_timings.png)
 
-WDC65816 has CPU two outputs signaling whether there is a Valid Data Address (VDA)
+WDC65816 has two outputs signaling whether there is a Valid Data Address (VDA)
 or Valid Program Address (VPA) on the bus. Most of the time one of these signals
 is high, as the CPU is usually reading or writing memory (this is what CPUs do)
 or reading a next instruction to be executed.
