@@ -4,6 +4,8 @@
   content: Source
 - link: /news.html
   content: News
+- link: https://bbs.x65.zone/
+  content: BBS
 - link: https://discord.gg/TuTe3kymgy
   content: >-
     <img src="https://img.shields.io/discord/1135290734606557326?logo=discord&style=for-the-badge&logoColor=9f91e9&labelColor=606060&color=72c06f" alt="Discord Chat">
