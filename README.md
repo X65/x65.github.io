@@ -38,7 +38,7 @@ Hardware is based on [Picocomputer 6502][8] and [Neo6502][9] design providing im
 
 ## Why?
 
-Because we need ["Understandable Computers" to make computers unstandable](https://www.youtube.com/watch?v=2H2mh8wLXco).
+Because we need ["Understandable Computers" to make computers understandable](https://www.youtube.com/watch?v=2H2mh8wLXco).
 
 > It's like our entire technology subculture looked up and said "HOLY CRAP WE ARE DROWNING IN COMPLEXITY!"<br>
 > Remember when we WEREN'T? Let's go play with THAT stuff!<br>
