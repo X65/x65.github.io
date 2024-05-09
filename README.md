@@ -16,10 +16,10 @@ Modern 8-bit microcomputer
 - CPU: WDC [65C816][1], ~6MHz
 - RAM: 16MB [SPI PSRAM][10]
 - Video: [CGIA][2], DVI-D
-- Sound: Yamaha SD-1 [YMF825][3], Mono, 2xRCA (OPL3-like)
+- Sound: Yamaha SD-1 [YMF825][3], Mono, 2xRCA
 - Input/Output:
   - [RP816-RIA][4]
-  - [ESP32-C3][5], Wi-Fi, BT, GPIO
+  - [ESP32-C3][5]: Wi-Fi, BT, [GPIO][11]
 - Ports:
   - 6x [USB][6] port + 2x internal
   - 2x [DE-9 Joystick][7] port (SEGA wiring)
@@ -36,6 +36,7 @@ Hardware is based on [Picocomputer 6502][8] and [Neo6502][9] design providing im
 [8]: https://picocomputer.github.io
 [9]: https://neo6502.com
 [10]: https://www.espressif.com.cn/sites/default/files/documentation/esp-psram64_esp-psram64h_datasheet_en.pdf
+[11]: https://en.wikipedia.org/wiki/General-purpose_input/output
 
 ## Why?
 
