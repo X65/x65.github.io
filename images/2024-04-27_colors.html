@@ -66,10 +66,10 @@
       const [r2, g2, b2] = COLORS[i++];
       const [r3, g3, b3] = COLORS[i++];
       console.log(
-        `0x${toHex(r0)}, 0x${toHex(g0)}, 0x${toHex(b0)}, ` +
-          `0x${toHex(r1)}, 0x${toHex(g1)}, 0x${toHex(b1)}, ` +
-          `0x${toHex(r2)}, 0x${toHex(g2)}, 0x${toHex(b2)}, ` +
-          `0x${toHex(r3)}, 0x${toHex(g3)}, 0x${toHex(b3)}, `
+        `0x00${toHex(r0)}${toHex(g0)}${toHex(b0)}, ` +
+          `0x00${toHex(r1)}${toHex(g1)}${toHex(b1)}, ` +
+          `0x00${toHex(r2)}${toHex(g2)}${toHex(b2)}, ` +
+          `0x00${toHex(r3)}${toHex(g3)}${toHex(b3)}, `
       );
     }
 
