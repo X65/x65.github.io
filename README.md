@@ -28,7 +28,7 @@ Hardware is based on [Picocomputer 6502][8] and [Neo6502][9] design providing im
 
 [1]: https://en.wikipedia.org/wiki/WDC_65C816
 [2]: https://github.com/X65/X65/wiki/CGIA
-[3]: https://device.yamaha.com/en/lsi/products/sound_generator/images/4MF825A40.pdf
+[3]: https://www.youtube.com/watch?v=BEgAx0jngKQ
 [4]: https://picocomputer.github.io/ria.html
 [5]: https://en.wikipedia.org/wiki/ESP32#ESP32-C3
 [6]: https://en.wikipedia.org/wiki/USB
