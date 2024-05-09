@@ -16,7 +16,7 @@ Modern 8-bit microcomputer
 - CPU: WDC [65C816][1], ~6MHz
 - RAM: 16MB [SPI PSRAM][10]
 - Video: [CGIA][2], DVI-D
-- Sound: Yamaha SD-1 [YMF825][3], Mono RCA (OPL3-like)
+- Sound: Yamaha SD-1 [YMF825][3], Mono, 2xRCA (OPL3-like)
 - Input/Output:
   - [RP816-RIA][4]
   - [ESP32-C3][5], Wi-Fi, BT, GPIO
