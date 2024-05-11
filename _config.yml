@@ -27,3 +27,6 @@ defaults:
       path: ""
     values:
       layout: "default"
+
+posthog_api_key: phc_UQn7P52g9r5tEcD6wIIkFnNCL4teOAg8ItastJri7vF
+posthog_host: https://eu.i.posthog.com
