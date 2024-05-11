@@ -22,4 +22,6 @@ Hopefully this will allow shared full-speed memory access by CPU and VPU.
 
 ![protoA board 3D view](/images/2024-04-16_protoA_3D.png)
 
+📒 [protoA board schematic PDF](/images/2024-04-16_protoA-schematic.pdf)
+
 Now, to manufacturing…
