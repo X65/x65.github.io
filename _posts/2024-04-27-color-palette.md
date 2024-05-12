@@ -83,7 +83,7 @@ moving it up `3/4` I have what I need.
 
 ![cosine graph](/images/2024-04-27_cosine.png)
 
-They said, you will never use math in your live after leaving school…
+They said, you will never use math in your life after leaving school…
 
 After plugging the equations to some simple JavaScript and generating [visualization
 in HTML table](/images/2024-04-27_colors.html) I ended up with the following palette of colors:
