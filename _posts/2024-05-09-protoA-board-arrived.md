@@ -24,9 +24,9 @@ Testing reveals I can run memory at 1/4 of expected 133MHz. 😥
 I am still experiencing QPI CLK ringing, causing memory reads to skip nybbles.
 This is frustrating. Either I am missing something, or it cannot be done.
 On the other hand, the second Pi Pico is able to drive HDMI screen at 266MHz just fine.
-I guess the next proto board will need to have RP2040 MPU on-board and memories REALLY close.
+I guess the next proto board will need to have RP2040 MPU on-board and memory chips REALLY close.
 
-The second issue shows by running [test program]({% post_url 2024-03-10-CPU-running %}).
+The second issue appears after running [test program]({% post_url 2024-03-10-CPU-running %}).
 
 ```console
 00FFFC 00 00 B7 62
@@ -65,5 +65,5 @@ If I go faster, the latches are to slow to provide stable Address/Data Bus readi
 This may need more tuning on the final board.
 
 Overall I am a bit disappointed, but this board should unblock CGIA development.
-Quick math in head shows it should be able to drive enough memory read bandwidth
+Quick calculation in head shows it should be able to drive enough memory read bandwidth
 to feed video signal generation in real-time.
