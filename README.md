@@ -9,7 +9,7 @@ Modern 8-bit microcomputer
 
 [X65](https://github.com/X65) is an effort to build an 8-bit microcomputer for the modern era. It uses best of breed components and strives to keep 8-bit feeling, while being usable for daily basis computing activities.
 
-<img src="/images/2024-05-08_protoA.jpg" style="float: right;width:33%;"/>
+<img src="/images/2024-05-11_board.jpg" style="float: right;width:33%;"/>
 
 ### Components
 
@@ -18,7 +18,7 @@ Modern 8-bit microcomputer
 - Video: [CGIA][2], DVI-D
 - Sound: Yamaha SD-1 [YMF825][3], Mono, 2xRCA
 - Input/Output:
-  - [RP816-RIA][4]
+  - [RP816-RIA][4]: USB mass storage, HID, UART
   - [ESP32-C3][5]: Wi-Fi, BT, [GPIO][11]
 - Ports:
   - 6x [USB][6] port + 2x internal
