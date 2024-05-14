@@ -8,7 +8,7 @@ The protoboards arrived! 🎉
 
 The quality of boards is excellent, as expected of [PCBWay](https://www.pcbway.com/). 🦾
 
-![protoA board PCBs](/images/2024-05-06_protoA.png)
+![protoA board PCBs](/media/2024-05-06_protoA.png)
 
 The obvious hardware bug is glaring… 🤦‍♂️ Oh well… I can work around.<br>
 I wonder can you spot it?
@@ -16,9 +16,9 @@ I wonder can you spot it?
 After finishing the assembly of THT components, the board looks as expected.
 Let's see how it works.
 
-![protoA board](/images/2024-05-08_protoA_1.png)
+![protoA board](/media/2024-05-08_protoA_1.png)
 
-![protoA board](/images/2024-05-08_protoA_3.png)
+![protoA board](/media/2024-05-08_protoA_3.png)
 
 Testing reveals I can run memory at 1/4 of expected 133MHz. 😥
 I am still experiencing QPI CLK ringing, causing memory reads to skip nybbles.
@@ -56,7 +56,7 @@ CPU: 0xFF00FF R
 
 The second and third bytes of address are swapped. Quick look at the schematic reveals the issue.
 
-![protoA CE reversed BUG](/images/2024-05-08_protoA_BE_bug.png)
+![protoA CE reversed BUG](/media/2024-05-08_protoA_BE_bug.png)
 
 BE0 and BE1 got connected reversed. Who designs symbols like THIS??!
 

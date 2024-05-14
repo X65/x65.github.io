@@ -29,7 +29,7 @@ we want to put them.
 
 Time to wire it up on the breadboard!
 
-![X65 breadboard](/images/2024-01-20_board.jpg)
+![X65 breadboard](/media/2024-01-20_board.jpg)
 
 [1]: https://en.wikipedia.org/wiki/WDC_65C816
 [2]: https://neo6502.com

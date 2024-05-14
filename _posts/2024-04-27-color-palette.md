@@ -81,18 +81,18 @@ moving it up `3/4` I have what I need.
 
     cos(1/7 * 2π x)/4 + 3/4
 
-![cosine graph](/images/2024-04-27_cosine.png)
+![cosine graph](/media/2024-04-27_cosine.png)
 
 They said, you will never use math in your life after leaving school…
 
 After plugging the equations to some simple JavaScript and generating [visualization
-in HTML table](/images/2024-04-27_colors.html) I ended up with the following palette of colors:
+in HTML table](/media/2024-04-27_colors.html) I ended up with the following palette of colors:
 
-![X65 palette](/images/2024-04-27_X65_RGB_palette.png)
+![X65 palette](/media/2024-04-27_X65_RGB_palette.png)
 
 Let's check how it performs live… Recolored [Carrion's Tiger][2] image looks like this:
 
-![Frenzy-Pic-KurosawaX65](/images/2024-04-27_carrion-tigr65.webp)
+![Frenzy-Pic-KurosawaX65](/media/2024-04-27_carrion-tigr65.webp)
 
 Color me impressed! 🥳
 

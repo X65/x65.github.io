@@ -6,7 +6,7 @@ author: smokku
 
 Working towards textmode terminal on [DVI][2] display…
 
-![DVI text mode on monitor](/images/2024-03-20_DVI_TextMode.png)
+![DVI text mode on monitor](/media/2024-03-20_DVI_TextMode.png)
 
 Based on modified [colour_terminal][1] example.
 

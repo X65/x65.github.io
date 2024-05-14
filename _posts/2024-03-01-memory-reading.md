@@ -28,4 +28,4 @@ FFFF00 D4 02 28 55 5F 11 ED 95 9B 03 31 6E B5 41 53 57
 ]█
 ```
 
-![PIO assembly](/images/2024-03-01_PIO_assembly.png)
+![PIO assembly](/media/2024-03-01_PIO_assembly.png)

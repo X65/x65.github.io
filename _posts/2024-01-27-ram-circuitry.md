@@ -24,7 +24,7 @@ emulate linear 16MB of memory for the CPU.
 
 65816 is living in a Matrix, thinking there is some real DRAM memory and I/O hardware out there…
 
-![X65 breadboard](/images/2024-01-27_board.png)
+![X65 breadboard](/media/2024-01-27_board.png)
 
 [1]: https://en.wikipedia.org/wiki/WDC_65C816
 [2]: https://en.wikipedia.org/wiki/Serial_Peripheral_Interface

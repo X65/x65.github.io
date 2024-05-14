@@ -6,7 +6,7 @@ author: smokku
 
 Done rewriting text mode console to [DVI][1] output.
 
-![DVI console on monitor](/images/2024-03-21_DVI_Console.png)
+![DVI console on monitor](/media/2024-03-21_DVI_Console.png)
 
 Replaced demo font with [Atari ST 8x8][2] font, which is being rendered as 8×16, due to raster line doubling on DVI output. Looks amazing. 🎉
 
