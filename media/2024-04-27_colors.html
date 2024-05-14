@@ -46,7 +46,7 @@
       const H = (h * 360) / 15;
       for (let l = 0; l <= 7; l += 1) {
         const L = (7 + 5 * l) / 49; // | 1/7 |  (5/7) / 7  | 1/7 |
-        const S = Math.cos((1 / 7) * 2 * Math.PI * l) / 4 + 0.5;
+        const S = Math.cos((1 / 7) * 2 * Math.PI * l) / 4 + 5/8;
         COLORS.push(HSL2RGB(H, S, L));
       }
     }
