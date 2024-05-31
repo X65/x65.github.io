@@ -1,5 +1,5 @@
 ---
-title: X65 - Modern 8-bit microcomputer
+title: Home
 ---
 # X65
 

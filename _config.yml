@@ -1,5 +1,13 @@
 repository: X65/x65.github.io
 url: https://x65.zone
+title: X65 - Modern 8-bit microcomputer
+tagline: Modern 8-bit microcomputer
+description: X65 is an effort to build an 8-bit microcomputer for the modern era. It uses best of breed components and strives to keep 8-bit feeling, while being usable for daily basis computing activities.
+
+social:
+  links:
+    - https://github.com/X65
+    - https://discord.gg/TuTe3kymgy
 
 plugins:
   - jekyll-github-metadata
