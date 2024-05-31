@@ -20,3 +20,6 @@ MEM2: 32Mb ISSI
 MEM3: 32Mb ISSI
 USB: 0 devices
 ```
+
+This gives 4x (Quad) memory speed boost. This is crucial as the memory access time
+is the main factor in how fast the CPU can run.
