@@ -14,7 +14,7 @@ Except in our case, the line height is configurable, so you can have 8x1 cells u
 
 As a demo picture, I've converted ["The Mill" by Veto](https://csdb.dk/release/?id=101528):
 
-![The Mill by Veto, converted tto X65](/media/2024-05-29_the-mill-veto.jpeg)
+![The Mill by Veto, converted to X65](/media/2024-05-29_the-mill-veto.jpeg)
 
 As you can see, X65 is now capable of perfectly replicating Commodore 64 HiRes graphics mode.
 (The difference between X65 palette of 128 colours and 16 colours of C64 is unnoticeable.)
