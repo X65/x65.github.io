@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<style>
+  HTML,
+  BODY,
+  TABLE {
+    font-family: monospace;
+    font-size: 12px;
+    background-color: #888;
+  }
+  TD, TH {
+    width: 20px;
+    height: 20px;
+  }
+</style>
+<table>
+  <script>
+    function HSL2RGB(h, s, l) {
+      h /= 360;
+      let r, g, b;
+      if (s === 0) {
+        r = g = b = l; // achromatic
+      } else {
+        const hue2rgb = (p, q, t) => {
+          if (t < 0) t += 1;
+          if (t > 1) t -= 1;
+          if (t < 1 / 6) return p + (q - p) * 6 * t;
+          if (t < 1 / 2) return q;
+          if (t < 2 / 3) return p + (q - p) * (2 / 3 - t) * 6;
+          return p;
+        };
+        const q = l < 0.5 ? l * (1 + s) : l + s - l * s;
+        const p = 2 * l - q;
+        r = hue2rgb(p, q, h + 1 / 3);
+        g = hue2rgb(p, q, h);
+        b = hue2rgb(p, q, h - 1 / 3);
+      }
+      return [r, g, b];
+    }
+
+    let COLORS = [];
+    for (let l = 0; l <= 7; l += 1) {
+      const L = l / 7;
+      COLORS.push(HSL2RGB(0, 0, L));
+    }
+    for (let h = 0; h < 31; h += 1) {
+      const H = (h * 360) / 31;
+      for (let l = 0; l <= 7; l += 1) {
+        const L = (7 + 5 * l) / 49; // | 1/7 |  (5/7) / 7  | 1/7 |
+        const S = Math.cos((1 / 7) * 2 * Math.PI * l) / 4 + 5 / 8;
+        COLORS.push(HSL2RGB(H, S, L));
+      }
+    }
+
+    // Map to 8bit value
+    COLORS = COLORS.map(([r, g, b]) => {
+      r = Math.round(r * 255);
+      g = Math.round(g * 255);
+      b = Math.round(b * 255);
+      return [r, g, b];
+    });
+
+    const toHex = (v) => ("0" + v.toString(16)).slice(-2);
+    for (let i = 0; i < COLORS.length; ) {
+      let row = "";
+      for (let j = 0; j < 8; ++j) {
+        const [r, g, b] = COLORS[i++];
+        row += `0x00${toHex(r)}${toHex(g)}${toHex(b)}, `;
+      }
+      console.log(row + "//");
+    }
+
+    const table = document.querySelector("table");
+    let tr = document.createElement("tr");
+    table.appendChild(tr);
+    tr.appendChild(document.createElement("th"))
+    for (let i = 0; i < 8; ++i) {
+      const td = document.createElement("th");
+      td.innerText = ("00" + i.toString(2)).slice(-3);
+      tr.appendChild(td);
+    }
+    for (let i = 0; i < COLORS.length; ++i) {
+      const [r, g, b] = COLORS[i];
+
+      if (i % 8 === 0) {
+        tr = document.createElement("tr");
+        table.appendChild(tr);
+        const td = document.createElement("th");
+        td.innerText = ("0000" + Math.floor(i / 8).toString(2)).slice(-5);
+        tr.appendChild(td);
+      }
+
+      const td = document.createElement("td");
+      td.style.backgroundColor = `rgb(${r},${g},${b})`;
+      tr.appendChild(td);
+    }
+  </script>
+</table>
