@@ -4,6 +4,7 @@ category: news
 author: smokku
 ---
 
+<img src="/media/2024-06-24_X65protoBboard.png" style="float: right;height:135px;" title="protoB pixel-art by Ricketyhalo"/>
 The second set of protoboards has arrived! 🎉
 
 The quality of these boards is just as excellent [as before]({% post_url 2024-05-09-protoA-board-arrived %}).
