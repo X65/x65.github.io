@@ -3,11 +3,11 @@ title: Home
 ---
 # X65
 
-Modern 8-bit microcomputer
+Modern 8-bit Microcomputer
 
 ## READY<br><blink>&#x2588;</blink>
 
-[X65](https://github.com/X65) is an effort to build an 8-bit microcomputer for the modern era. It uses best of breed components and strives to keep 8-bit feeling, while being usable for daily basis computing activities.
+[X65](https://github.com/X65) is an effort to build an 8-bit microcomputer for the modern era. It uses best of breed components and strives to maintain the 8-bit feeling while being usable for daily basis computing activities.
 
 <img src="/media/2024-06-20-protoA_protoB.jpeg" style="float: right;width:33%;"/>
 
@@ -24,7 +24,7 @@ Modern 8-bit microcomputer
   - 6x [USB][6] port + 2x internal
   - 2x [DE-9 Joystick][7] port (SEGA wiring)
 
-Hardware is based on [Picocomputer 6502][8] and [Neo6502][9] design providing implementation of non-existing chips and glue to modern digital interfaces (USB, DVI).
+The hardware is based on [Picocomputer 6502][8] and [Neo6502][9] designs providing implementation of non-existing chips and glue to modern digital interfaces (USB, DVI).
 
 [1]: https://en.wikipedia.org/wiki/WDC_65C816
 [2]: https://github.com/X65/X65/wiki/CGIA
