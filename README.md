@@ -14,7 +14,7 @@ Modern 8-bit Microcomputer
 ### Components
 
 - CPU: WDC [65C816][1], ~6MHz
-- RAM: 16MB [SPI PSRAM][10]
+- RAM: 16MB [PSRAM][10]
 - Video: [CGIA][2], DVI-D
 - Sound: Yamaha SD-1 [YMF825][3], Mono, 2xRCA
 - Input/Output:
@@ -35,7 +35,7 @@ The hardware is based on [Picocomputer 6502][8] and [Neo6502][9] designs providi
 [7]: http://wiki.icomp.de/wiki/DE-9_Joystick
 [8]: https://picocomputer.github.io
 [9]: https://neo6502.com
-[10]: https://www.espressif.com.cn/sites/default/files/documentation/esp-psram64_esp-psram64h_datasheet_en.pdf
+[10]: https://www.infineon.com/cms/en/product/memories/psram-pseudostatic-dram/s70kl1282gabhv020/
 [11]: https://en.wikipedia.org/wiki/General-purpose_input/output
 
 ## Why?
