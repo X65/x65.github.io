@@ -2,6 +2,14 @@
 ---
 # Timeline
 
+## 2024-08-25
+
+![2024-08-25](/media/2024-08-25_pico2-VPU.jpg)
+
+## 2024-08-19
+
+![2024-08-19](/media/2024-08-19_protoA-CPU-breakout-board.jpg)
+
 ## 2024-06-20
 
 ![2024-06-20](/media/2024-06-20-protoA_protoB.jpeg)
