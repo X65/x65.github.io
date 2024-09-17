@@ -67,10 +67,10 @@ nav a.nav-active {
   color: var(--main-bg-color);
   text-decoration: none;
 }
-ul {
+ul, ol {
   padding-left: 2em;
 }
-li {
+ul > li {
   list-style-type: disc;
 }
 code.language-plaintext {
