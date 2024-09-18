@@ -2,9 +2,13 @@
 ---
 # Timeline
 
+## 2024-09-17
+
+![2024-09-17](/media/2024-09-17_board.png)
+
 ## 2024-09-15
 
-![2024-08-25](/media/2024-09-15_full-breadboard.jpg)
+![2024-09-15](/media/2024-09-15_full-breadboard.jpg)
 
 ## 2024-08-25
 
