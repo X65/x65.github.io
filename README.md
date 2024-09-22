@@ -37,7 +37,7 @@ providing implementation of non-existing chips and glue to modern digital interf
 [7]: http://wiki.icomp.de/wiki/DE-9_Joystick
 [8]: https://picocomputer.github.io
 [9]: https://neo6502.com
-[10]: https://www.infineon.com/cms/en/product/memories/psram-pseudostatic-dram/s70kl1282gabhv020/
+[10]: https://www.apmemory.com/products/psram-iot-ram/
 [11]: https://en.wikipedia.org/wiki/General-purpose_input/output
 [12]: https://en.wikipedia.org/wiki/Pulse-width_modulation
 [13]: https://www.rohm.com/products/audio-video/audio-processors/analog/bd3461fs-product
