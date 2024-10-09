@@ -13,9 +13,17 @@
     gap: 2em;
   }
   TD,
-  TH {
+  TH,
+  .color {
     width: 20px;
     height: 20px;
+  }
+  TD {
+    cursor: pointer;
+  }
+  .color {
+    border: 1px solid black;
+    display: inline-block;
   }
 </style>
 <table>
@@ -43,10 +51,12 @@
       return [r, g, b];
     }
 
+    function toHex(num) {
+      return ("0" + num.toString(16)).slice(-2);
+    }
+
     function toHexColor(r, g, b) {
-      return `#${("0" + r.toString(16)).slice(-2)}${(
-        "0" + g.toString(16)
-      ).slice(-2)}${("0" + b.toString(16)).slice(-2)}`;
+      return `#${toHex(r)}${toHex(g)}${toHex(b)}`;
     }
 
     let COLORS = [];
@@ -71,7 +81,6 @@
       return [r, g, b];
     });
 
-    const toHex = (v) => ("0" + v.toString(16)).slice(-2);
     for (let i = 0; i < COLORS.length; ) {
       let row = "";
       for (let j = 0; j < 8; ++j) {
@@ -104,7 +113,7 @@
       const td = document.createElement("td");
       td.style.backgroundColor = `rgb(${r},${g},${b})`;
       const hexColor = toHexColor(r, g, b);
-      td.title = hexColor + ` : ${i} \$${i.toString(16)}`;
+      td.title = hexColor + ` : ${i} \$${toHex(i)}`;
       td.onclick = () => navigator.clipboard.writeText(hexColor);
       tr.appendChild(td);
     }
@@ -114,7 +123,9 @@
   <script>
     function findColor() {
       const input = document.getElementById("color");
+      const inputBox = document.getElementById("color-box");
       const output = document.getElementById("closest");
+      const outputBox = document.getElementById("closest-box");
       let value = input.value;
       if (value.startsWith("#")) value = value.slice(1);
       const R = parseInt(value.substr(0, 2), 16);
@@ -123,24 +134,32 @@
       if (Number.isInteger(R) && Number.isInteger(G) && Number.isInteger(B)) {
         let distance = Number.POSITIVE_INFINITY;
         let color = "---";
+        let colorString = "---";
         for (let i = 0; i < COLORS.length; ++i) {
           const [r, g, b] = COLORS[i];
           const d = Math.sqrt(
             Math.pow(R - r, 2) + Math.pow(G - g, 2) + Math.pow(B - b, 2)
           );
-          console.log(COLORS[i], d);
           if (d < distance) {
             distance = d;
-            color = toHexColor(r, g, b) + ` : ${i} \$${i.toString(16)}`;
+            color = toHexColor(r, g, b);
+            colorString = color + ` : ${i} \$${toHex(i)}`;
           }
         }
-        output.value = color;
-        console.debug(R, G, B);
+        output.value = colorString;
+        outputBox.style.backgroundColor = color;
+        inputBox.style.backgroundColor = toHexColor(R, G, B);
       } else {
         output.value = "---";
       }
     }
   </script>
-  <label>Find color<input id="color" onchange="findColor()" /></label>
-  <label>Closest color<input id="closest" readonly /></label>
+  <label>Find color
+    <input id="color" onchange="findColor()">
+    <input class="color" id="color-box" disabled>
+  </label>
+  <label>Closest color
+    <input id="closest" readonly>
+    <input class="color" id="closest-box" disabled>
+  </label>
 </form>
