@@ -4,7 +4,7 @@ category: news
 author: smokku
 ---
 
-We have a new Project Logo! 🎉
+We have the new Project Logo! 🎉
 
 I went with `MΛTEJ`'s idea of having a Lynx as the mascot and designed the branding around it.
 
