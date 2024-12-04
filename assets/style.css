@@ -73,11 +73,15 @@ ul, ol {
 ul > li {
   list-style-type: disc;
 }
+hr {
+  border: 2px solid var(--main-fg-color);
+}
 code.language-plaintext {
   background-color: var(--secondary-bg-color);
 }
 pre.highlight {
   color: rgb(182, 182, 182);
+  overflow: auto;
 }
 @media print {
   body {
