@@ -18,13 +18,13 @@ Modern 8-bit Microcomputer
 - CPU: WDC [65C816][1], ~6MHz
 - RAM: 16MB [PSRAM][10]
 - Video: [CGIA][2], DVI-D 480p, 384×240px
-- Sound: Yamaha SD-1 [YMF825][3] + 2x [PWM][12], 2xRCA with [mixer][13]
+- Sound: Yamaha SD-1 [YMF825][3] + 2× [PWM][12], 2× RCA with [mixer][13]
 - Input/Output:
   - [RP816-RIA][4]: USB mass storage, HID
   - [ESP32-C3][5]: Wi-Fi, BT, USB-UART
 - Ports:
-  - 6x [USB][6] port + 2x internal
-  - 2x [DE-9 Joystick][7] port (SEGA wiring), [GPIO][11]
+  - 6× [USB][6] port + 2× internal
+  - 2× [DE-9 Joystick][7] port (SEGA wiring), [GPIO][11]
   - Expansion: Full CPU bus, Audio-In, I2C
 
 The hardware is based on [Picocomputer 6502][8] and [Neo6502][9] designs
