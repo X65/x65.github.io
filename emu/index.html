@@ -4,6 +4,12 @@ title: X65 Emulator
 
 <h1><img src="/emu/emu.gif" style="float: left;height:1em;margin-right:0.25em;">X65 Emu</h1>
 
+<blockquote style="font-size:75%">
+    NOTICE: This is a preview of the X65 Emulator that is still
+    a work-in-progress. Many things are not implemented (yet), some things
+    (like the CPU) are stubbed. Anyway… Have fun toying around. 😄
+    </blockquote>
+
 <nav class="emu-nav">{% for item in site.data.emu %}
     <a href="emu.html?file=roms/{{ item.xex }}" target="emuFrame"><img src="roms/{{ item.img }}">{{ item.title }}</a>{% endfor %}
 </nav>
@@ -15,7 +21,5 @@ title: X65 Emulator
 <script>
     var emuFrame = document.querySelector('#emuFrame');
     emuFrame.style.width = '100%';
-    var emuWidth = emuFrame.clientWidth;
-    emuFrame.style.width = emuWidth + 'px';
-    emuFrame.style.height = (emuWidth / 1.6) + 'px';
+    emuFrame.style.height = (emuFrame.clientWidth / 1.6) + 'px';
 </script>
