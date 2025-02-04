@@ -1,0 +1,21 @@
+---
+title: X65 Emulator
+---
+
+<h1><img src="/emu/emu.gif" style="float: left;height:1em;margin-right:0.25em;">X65 Emu</h1>
+
+<nav class="emu-nav">{% for item in site.data.emu %}
+    <a href="emu.html?file=roms/{{ item.xex }}" target="emuFrame"><img src="roms/{{ item.img }}">{{ item.title }}</a>{% endfor %}
+</nav>
+
+<hr>
+
+<iframe src="emu.html?file=roms/MODE2_hello-glyphs.xex" name="emuFrame"  id="emuFrame"></iframe>
+
+<script>
+    var emuFrame = document.querySelector('#emuFrame');
+    emuFrame.style.width = '100%';
+    var emuWidth = emuFrame.clientWidth;
+    emuFrame.style.width = emuWidth + 'px';
+    emuFrame.style.height = (emuWidth / 1.6) + 'px';
+</script>

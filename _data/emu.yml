@@ -1,0 +1,33 @@
+- title: SMON <br>(Machine Monitor)
+  img: SMON.png
+  xex: SMON.xex
+- title: Hello UART!<br>(RIA UART test)
+  img: hello_uart.png
+  xex: hello_uart.xex
+- title: MODE2<br>Text glyphs &amp; colors
+  img: MODE2_hello-glyphs.png
+  xex: MODE2_hello-glyphs.xex
+- title: MODE3<br>Veto – The Mill
+  img: MODE3_Veto-the_mill.png
+  xex: MODE3_Veto-the_mill.xex
+- title: MODE4<br>Super Wonder Boy
+  img: MODE4_SWBoy.png
+  xex: MODE4_SWBoy.xex
+- title: MODE5<br>Carrion – One Zak &amp;…
+  img: MODE5_Carrion-One_Zak_And_His_Kracken.png
+  xex: MODE5_Carrion-One_Zak_And_His_Kracken.xex
+- title: MODE6<br>Farfar – perso1
+  img: MODE6_Farfar-perso1.png
+  xex: MODE6_Farfar-perso1.xex
+- title: MODE7<br>X65 mascot
+  img: MODE7_mascot.png
+  xex: MODE7_mascot.xex
+- title: Raster Bars
+  img: raster_bars.png
+  xex: raster_bars.xex
+- title: RSI<br>Raster Interrupt
+  img: RSI.png
+  xex: RSI.xex
+- title: VBI<br>Vertical Blank Int…
+  img: VBI.png
+  xex: VBI.xex
