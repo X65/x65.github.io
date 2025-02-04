@@ -11,7 +11,10 @@ title: X65 Emulator
     </blockquote>
 
 <nav class="emu-nav">{% for item in site.data.emu %}
-    <a href="emu.html?file=roms/{{ item.xex }}" target="emuFrame"><img src="roms/{{ item.img }}">{{ item.title }}</a>{% endfor %}
+<div>
+    <a href="emu.html?file=roms/{{ item.xex }}" target="emuFrame" class="screenshot"><img src="roms/{{ item.img }}">{{ item.title }}{% if item.src %}
+    <a href="{{ item.src }}" target="_blank" class="source"></a>{% endif %}</a>
+</div>{% endfor %}
 </nav>
 
 <hr>
