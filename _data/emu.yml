@@ -42,3 +42,7 @@
   img: VBI.png
   xex: VBI.xex
   src: https://github.com/X65/examples/blob/main/src/cgia/vbl.asm
+- title: Sprites
+  img: sprites.png
+  xex: sprites.xex
+  src: https://github.com/X65/examples/blob/main/src/cgia/sprites.asm
