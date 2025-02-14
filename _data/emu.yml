@@ -46,3 +46,7 @@
   img: sprites.png
   xex: sprites.xex
   src: https://github.com/X65/examples/blob/main/src/cgia/sprites.asm
+- title: Shadow Of The Beast
+  img: SOTB.png
+  xex: SOTB.xex
+  src: https://github.com/X65/examples/blob/main/src/cgia/sotb.asm
