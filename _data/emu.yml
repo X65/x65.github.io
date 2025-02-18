@@ -50,3 +50,7 @@
   img: SOTB.png
   xex: SOTB.xex
   src: https://github.com/X65/examples/blob/main/src/cgia/sotb.asm
+- title: Mixed Display Modes<br>…and affine rotator
+  img: mixed_modes.png
+  xex: mixed_modes.xex
+  src: https://github.com/X65/examples/blob/main/src/cgia/mixed_modes.asm
