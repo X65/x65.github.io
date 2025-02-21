@@ -18,14 +18,15 @@ Modern 8-bit Microcomputer
 - CPU: WDC [65C816][1], ~6MHz
 - RAM: 16MB [PSRAM][10]
 - Video: [CGIA][2], DVI-D 480p, 384×240px
-- Sound: Yamaha SD-1 [YMF825][3] + 2× [PWM][12], 2× RCA with [mixer][13]
+- Sound: Yamaha SD-1 [YMF825][3] + 2× [PWM][12], 2× RCA with ROHM [BD34602FS-M][13] mixer
 - Input/Output:
   - [RP816-RIA][4]: USB mass storage, HID
   - [ESP32-C3][5]: Wi-Fi, BT, USB-UART
 - Ports:
   - 6× [USB][6] port + 2× internal
-  - 2× [DE-9 Joystick][7] port (SEGA wiring), [GPIO][11]
-  - Expansion: Full CPU bus, Audio-In, I²C
+  - 2× [DE-9 Joystick][7] port, [GPIO][11] using [MCP23017][14]
+  - Expansion: Full CPU bus, Audio-In (mixed), I²C
+- Interrupt Controller: TI [PCF8574A][15]
 
 The hardware is based on [Picocomputer 6502][8] and [Neo6502][9] designs
 providing implementation of non-existing chips and glue to modern digital interfaces (USB, DVI).
@@ -42,7 +43,9 @@ providing implementation of non-existing chips and glue to modern digital interf
 [10]: https://www.apmemory.com/products/psram-iot-ram/
 [11]: https://en.wikipedia.org/wiki/General-purpose_input/output
 [12]: https://en.wikipedia.org/wiki/Pulse-width_modulation
-[13]: https://www.rohm.com/products/audio-video/audio-processors/analog/bd3461fs-product
+[13]: https://www.rohm.com/products/audio-video/audio-processors/analog/bd34602fs-m-product
+[14]: https://www.microchip.com/en-us/product/mcp23017
+[15]: https://www.ti.com/product/PCF8574A
 
 ## Why?
 
