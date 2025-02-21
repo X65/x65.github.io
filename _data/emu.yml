@@ -58,3 +58,7 @@
   img: pwm_samples.png
   xex: pwm_samples.xex
   src: https://github.com/X65/examples/blob/main/src/cgia/pwm_samples.asm
+- title: OPL3 VGM playback<br>Tyrian, The Level
+  img: opl.png
+  xex: opl.xex
+  src: https://github.com/X65/examples/blob/main/src/sound/opl.asm
