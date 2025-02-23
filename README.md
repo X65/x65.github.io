@@ -26,7 +26,7 @@ Modern 8-bit Microcomputer
   - 6× [USB][6] port + 2× internal
   - 2× [DE-9 Joystick][7] port, [GPIO][11] using TI [TCA6416A][14]
   - Expansion: Full CPU bus, Audio-In (mixed), I²C
-- Interrupt Controller: [MCP23008T][15]
+- Interrupt Controller: [MCP23008][15]
 
 The hardware is based on [Picocomputer 6502][8] and [Neo6502][9] designs
 providing implementation of non-existing chips and glue to modern digital interfaces (USB, DVI).
