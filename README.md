@@ -24,9 +24,9 @@ Modern 8-bit Microcomputer
   - [ESP32-C3][5]: Wi-Fi, BT, USB-UART
 - Ports:
   - 6× [USB][6] port + 2× internal
-  - 2× [DE-9 Joystick][7] port, [GPIO][11] using [MCP23017][14]
+  - 2× [DE-9 Joystick][7] port, [GPIO][11] using TI [TCA6416A][14]
   - Expansion: Full CPU bus, Audio-In (mixed), I²C
-- Interrupt Controller: TI [PCF8574A][15]
+- Interrupt Controller: [MCP23008T][15]
 
 The hardware is based on [Picocomputer 6502][8] and [Neo6502][9] designs
 providing implementation of non-existing chips and glue to modern digital interfaces (USB, DVI).
@@ -44,8 +44,8 @@ providing implementation of non-existing chips and glue to modern digital interf
 [11]: https://en.wikipedia.org/wiki/General-purpose_input/output
 [12]: https://en.wikipedia.org/wiki/Pulse-width_modulation
 [13]: https://www.rohm.com/products/audio-video/audio-processors/analog/bd34602fs-m-product
-[14]: https://www.microchip.com/en-us/product/mcp23017
-[15]: https://www.ti.com/product/PCF8574A
+[14]: https://www.ti.com/product/TCA6416A
+[15]: https://www.microchip.com/en-us/product/mcp23008
 
 ## Why?
 
