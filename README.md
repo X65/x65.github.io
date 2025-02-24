@@ -17,19 +17,19 @@ Modern 8-bit Microcomputer
 
 - CPU: WDC [65C816][1], ~6MHz
 - RAM: 16MB [PSRAM][10]
-- Video: [CGIA][2], DVI-D 480p, 384×240px
-- Sound: Yamaha SD-1 [YMF825][3] + 2× [PWM][12], 2× RCA with ROHM [BD34602FS-M][13] mixer
+- Video: [CGIA][2], DVI-D 480p, 384×240px<br>(C64/A800 on steroids)
+- Sound: Yamaha SD-1 [YMF825][3] (OPL3+) + 2× [PWM][12],<br>2× RCA with ROHM [BD34602FS-M][13] mixer
 - Input/Output:
   - [RP816-RIA][4]: USB mass storage, HID
   - [ESP32-C3][5]: Wi-Fi, BT, USB-UART
 - Ports:
-  - 6× [USB][6] port + 2× internal
-  - 2× [DE-9 Joystick][7] port, [GPIO][11] using TI [TCA6416A][14]
+  - 6× [USB][6] port + 2× internal USB pins
+  - 2× [DE-9 Joystick][7] port / [GPIO][11] using TI [TCA6416A][14]
   - Expansion: Full CPU bus, Audio-In (mixed), I²C
 - Interrupt Controller: [MCP23008][15]
 
 The hardware is based on [Picocomputer 6502][8] and [Neo6502][9] designs
-providing implementation of non-existing chips and glue to modern digital interfaces (USB, DVI).
+providing implementation of non-existing chips and glue to modern digital interfaces.
 
 [1]: https://en.wikipedia.org/wiki/WDC_65C816
 [2]: https://github.com/X65/X65/wiki/CGIA
