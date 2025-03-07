@@ -62,3 +62,9 @@
   img: opl.png
   xex: opl.xex
   src: https://github.com/X65/examples/blob/main/src/sound/opl.asm
+- title: Aot… PETSCII Robots<br>Amiga title screen
+  img: PetsciiRobots.png
+  xex: PetsciiRobots.xex
+- title: Dune I<br>Chani encounter
+  img: Dune_Chani.png
+  xex: Dune_Chani.xex
