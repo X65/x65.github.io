@@ -19,10 +19,16 @@ title: X65 Emulator
 
 <hr>
 
+<script>
+</script>
 <iframe src="emu.html?file=roms/SOTB.xex" name="emuFrame"  id="emuFrame"></iframe>
 
 <script>
     var emuFrame = document.querySelector('#emuFrame');
     emuFrame.style.width = '100%';
     emuFrame.style.height = (emuFrame.clientWidth / 1.6 + 24) + 'px';
+    var params = new URL(document.location.toString()).searchParams;
+    var ROM = params.get('rom');
+    if (ROM && !ROM.endsWith('.xex')) ROM += ".xex";
+    if (ROM) emuFrame.setAttribute("src", "emu.html?file=roms/" + ROM);
 </script>
