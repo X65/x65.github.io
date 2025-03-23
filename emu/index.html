@@ -12,23 +12,21 @@ title: X65 Emulator
 
 <nav class="emu-nav">{% for item in site.data.emu %}
 <div>
-    <a href="emu.html?file=roms/{{ item.xex }}" target="emuFrame" class="screenshot"><img src="roms/{{ item.img }}">{{ item.title }}{% if item.src %}
+    <a href="emu.html?file=roms/{{ item.xex }}" target="Emu" class="screenshot"><img src="roms/{{ item.img }}">{{ item.title }}{% if item.src %}
     <a href="{{ item.src }}" target="_blank" class="source"></a>{% endif %}</a>
 </div>{% endfor %}
 </nav>
 
 <hr>
 
-<script>
-</script>
-<iframe src="emu.html?file=roms/SOTB.xex" name="emuFrame"  id="emuFrame"></iframe>
+<iframe src="emu.html?file=roms/SOTB.xex" name="Emu" id="Emu"></iframe>
 
 <script>
-    var emuFrame = document.querySelector('#emuFrame');
-    emuFrame.style.width = '100%';
-    emuFrame.style.height = (emuFrame.clientWidth / 1.6 + 24) + 'px';
+    var Emu = document.querySelector('#Emu');
+    Emu.style.width = '100%';
+    Emu.style.height = (Emu.clientWidth / 1.6 + 24) + 'px';
     var params = new URL(document.location.toString()).searchParams;
     var ROM = params.get('rom');
     if (ROM && !ROM.endsWith('.xex')) ROM += ".xex";
-    if (ROM) emuFrame.setAttribute("src", "emu.html?file=roms/" + ROM);
+    if (ROM) Emu.setAttribute("src", "emu.html?file=roms/" + ROM);
 </script>
