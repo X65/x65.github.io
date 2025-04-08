@@ -9,7 +9,8 @@ Modern 8-bit Microcomputer
 
 ## READY<br><blink>&#x2588;</blink>
 
-[X65](https://github.com/X65) is an 8-bit microcomputer for the modern era. It uses best of breed components and strives to maintain the 8-bit feeling while being usable for daily basis computing activities.
+[X65](https://github.com/X65) is an 8-bit microcomputer for the modern era.<br>
+It blends the core principles of 8-bit computing with modern hardware components to remain practical and capable of handling everyday tasks.
 
 <a href="/timeline.html"><img src="/media/2025-04-06_board-vis.png" style="float: right;width:33%;"></a>
 
@@ -50,14 +51,15 @@ providing implementation of non-existing chips and glue to modern digital interf
 
 ## Why?
 
-Because we need ["Understandable Computers" to make computers understandable](https://www.youtube.com/watch?v=2H2mh8wLXco).
+We need ["Understandable Computers" to make computers understandable][17].<br>
+Simple machines, where each part has a clear purpose, make the best teaching tools, not just for learning but for growing. They invite curiosity, exploration, and insight in a way modern systems no longer do.
 
-> It's like our entire technology subculture looked up and said "HOLY CRAP WE ARE DROWNING IN COMPLEXITY!"<br>
-> Remember when we WEREN'T? Let's go play with THAT stuff!<br>
-> -- Feoh
+The X65 is also just *fun*. It is a machine you can truly get to know, shape, and expand. With much of its hardware defined in software, it is uniquely easy to modify and make your own. In an age of sealed boxes and hidden layers, X65 brings back the sense of agency we once had - the joy of a computer that answers to *you*.
+
+[17]: https://www.youtube.com/watch?v=2H2mh8wLXco
 
 ## Contact
 
-Login to [X65.zone BBS](https://bbs.x65.zone/),
-write to: [contact@x65.zone](mailto:contact@x65.zone?subject=X65)
-or [join Discord](https://discord.gg/TuTe3kymgy) chat.
+Call 🖀 [X65.zone BBS](https://bbs.x65.zone/),
+write to: 📨 [contact@x65.zone](mailto:contact@x65.zone?subject=X65)
+or 🗯️ [join Discord](https://discord.gg/TuTe3kymgy) chat.
