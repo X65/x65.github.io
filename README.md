@@ -15,7 +15,7 @@ Modern 8-bit Microcomputer
 
 ### Components
 
-- CPU: WDC [65C816][1], ~6MHz
+- CPU: WDC [65C816][1], [~6MHz][16]
 - RAM: 16MB [PSRAM][10]
 - Video: [CGIA][2], DVI-D 480p, 384×240px<br>(C64/A800 on steroids)
 - Sound: Yamaha SD-1 [YMF825][3] (OPL3+) + 2× [PWM][12],<br>2× RCA with ROHM [BD34602FS-M][13] mixer
@@ -46,6 +46,7 @@ providing implementation of non-existing chips and glue to modern digital interf
 [13]: https://www.rohm.com/products/audio-video/audio-processors/analog/bd34602fs-m-product
 [14]: https://www.ti.com/product/TCA6416A
 [15]: https://www.microchip.com/en-us/product/mcp23008
+[16]: {% post_url 2024-03-07-VAB-memory-optimization %}
 
 ## Why?
 
