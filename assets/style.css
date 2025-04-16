@@ -197,10 +197,12 @@ a[href^="https://youtu.be/"]:hover::after {
 .emu-nav > div:hover a.source::after {
   opacity: 1;
 }
-iframe#emuFrame {
+iframe#Emu {
   width: 1024px;
   height: 640px;
   border: none;
   resize: both;
   overflow: hidden;
+  min-width: 384px;
+  min-height: 240px;
 }

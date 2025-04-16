@@ -29,4 +29,11 @@ title: X65 Emulator
     var ROM = params.get('rom');
     if (ROM && !ROM.endsWith('.xex')) ROM += ".xex";
     if (ROM) Emu.setAttribute("src", "emu.html?file=roms/" + ROM);
+
+    for (var link of document.querySelectorAll('.emu-nav a')) {
+        link.addEventListener('click', function(e) {
+            ROM = this.getAttribute('href').replace('emu.html?file=roms/', '');
+            window.history.pushState(null, '', '/emu/?rom=' + ROM + '#Emu');
+        });
+    }
 </script>
