@@ -7,7 +7,7 @@ title: Home
 
 Modern 8-bit Microcomputer
 
-## READY<br><blink>&#x2588;</blink>
+#### READY<br><blink>&#x2588;</blink>
 
 [X65](https://github.com/X65) is an 8-bit microcomputer for the modern era.<br>
 It blends the core principles of 8-bit computing with modern hardware components to remain practical and capable of handling everyday tasks.
@@ -21,9 +21,9 @@ It blends the core principles of 8-bit computing with modern hardware components
 - **Video**: [CGIA][2], DVI-D 480p (384×240px)<br>
   (C64/A800 on steroids)
 - **Audio**:
-  - Yamaha SD-1 [YMF825][3] (OPL3+)
+  - Yamaha SD-1 [YMF825][3] (next-gen OPL3)
   - 2× [PWM][12]
-  - 2× RCA out via ROHM [BD34602FS-M][13] mixer
+  - 2× RCA out, 2× RCA in and Ext-In<br>via ROHM [BD34602FS-M][13] mixer
 - **I/O**:
   - [RP816-RIA][4] (USB mass storage, HID)
   - [ESP32-C3][5] (Wi-Fi, Bluetooth, USB-UART)
@@ -40,7 +40,7 @@ providing implementations of non-existing chips and glue to modern digital inter
 
 X65 runs its own native operating system: **OS/816**.
 
-OS/816 is built specifically for the 65C816 and uses its 16-bit capabilities fully. It provides a simple environment for applications, shell access, and low-level programming, without legacy overhead or unnecessary complexity.
+OS/816 is built specifically for the 65C816 and uses its 16-bit capabilities. It provides a simple environment for multitasking, applications, shell access, and low-level programming, without legacy overhead or unnecessary complexity.
 
 The system is designed to be practical and transparent. You can write code close to the hardware, or build higher-level tools if you want. It's easy to follow, easy to extend, and doesn't get in the way.
 
@@ -74,4 +74,4 @@ The X65 is also just *fun*. It is a machine you can truly get to know, shape, an
 
 Call 🖀 [X65.zone BBS](https://bbs.x65.zone/),
 write to: 📨 [contact@x65.zone](mailto:contact@x65.zone?subject=X65)
-or 🗯️ [join Discord](https://discord.gg/TuTe3kymgy) chat.
+or 💬 [join Discord](https://discord.gg/TuTe3kymgy) chat.
