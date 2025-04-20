@@ -16,21 +16,33 @@ It blends the core principles of 8-bit computing with modern hardware components
 
 ### Components
 
-- CPU: WDC [65C816][1], [~6MHz][16]
-- RAM: 16MB [PSRAM][10]
-- Video: [CGIA][2], DVI-D 480p, 384×240px<br>(C64/A800 on steroids)
-- Sound: Yamaha SD-1 [YMF825][3] (OPL3+) + 2× [PWM][12],<br>2× RCA with ROHM [BD34602FS-M][13] mixer
-- Input/Output:
-  - [RP816-RIA][4]: USB mass storage, HID
-  - [ESP32-C3][5]: Wi-Fi, BT, USB-UART
-- Ports:
-  - 6× [USB][6] port + 2× internal USB pins
-  - 2× [DE-9 Joystick][7] port / [GPIO][11] using TI [TCA6416A][14]
+- **CPU**: WDC [65C816][1] @ [~6MHz][16]
+- **RAM**: 16MB [PSRAM][10]
+- **Video**: [CGIA][2], DVI-D 480p (384×240px)<br>
+  (C64/A800 on steroids)
+- **Audio**:
+  - Yamaha SD-1 [YMF825][3] (OPL3+)
+  - 2× [PWM][12]
+  - 2× RCA out via ROHM [BD34602FS-M][13] mixer
+- **I/O**:
+  - [RP816-RIA][4] (USB mass storage, HID)
+  - [ESP32-C3][5] (Wi-Fi, Bluetooth, USB-UART)
+- **Ports**:
+  - 6× [USB][6] ports + 2× internal USB pins
+  - 2× [DE-9 Joystick][7] ports / [GPIO][11] (via TI [TCA6416A][14])
   - Expansion: CPU bus, 4× IO_EN, 4× IRQ, Audio-In (mixed), I²C
-- Interrupt Controller: [MCP23008][15]
+- **Interrupt controller**: [MCP23008][15]
 
-The hardware is based on [Picocomputer 6502][8] and [Neo6502][9] designs
-providing implementation of non-existing chips and glue to modern digital interfaces.
+The hardware is based on [Picocomputer 6502][8] and [Neo6502][9] designs,
+providing implementations of non-existing chips and glue to modern digital interfaces.
+
+### OS/816
+
+X65 runs its own native operating system: **OS/816**.
+
+OS/816 is built specifically for the 65C816 and uses its 16-bit capabilities fully. It provides a simple environment for applications, shell access, and low-level programming, without legacy overhead or unnecessary complexity.
+
+The system is designed to be practical and transparent. You can write code close to the hardware, or build higher-level tools if you want. It's easy to follow, easy to extend, and doesn't get in the way.
 
 [1]: https://en.wikipedia.org/wiki/WDC_65C816
 [2]: https://github.com/X65/X65/wiki/CGIA
