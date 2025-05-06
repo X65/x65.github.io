@@ -9,40 +9,58 @@ Modern 8-bit Microcomputer
 
 #### READY<br><blink>&#x2588;</blink>
 
-[X65](https://github.com/X65) is an 8-bit microcomputer for the modern era.<br>
-It blends the core principles of 8-bit computing with modern hardware components to remain practical and capable of handling everyday tasks.
+[X65](https://github.com/X65) is an 8-bit microcomputer for the modern era.  
+It blends the core principles of 8-bit computing with modern hardware components, making it practical and capable of handling everyday tasks.
 
-<a href="/timeline.html"><img src="/media/2025-04-06_board-vis.png" style="float: right;width:33%;"></a>
+<a href="/timeline.html"><img src="/media/2025-04-06_board-vis.png" alt="X65 Board Visualization" style="float:right;width:33%;"></a>
 
-### Components
+## Components
 
-- **CPU**: WDC [65C816][1] @ [~6MHz][16]
+- **CPU**: WDC [65C816][1] @ [~6MHz][17]
 - **RAM**: 16MB [PSRAM][10]
-- **Video**: [CGIA][2], DVI-D 480p (384×240px)<br>
-  (C64/A800 on steroids)
+- **Video**: [CGIA][2], DVI-D 480p (384×240px)  
+  *(C64/A800 on steroids)*
 - **Audio**:
   - Yamaha SD-1 [YMF825][3] (next-gen OPL3)
-  - 2× [PWM][12]
-  - 2× RCA out, 2× RCA in and Ext-In<br>via ROHM [BD34602FS-M][13] mixer
+  - 2× [PWM][12] channels
+  - 2× RCA out, 2× RCA in, 2+1 Exp-in  
+    via ROHM [BD34602FS-M][13] audio mixer
 - **I/O**:
   - [RP816-RIA][4] (USB mass storage, HID)
   - [ESP32-C3][5] (Wi-Fi, Bluetooth, USB-UART)
 - **Ports**:
   - 6× [USB][6] ports + 2× internal USB pins
   - 2× [DE-9 Joystick][7] ports / [GPIO][11] (via TI [TCA6416A][14])
-  - Expansion: CPU bus, 4× IO_EN, 4× IRQ, Audio-In (mixed), I²C
+  - **Expansion**: CPU bus, 4× IO_EN, 4× IRQ, Audio-In (mixed), I²C
 - **Interrupt controller**: [MCP23008][15]
 
-The hardware is based on [Picocomputer 6502][8] and [Neo6502][9] designs,
-providing implementations of non-existing chips and glue to modern digital interfaces.
+> The hardware is based on [Picocomputer 6502][8] and [Neo6502][9] designs,
+> providing implementations of non-existing chips and glue to modern digital interfaces.
 
-### OS/816
+## OS/816
 
 X65 runs its own native operating system: **OS/816**.
 
-OS/816 is built specifically for the 65C816 and uses its 16-bit capabilities. It provides a simple environment for multitasking, applications, shell access, and low-level programming, without legacy overhead or unnecessary complexity.
+OS/816 is built specifically for the 65C816 and leverages its capabilities. It provides:
 
-The system is designed to be practical and transparent. You can write code close to the hardware, or build higher-level tools if you want. It's easy to follow, easy to extend, and doesn't get in the way.
+- Simple multitasking environment
+- Application framework
+- Shell access
+- Low-level programming interfaces
+
+All without legacy overhead or unnecessary complexity.
+
+The system is designed to be practical and transparent. You can write code close to the hardware or build higher-level tools as needed. It is easy to follow, easy to extend, and won't get in your way.
+
+## Why X65?
+
+We need ["Understandable Computers" to make computers understandable][16].
+
+Simple machines with clear component purposes make the best teaching tools - not just for learning, but for growth. They invite curiosity, exploration, and insight in ways modern systems no longer do.
+
+The X65 is also just *fun*.  
+It is a machine you can truly get to know, shape, and expand.  
+With much of its hardware defined in software, it is uniquely easy to modify and make your own. In an age of sealed boxes and hidden layers, X65 brings back the sense of agency we once had - the joy of a computer that answers to *you*.
 
 [1]: https://en.wikipedia.org/wiki/WDC_65C816
 [2]: https://github.com/X65/X65/wiki/CGIA
@@ -59,19 +77,11 @@ The system is designed to be practical and transparent. You can write code close
 [13]: https://www.rohm.com/products/audio-video/audio-processors/analog/bd34602fs-m-product
 [14]: https://www.ti.com/product/TCA6416A
 [15]: https://www.microchip.com/en-us/product/mcp23008
-[16]: {% post_url 2024-03-07-VAB-memory-optimization %}
-
-## Why?
-
-We need ["Understandable Computers" to make computers understandable][17].<br>
-Simple machines, where each part has a clear purpose, make the best teaching tools, not just for learning but for growing. They invite curiosity, exploration, and insight in a way modern systems no longer do.
-
-The X65 is also just *fun*. It is a machine you can truly get to know, shape, and expand. With much of its hardware defined in software, it is uniquely easy to modify and make your own. In an age of sealed boxes and hidden layers, X65 brings back the sense of agency we once had - the joy of a computer that answers to *you*.
-
-[17]: https://www.youtube.com/watch?v=2H2mh8wLXco
+[16]: https://www.youtube.com/watch?v=2H2mh8wLXco
+[17]: {% post_url 2024-03-07-VAB-memory-optimization %}
 
 ## Contact
 
-Call 🖀 [X65.zone BBS](https://bbs.x65.zone/),
-write to: 📨 [contact@x65.zone](mailto:contact@x65.zone?subject=X65)
-or 💬 [join Discord](https://discord.gg/TuTe3kymgy) chat.
+Join 💬 [Discord Community](https://discord.gg/TuTe3kymgy),  
+Email 📨 [contact@x65.zone](mailto:contact@x65.zone?subject=X65)  
+Call 🖀 [X65.zone BBS](https://bbs.x65.zone/).
