@@ -52,13 +52,6 @@ title: X65 Emulator
     var Emu = document.querySelector('#Emu');
     Emu.style.width = '100%';
     Emu.style.height = (Emu.clientWidth / 1.6 + 24) + 'px';
-    var params = new URL(document.location.toString()).searchParams;
-    var ROM = params.get('rom');
-    if (ROM && !ROM.endsWith('.xex')) ROM += ".xex";
-    if (ROM) {
-        Emu.setAttribute("src", "emu.html?file=roms/" + ROM);
-        updateOG(ROM);
-    }
 
     for (var link of document.querySelectorAll('.emu-nav a')) {
         link.addEventListener('click', function(e) {
@@ -67,4 +60,13 @@ title: X65 Emulator
             updateOG(ROM);
         });
     }
+
+    var params = new URL(document.location.toString()).searchParams;
+    var ROM = params.get('rom');
+    if (ROM && !ROM.endsWith('.xex')) ROM += ".xex";
+    if (ROM) {
+        Emu.setAttribute("src", "emu.html?file=roms/" + ROM);
+        updateOG(ROM);
+    }
+
 </script>
