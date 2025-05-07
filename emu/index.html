@@ -22,18 +22,49 @@ title: X65 Emulator
 <iframe src="emu.html?file=roms/SOTB.xex" name="Emu" id="Emu"></iframe>
 
 <script>
+    var ROMS = []
+{% for item in site.data.emu %}    ROMS.push({ xex: "{{ item.xex }}", img: "{{ item.img }}", title: "{{ item.title }}", src: "{{ item.src }}" });
+{% endfor %}
+    var orgTitle = document.title;
+    var og_title = document.querySelector('meta[property="og:title"]');
+    var og_title_content = og_title && og_title.content;
+    var tt_title = document.querySelector('meta[property="twitter:title"]');
+    var tt_title_content = tt_title && tt_title.content;
+    var og_description = document.querySelector('meta[property="og:description"]');
+    var og_description_content = og_description && og_description.content;
+    var og_image = document.querySelector('meta[property="og:image"]');
+    var og_image_content = og_image && og_image.content;
+    var og_url = document.querySelector('meta[property="og:url"]');
+    var og_url_content = og_url && og_url.content;
+    function updateOG(rom) {
+        document.title = ROM + " - " + orgTitle;
+        og_title.content = tt_title.content = ROM + " - " + (og_title_content || orgTitle);
+        var ROM_data = ROMS.find(function(R) {return R.xex == ROM});
+        if (ROM_data) {
+            if (!og_description) { og_description = document.createElement("meta"); og_description.setAttribute("property", "og:description"); document.head.appendChild(og_description);}
+            og_description.content = ROM_data.title.replaceAll("<br>", "\n");
+            if (!og_image && og_url_content) { og_image = document.createElement("meta"); og_image.setAttribute("property", "og:image"); document.head.appendChild(og_image);}
+            og_image.content = og_url_content + "roms/" + ROM_data.img;
+            if (og_url_content) og_url.content = og_url_content + "?rom=" + ROM;
+        }
+    }
+
     var Emu = document.querySelector('#Emu');
     Emu.style.width = '100%';
     Emu.style.height = (Emu.clientWidth / 1.6 + 24) + 'px';
     var params = new URL(document.location.toString()).searchParams;
     var ROM = params.get('rom');
     if (ROM && !ROM.endsWith('.xex')) ROM += ".xex";
-    if (ROM) Emu.setAttribute("src", "emu.html?file=roms/" + ROM);
+    if (ROM) {
+        Emu.setAttribute("src", "emu.html?file=roms/" + ROM);
+        updateOG(ROM);
+    }
 
     for (var link of document.querySelectorAll('.emu-nav a')) {
         link.addEventListener('click', function(e) {
             ROM = this.getAttribute('href').replace('emu.html?file=roms/', '');
             window.history.pushState(null, '', '/emu/?rom=' + ROM + '#Emu');
+            updateOG(ROM);
         });
     }
 </script>
