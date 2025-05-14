@@ -4,10 +4,21 @@ title: X65 - Modern 8-bit microcomputer
 tagline: Modern 8-bit microcomputer
 description: X65 is an 8-bit microcomputer for the modern era.
 
+author:
+  twitter: X65pc
+twitter:
+  username: X65pc
+  card: summary_large_image
 social:
+  name: X65 Project
   links:
     - https://github.com/X65
     - https://discord.gg/TuTe3kymgy
+    - https://x.com/X65pc
+    - https://www.youtube.com/@X65pc
+    - https://patreon.com/X65pc
+logo: /assets/paw_logo_512.png
+timezone: Europe/Warsaw
 
 plugins:
   - jekyll-github-metadata
