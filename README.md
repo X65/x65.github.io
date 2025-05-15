@@ -32,7 +32,7 @@ It blends the core principles of 8-bit computing with modern hardware components
   - 6× [USB][6] ports + 2× internal USB pins
   - 2× [DE-9 Joystick][7] ports / [GPIO][11] (via TI [TCA6416A][14])
   - **Expansion**: CPU bus, 4× IO_EN, 4× IRQ, Audio-In (mixed), I²C
-- **Interrupt controller**: [MCP23008][15]
+- **Interrupt controller**: memory-mapped flags register
 
 > The hardware is based on [Picocomputer 6502][8] and [Neo6502][9] designs,
 > providing implementations of non-existing chips and glue to modern digital interfaces.
@@ -76,7 +76,6 @@ With much of its hardware defined in software, it is uniquely easy to modify and
 [12]: https://en.wikipedia.org/wiki/Pulse-width_modulation
 [13]: https://www.rohm.com/products/audio-video/audio-processors/analog/bd34602fs-m-product
 [14]: https://www.ti.com/product/TCA6416A
-[15]: https://www.microchip.com/en-us/product/mcp23008
 [16]: https://www.youtube.com/watch?v=2H2mh8wLXco
 [17]: {% post_url 2024-03-07-VAB-memory-optimization %}
 
