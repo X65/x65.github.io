@@ -10,11 +10,9 @@
 <link rel="shortcut icon" type="image/png" href="/assets/paw_logo_32.png">
 {% feed_meta %}
 {% seo %}
-{% if site.posthog_api_key and site.posthog_host and jekyll.environment == 'production' %}
-{% include analytics.html %}
-{% endif %}
 
 {% include navigation.html %}
 {{ content }}
 
 <p>&nbsp;</p>
+{% if jekyll.environment == 'production' %}{% include analytics.html %}{% endif %}
