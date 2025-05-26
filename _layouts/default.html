@@ -9,10 +9,10 @@
 <link rel="stylesheet" href="/assets/monokai.css">
 <link rel="shortcut icon" type="image/png" href="/assets/paw_logo_32.png">
 {% feed_meta %}
+{% if jekyll.environment == 'production' %}{% include analytics.html %}{% endif %}
 {% seo %}
 
 {% include navigation.html %}
 {{ content }}
 
 <p>&nbsp;</p>
-{% if jekyll.environment == 'production' %}{% include analytics.html %}{% endif %}
