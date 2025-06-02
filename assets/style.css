@@ -65,8 +65,9 @@ blink {
     visibility: hidden;
   }
 }
-nav {
+nav.main-navigation {
   float: right;
+  text-align: right;
 }
 nav a img {
   vertical-align: middle;
@@ -75,6 +76,9 @@ nav a.nav-active {
   background-color: var(--main-fg-color);
   color: var(--main-bg-color);
   text-decoration: none;
+}
+nav svg {
+  vertical-align: text-bottom;
 }
 ul, ol {
   padding-left: 2em;
@@ -116,14 +120,41 @@ hgroup * {
 hgroup p {
   color: var(--secondary-fg-color);
 }
+hgroup h1 {
+  white-space: nowrap;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  color: var(--strong-fg-color);
+}
 .page-navigation {
   display: flex;
+  flex-direction: row;
+  align-items: center;
   justify-content: flex-end;
-  margin: 0;
+  gap: 0.5em;
+  margin: 1em 0;
+  width: 100%;
   color: var(--secondary-fg-color);
 }
 .page-navigation a {
-  margin-inline: 0.5em;
+  text-align: right;
+  white-space: nowrap;
+  flex-shrink: 1;
+  max-width: 40%;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+}
+.page-navigation a:first-child::before {
+  content: "< ";
+  color: var(--secondary-fg-color);
+  display: inline-block;
+  margin-inline-end: 0.25em;
+}
+.page-navigation a:last-child::after {
+  content: " >";
+  color: var(--secondary-fg-color);
+  display: inline-block;
+  margin-inline-start: 0.25em;
 }
 a[href*="/github.com/X65"]::after {
   content: "";
@@ -163,9 +194,6 @@ a[href^="https://youtu.be/"]::after {
 }
 a[href^="https://youtu.be/"]:hover::after {
   opacity: 1;
-}
-.emu-nav {
-  float: none;
 }
 .emu-nav > div {
   display: inline-flex;
