@@ -68,6 +68,7 @@ blink {
 nav.main-navigation {
   float: right;
   text-align: right;
+  line-height: 1.15; /* line spacing */
 }
 nav a img {
   vertical-align: middle;
