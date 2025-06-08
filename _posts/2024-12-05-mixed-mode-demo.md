@@ -6,7 +6,7 @@ author: smokku
 
 X65 Display List is soooo powerful.
 
-[![Mixed Modes DL demo](/media/2024-12-05_mixed-mode-demo.jpg)](https://youtu.be/fsTFN2UXo_c)
+[![Mixed Modes DL demo](/media/2024-12-05_mixed-mode-demo.jpg)](https://youtu.be/fsTFN2UXo_c){:target="_blank"}
 
 Showcasing:
 
