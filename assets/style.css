@@ -145,17 +145,29 @@ hgroup h1 {
   overflow-x: hidden;
   text-overflow: ellipsis;
 }
-.page-navigation a:first-child::before {
+.page-navigation a.next {
+  position: relative;
+  padding-left: 1em;
+}
+.page-navigation a.next::before {
   content: "< ";
   color: var(--secondary-fg-color);
-  display: inline-block;
-  margin-inline-end: 0.25em;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
-.page-navigation a:last-child::after {
+.page-navigation a.prev {
+  position: relative;
+  padding-right: 1em;
+}
+.page-navigation a.prev::after {
   content: " >";
   color: var(--secondary-fg-color);
-  display: inline-block;
-  margin-inline-start: 0.25em;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 a[href*="/github.com/X65"]::after {
   content: "";
