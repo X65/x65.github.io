@@ -62,6 +62,8 @@ jobs:
           folder: _site
           bucket: ${{ secrets.S3_BUCKET }}
           bucket-region: ${{ secrets.S3_BUCKET_REGION }}
+          dist-id: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
+          invalidation: /          
 
   # Deployment job
   deploy:
