@@ -11,7 +11,7 @@ It's happening, guys… 🥳
 It iss being built by the awesome guys at [PCBWay][2].  
 The quality should be amazing - as usual with them. 🦾
 
-![DEV-board visualization](/media/2025-06-25_board-vis.png)
+![DEV-board visualization](/media/2025-06-25_board-vis.png){:target="_blank"}
 
 Let me remind you, though, this is not a final product.
 
