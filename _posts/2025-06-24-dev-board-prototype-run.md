@@ -8,7 +8,7 @@ It's happening, guys… 🥳
 
 `Rev1` of the [DEV-board][1] has just gone into production.
 
-It iss being built by the awesome guys at [PCBWay][2].  
+It is being built by the awesome guys at [PCBWay][2].
 The quality should be amazing - as usual with them. 🦾
 
 ![DEV-board visualization](/media/2025-06-25_board-vis.png){:target="_blank"}
