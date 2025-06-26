@@ -23,7 +23,7 @@ finish the OS/816 operating system, and write/port some actually useful applicat
 
 The complete machine will be in the all-in-one keyboard computer form factor:
 
-* Standard 60% QWERTY keyboard (customization possible)
+* Standard 70% keyboard
 * I/O ports at the back and sides; layout similar to DEV-board
   * plus 6 extra USB ports (not present on DEV-board)
 * Hardware bays, in the style of how Amiga/MSX computers mounted disk drives
