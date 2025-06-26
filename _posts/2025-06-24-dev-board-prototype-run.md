@@ -31,5 +31,5 @@ The complete machine will be in the all-in-one keyboard computer form factor:
 I’ve got a pretty clear vision already.  
 Now to make the CAD design and figure out how to 3D-print it.
 
-[1]: /media/2025-06-25_board-vis.png
+[1]: https://github.com/X65/schematic/blob/main/protoC/protoC.pdf
 [2]: https://www.pcbway.com/
