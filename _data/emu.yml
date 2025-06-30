@@ -72,3 +72,7 @@
   img: raster_bar.png
   xex: raster_bar.xex
   src: https://github.com/X65/examples/blob/main/src/cgia/lkhs_raster_bar.asm
+- title: Four-Byte Burger
+  img: 4BB.png
+  xex: 4BB.xex
+  src: https://github.com/X65/examples/blob/main/src/cgia/four_byte_burger.asm
