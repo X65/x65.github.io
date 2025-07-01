@@ -18,9 +18,18 @@ It blends the core principles of 8-bit computing with modern hardware components
 
 - **CPU**: WDC [65C816][1] @ [~6MHz][17]
 - **RAM**: 16MB [PSRAM][10] (flat, no banking)
-- **Video**:
-  - [CGIA][2]: Custom chip, DVI-D 480p (384×240px)
-    *(C64/A800 style, 256-color palette)*
+- **Video**: [CGIA][2] (custom VPU chip)
+  - **Output**: DVI-D, 384×240px @480p
+  - 256-color [palette][18]
+  - 4 graphics/sprite planes:
+    - Background graphics Display List  
+      *(ANTIC-style)*
+    - 6 graphics modes  
+      *(C64-style + HAM + MODE7)*
+    - Hardware scrolling
+    - 8 sprites (per plane), up to 64px wide;  
+      built-in multiplexing
+  - Three types of programmable raster interrupts
 - **Audio**:
   - Yamaha [SD-1 YMF825][3] (FM synth, OPL3-class)
   - 2× sample playback channels
@@ -36,18 +45,20 @@ It blends the core principles of 8-bit computing with modern hardware components
   - **Expansion**: CPU bus, 4× IO_EN, 4× IRQ, Audio-In (mixed), I²C
 - **Interrupt controller**: memory-mapped flags register
 
-> The hardware is based on [Picocomputer 6502][8] and [Neo6502][9] designs,
-> providing implementations of non-existing chips and glue to modern digital interfaces.
+> Current [**Milestone 1** prototype][19] is available as a **DEV-board** for developers to experiment with.  
+> Final hardware is going to be an all-in-one keyboard computer form factor.
 
 ## OS/816
 
 X65 runs its own native operating system: **OS/816**.
 
-OS/816 is built specifically for the 65C816 and leverages its capabilities. It provides:
+OS/816 is built specifically for the 65C816 and leverages its capabilities.  
+It provides:
 
 - Simple multitasking environment
 - Application framework
 - Shell access
+- Virtual screens
 - Low-level programming interfaces
 
 All without legacy overhead or unnecessary complexity.
@@ -71,8 +82,6 @@ With much of its hardware defined in software, it is uniquely easy to modify and
 [5]: https://en.wikipedia.org/wiki/ESP32#ESP32-C3
 [6]: https://en.wikipedia.org/wiki/USB
 [7]: http://wiki.icomp.de/wiki/DE-9_Joystick
-[8]: https://picocomputer.github.io
-[9]: https://neo6502.com
 [10]: https://www.apmemory.com/products/psram-iot-ram/
 [11]: https://en.wikipedia.org/wiki/General-purpose_input/output
 [12]: https://www.nxp.com/docs/en/data-sheet/SGTL5000.pdf
@@ -80,6 +89,8 @@ With much of its hardware defined in software, it is uniquely easy to modify and
 [14]: https://www.ti.com/product/TCA6416A
 [16]: https://www.youtube.com/watch?v=2H2mh8wLXco
 [17]: {% post_url 2024-03-07-VAB-memory-optimization %}
+[18]: /media/2024-06-08_colors.html
+[19]: <https://github.com/X65/schematic/blob/main/protoC/protoC.pdf>
 
 ## Contact
 
