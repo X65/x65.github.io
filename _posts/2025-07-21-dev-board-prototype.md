@@ -6,7 +6,7 @@ author: smokku
 
 The [DEV-board][1]s has just arrived and look amazing!!! 🎉
 
-![DEV-board](/media/2025-07-21_DEV-board.png){:target="_blank"}
+![DEV-board](/media/2025-07-21_DEV-board.png)
 
 Let the bring-up begin…
 
