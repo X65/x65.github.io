@@ -193,6 +193,12 @@ a[href^="https://youtu.be/"] {
   position: relative;
   display: inline-block;
 }
+a[href^="https://youtu.be/"] > img {
+  border-radius: min(1em, 2vw);
+}
+a[href^="https://youtu.be/"]:hover > img {
+  border-radius: 0;
+}
 a[href^="https://youtu.be/"]::after {
   content: "";
   position: absolute;
