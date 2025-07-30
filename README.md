@@ -5,7 +5,7 @@ title: Home
 
 # X65
 
-Modern 8-bit Microcomputer
+Modern 8-bit Computer
 
 #### READY<br><blink>&#x2588;</blink>
 
