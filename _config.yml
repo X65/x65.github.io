@@ -1,10 +1,9 @@
 repository: X65/x65.github.io
 url: https://x65.zone
-title: X65 - Modern 8-bit computer
+title: X65 - Modern 8-bit computer for Creativity, Learning, and Retro Gaming
 tagline: Modern 8-bit computer
 description: |
-  X65 - modern 8-bit microcomputer for the modern era.
-  :: 65C816, 16MB RAM, 256 colors 384×240px, FM-synth, USB, Wi-Fi, BT, and more.
+  X65 is a modern 8-bit microcomputer built around the W65C816 CPU, featuring 16 MB flat RAM, custom CGIA video with 256-color palette, sprites, layers, and scrolling, Yamaha SD-1 FM audio plus DAC sampling, USB and Wi-Fi/Bluetooth, and its native OS/816 for multitasking, shell access, and low-level programming.
 
 author:
   twitter: X65pc
