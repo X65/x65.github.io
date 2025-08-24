@@ -54,10 +54,6 @@
   img: mixed_modes.png
   xex: mixed_modes.xex
   src: https://github.com/X65/examples/blob/main/src/cgia/mixed_modes.asm
-- title: Pulse-Width-Modulation<br>sampled music playback
-  img: pwm_samples.png
-  xex: pwm_samples.xex
-  src: https://github.com/X65/examples/blob/main/src/cgia/pwm_samples.asm
 - title: OPL3 VGM playback<br>Tyrian, The Level
   img: opl.png
   xex: opl.xex
