@@ -72,3 +72,7 @@
   img: 4BB.png
   xex: 4BB.xex
   src: https://github.com/X65/examples/blob/main/src/cgia/four_byte_burger.asm
+- title: Speed Test
+  img: bogo.png
+  xex: bogo.xex
+  src: https://github.com/X65/examples/blob/main/src/bench/bogo.asm
