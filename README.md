@@ -41,7 +41,7 @@ It blends the core principles of 8-bit computing with modern hardware components
   - [ESP32-C3][5]: Wi-Fi, Bluetooth, USB-UART
 - **Ports & Expansion**:
   - 6× [USB][6] ports + 2× internal USB headers
-  - 2× [DE-9 Joystick][7] / [GPIO][11] (via TI [TCA6416A][14])
+  - 2× [DE-9 Joystick][7] / [GPIO][11] (via NXP [PCAL6416A][14])
   - **Expansion**: CPU bus, 4× IO_EN, 4× IRQ, Audio-In (mixed), I²C
 - **Interrupt controller**: memory-mapped flags register
 
@@ -86,7 +86,7 @@ With much of its hardware defined in software, it is uniquely easy to modify and
 [11]: https://en.wikipedia.org/wiki/General-purpose_input/output
 [12]: https://www.nxp.com/docs/en/data-sheet/SGTL5000.pdf
 [13]: https://www.rohm.com/products/audio-video/audio-processors/analog/bd34602fs-m-product
-[14]: https://www.ti.com/product/TCA6416A
+[14]: https://www.nxp.com/docs/en/data-sheet/PCAL6416A.pdf
 [16]: https://www.youtube.com/watch?v=2H2mh8wLXco
 [17]: {% post_url 2024-03-07-VAB-memory-optimization %}
 [18]: /media/2024-06-08_colors.html
