@@ -2,4 +2,6 @@
     <a href="{{ item.link }}"{% if page.url == item.link %} class="nav-active"{% endif %}>{{ item.content }}</a>{% endfor %}
 <br />{% for item in site.data.externals %}
     <a href="{{ item.link }}">{{ item.content }}</a>{% endfor %}
+<br />
+{% unless page.url contains '/emu/' or page.url contains '/news/' %}{% include newsletter.html %}{% endunless %}
 </nav>
