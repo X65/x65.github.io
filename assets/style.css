@@ -277,15 +277,15 @@ iframe#Emu {
   padding: 0;
 }
 #mc_embed_signup input {
-  border: 2px solid var(--main-fg-color);
+  border: 0.15em solid var(--main-fg-color);
   box-sizing: border-box;
-  padding: 2px;
+  padding: 0.15em;
   margin: 0;
 }
 #mc_embed_signup input::placeholder {
   color: var(--secondary-bg-color);
   opacity: 0.33;
-  padding: 0 2px;
+  padding: 0 0.15em;
 }
 #mc_embed_note {
   font-size: 50%;
