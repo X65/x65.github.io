@@ -76,3 +76,11 @@
   img: bogo.png
   xex: bogo.xex
   src: https://github.com/X65/examples/blob/main/src/bench/bogo.asm
+- title: Sokoban<br>by Zbyti
+  img: sokoban.png
+  xex: https://raw.githubusercontent.com/zbyti/x65-playground/master/bin/sokoban.xex&joystick=digital_1
+  src: https://github.com/zbyti/x65-playground/tree/master/src/pascal/sokoban
+- title: Pikoban<br>by Zbyti
+  img: pikoban.png
+  xex: https://raw.githubusercontent.com/zbyti/x65-playground/master/bin/pikoban.xex&joystick=digital_1
+  src: https://github.com/zbyti/x65-playground/tree/master/src/pascal/sokoban

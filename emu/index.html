@@ -15,7 +15,7 @@ description: Emu is a browser-based emulator for the X65 microcomputer, showcasi
 
 <nav class="emu-nav">{% for item in site.data.emu %}
 <div>
-    <a href="emu.html?file=roms/{{ item.xex }}" target="Emu" class="screenshot"><img src="roms/{{ item.img }}">{{ item.title }}{% if item.src %}
+    <a href="emu.html?file={% unless item.xex contains 'http' %}roms/{% endunless %}{{ item.xex }}" target="Emu" class="screenshot"><img src="roms/{{ item.img }}">{{ item.title }}{% if item.src %}
     <a href="{{ item.src }}" target="_blank" class="source"></a>{% endif %}</a>
 </div>{% endfor %}
 </nav>
@@ -31,19 +31,32 @@ description: Emu is a browser-based emulator for the X65 microcomputer, showcasi
 
     var orgTitle = document.title;
 
-    var params = new URL(document.location.toString()).searchParams;
-    var ROM = params.get('rom');
-    if (ROM && !ROM.endsWith('.xex')) ROM += '.xex';
-    if (ROM) {
-        Emu.setAttribute('src', 'emu.html?file=roms/' + ROM);
-        document.title = ROM + ' - ' + orgTitle;
-    }
-
-    for (var link of document.querySelectorAll('.emu-nav a')) {
-        link.addEventListener('click', function(e) {
-            ROM = this.getAttribute('href').replace('emu.html?file=roms/', '');
-            window.history.pushState(null, '', '/emu/?rom=' + ROM + '#Emu');
+    function loadROM() {
+        var params = new URL(document.location).searchParams;
+        var ROM = params.get('rom');
+        if (ROM) {
+            if (!ROM.endsWith('.xex')) ROM += '.xex';
+            params.set('file', ROM);
+            params.delete('rom');
+            Emu.setAttribute('src', 'emu.html?' + params.toString());
+            ROM = ROM.split('/').pop();
             document.title = ROM + ' - ' + orgTitle;
+            Emu.focus();
+        }
+    }
+    loadROM();
+
+    for (var link of document.querySelectorAll('.emu-nav a.screenshot')) {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            params = new URL(document.location.origin + '/' + this.getAttribute('href')).searchParams;
+            params.set('rom', params.get('file'));
+            params.delete('file');
+            const LINK = new URL(document.location)
+            LINK.search = params.toString();
+            LINK.hash = '#Emu';
+            window.history.pushState(null, '', decodeURIComponent(LINK.toString()));
+            loadROM();
         });
     }
 
