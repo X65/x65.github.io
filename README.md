@@ -16,7 +16,7 @@ It blends the core principles of 8-bit computing with modern hardware components
 
 ## Components
 
-- **CPU**: WDC [65C816][1] @ [~1.74 MHz][17]
+- **CPU**: WDC [65C816][1] @ [~1.83 MHz][17]
 - **RAM**: 16MB [PSRAM][10] (flat, no banking)
 - **Video**: [CGIA][2] (custom VPU chip)
   - **Output**: DVI-D, 384×240px @480p
