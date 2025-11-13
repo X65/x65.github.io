@@ -1,26 +1,22 @@
-- title: SMON <br>(Machine Monitor)
-  img: SMON.png
-  xex: SMON.xex
-  src: https://github.com/X65/smon
-- title: Hello UART!<br>(RIA UART test)
-  img: hello_uart.png
-  xex: hello_uart.xex
-  src: https://github.com/X65/examples/blob/main/src/uart/hello.asm
 - title: MODE2 (text)<br>glyphs &amp; colors
   img: MODE2_hello-glyphs.png
   xex: MODE2_hello-glyphs.xex
   src: https://github.com/X65/firmware/blob/main/src/ria/misc/bins.c#L56
+- title: MODE2 (tiles)<br>Super Wonder Boy
+  img: MODE2_SWBoy.png
+  xex: MODE2_SWBoy.xex
+  src: https://github.com/X65/examples/blob/main/src/cgia/swboy.c
+- title: 80-column text
+  img: 80_columns.png
+  xex: 80_columns.xex
+  src: https://github.com/X65/examples/blob/main/src/cgia/text_80_columns.asm
 - title: MODE3 (hires)<br>Veto – The Mill
   img: MODE3_Veto-the_mill.png
   xex: MODE3_Veto-the_mill.xex
   src: https://csdb.dk/release/index.php?id=101528
-- title: MODE4 (tiles)<br>Super Wonder Boy
-  img: MODE4_SWBoy.png
-  xex: MODE4_SWBoy.xex
-  src: https://github.com/X65/examples/blob/main/src/cgia/swboy.c
-- title: MODE5 (multicolor)<br>Carrion – One Zak &amp;…
-  img: MODE5_Carrion-One_Zak_And_His_Kracken.png
-  xex: MODE5_Carrion-One_Zak_And_His_Kracken.xex
+- title: MODE3 (multicolor)<br>Carrion – One Zak &amp;…
+  img: MODE3_Carrion-One_Zak_And_His_Kracken.png
+  xex: MODE3_Carrion-One_Zak_And_His_Kracken.xex
   src: https://plus4world.powweb.com/software/One_Zak_And_His_Kracken
 - title: MODE6 (HAM)<br>Farfar – perso1
   img: MODE6_Farfar-perso1.png
@@ -72,10 +68,6 @@
   img: 4BB.png
   xex: 4BB.xex
   src: https://github.com/X65/examples/blob/main/src/cgia/four_byte_burger.asm
-- title: Speed Test
-  img: bogo.png
-  xex: bogo.xex
-  src: https://github.com/X65/examples/blob/main/src/bench/bogo.asm
 - title: Sokoban<br>by Zbyti
   img: sokoban.png
   xex: https://raw.githubusercontent.com/zbyti/x65-playground/master/bin/sokoban.xex&joystick=digital_1
@@ -84,3 +76,7 @@
   img: pikoban.png
   xex: https://raw.githubusercontent.com/zbyti/x65-playground/master/bin/pikoban.xex&joystick=digital_1
   src: https://github.com/zbyti/x65-playground/tree/master/src/pascal/sokoban
+- title: SMON <br>(Machine Monitor)
+  img: SMON.png
+  xex: SMON.xex
+  src: https://github.com/X65/smon
