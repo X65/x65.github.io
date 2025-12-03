@@ -11,15 +11,16 @@ implementation change - instead of implementing both RIA and CGIA
 in one RP2350 microcontroller, X65 will use two separate MCU chips
 communicating over a high-speed bus, each implementing one functional chip.
 
-First chip takes the role of North Bridge - interfacing CPU and memory.
+First chip takes the role of North Bridge - interfacing CPU and memory.  
 Second chip takes the role of South Bridge - interfacing to external hardware
 and implementing the VPU with its spare processing power.
 
-With all the available GPIO pins of two MCUs I can get rid of all the discrete components from the board.
+With all the available GPIO pins of two MCUs
+I can get rid of all the discrete components from the board.
 
 After a long discussion with community, I've also decided to not go
-with Yamaha SD-1 FM synthesizer as the sound chip of X65.
-SD-1 is not produced anymore and the supply is sketchy.
+with Yamaha SD-1 FM synthesizer as the sound chip of X65.  
+SD-1 is not produced anymore and the supply is sketchy.  
 Instead, we will go with yet another RP2350 MCU, implementing our own custom
 Sound Processor unit, driving a modern CODEC+DSP chip.
 
