@@ -50,10 +50,14 @@
   img: mixed_modes.png
   xex: mixed_modes.xex
   src: https://github.com/X65/examples/blob/main/src/cgia/mixed_modes.asm
-- title: OPL3 VGM playback<br>Tyrian, The Level
-  img: opl.png
-  xex: opl.xex
-  src: https://github.com/X65/examples/blob/main/src/sound/opl.asm
+- title: SGU-1 sound demo<br>Monty On The Run .sid
+  img: MontyOnTheRun.png
+  xex: MontyOnTheRun.xex
+  src: https://github.com/X65/examples/blob/main/src/sound/MontyOnTheRun.asm
+# - title: OPL3 VGM playback<br>Tyrian, The Level
+#   img: opl.png
+#   xex: opl.xex
+#   src: https://github.com/X65/examples/blob/main/src/sound/opl.asm
 - title: Aot… PETSCII Robots<br>Amiga title screen
   img: PetsciiRobots.png
   xex: PetsciiRobots.xex
