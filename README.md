@@ -31,11 +31,9 @@ It blends the core principles of 8-bit computing with modern hardware components
       built-in multiplexing
   - Three types of programmable raster interrupts
 - **Audio**:
-  - Yamaha [SD-1 YMF825][3] (FM synth, OPL3-class)
-  - 2× sample playback channels
-  - stereo sampling [ADC][12]
-  - 2× RCA out, 2× RCA in, 2+1 Exp-in  
-    via ROHM [BD34602FS-M][13] audio mixer
+  - [SGU-1][3] (FM synth, PCM sample)
+  - 2× RCA out, 2× RCA in, 2 Exp-in
+    via TI [AIC3268][13] audio codec
 - **I/O**:
   - [RP816-RIA][4]: USB mass storage, HID
   - [ESP32-C3][5]: Wi-Fi, Bluetooth, USB-UART
@@ -77,15 +75,14 @@ With much of its hardware defined in software, it is uniquely easy to modify and
 
 [1]: https://en.wikipedia.org/wiki/WDC_65C816
 [2]: https://github.com/X65/X65/wiki/CGIA
-[3]: https://www.youtube.com/watch?v=BEgAx0jngKQ
+[3]: https://github.com/X65/emu/blob/main/src/chips/sgu1.h
 [4]: https://picocomputer.github.io/ria.html
 [5]: https://en.wikipedia.org/wiki/ESP32#ESP32-C3
 [6]: https://en.wikipedia.org/wiki/USB
 [7]: http://wiki.icomp.de/wiki/DE-9_Joystick
 [10]: https://www.apmemory.com/products/psram-iot-ram/
 [11]: https://en.wikipedia.org/wiki/General-purpose_input/output
-[12]: https://www.nxp.com/docs/en/data-sheet/SGTL5000.pdf
-[13]: https://www.rohm.com/products/audio-video/audio-processors/analog/bd34602fs-m-product
+[13]: https://www.ti.com/lit/ds/symlink/tlv320aic3268.pdf
 [14]: https://www.nxp.com/docs/en/data-sheet/PCAL6416A.pdf
 [16]: https://www.youtube.com/watch?v=2H2mh8wLXco
 [17]: {% post_url 2024-03-07-VAB-memory-optimization %}
