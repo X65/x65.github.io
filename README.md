@@ -31,7 +31,7 @@ It blends the core principles of 8-bit computing with modern hardware components
       built-in multiplexing
   - Three types of programmable raster interrupts
 - **Audio**:
-  - [SGU-1][3]: FM synth, PCM sample, 8 channels
+  - [SGU-1][3]: subtractive synth, PCM sample, 8 channels
   - 2× RCA out, 2× RCA in, 2 Exp-in
     via TI [AIC3268][13] audio codec
 - **I/O**:
