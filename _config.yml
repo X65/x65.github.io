@@ -3,7 +3,7 @@ url: https://x65.zone
 title: X65 - Modern 8-bit computer for Creativity, Learning, and Retro Gaming
 tagline: Modern 8-bit computer
 description: |
-  X65 is a modern 8-bit microcomputer built around the W65C816 CPU, featuring 16 MB flat RAM, custom CGIA video with 256-color palette, sprites, layers, and scrolling, Yamaha SD-1 FM audio plus DAC sampling, USB and Wi-Fi/Bluetooth, and its native OS/816 for multitasking, shell access, and low-level programming.
+  X65 is a modern 8-bit microcomputer built around the W65C816 CPU, featuring 16 MB flat RAM, custom CGIA video with 256-color palette, sprites, layers, and scrolling, SGU-1 synth and PCM audio, USB and Wi-Fi/Bluetooth, and its native OS/816 for multitasking, shell access, and low-level programming.
 
 author:
   twitter: X65pc
