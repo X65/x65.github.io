@@ -50,10 +50,14 @@
   img: mixed_modes.png
   xex: mixed_modes.xex
   src: https://github.com/X65/examples/blob/main/src/cgia/mixed_modes.asm
-- title: SGU-1 sound demo<br>Monty On The Run .sid
+- title: Monty On The Run .sid<br>by Robert J. Hubbard
   img: MontyOnTheRun.png
   xex: MontyOnTheRun.xex
   src: https://github.com/X65/examples/blob/main/src/sound/MontyOnTheRun.asm
+- title: Mystery Cannon .sid<br>by Zack Maxis
+  img: Mystery_Cannon.png
+  xex: Mystery_Cannon.xex
+  src: https://deepsid.chordian.net/?file=/MUSICIANS/M/Manganoid/Mystery_Cannon_2SID.sid
 # - title: OPL3 VGM playback<br>Tyrian, The Level
 #   img: opl.png
 #   xex: opl.xex
