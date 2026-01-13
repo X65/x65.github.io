@@ -34,10 +34,10 @@
   img: RSI.png
   xex: RSI.xex
   src: https://github.com/X65/examples/blob/main/src/cgia/rsi.asm
-- title: VBI<br>Vertical Blank Int…
-  img: VBI.png
-  xex: VBI.xex
-  src: https://github.com/X65/examples/blob/main/src/cgia/vbl.asm
+# - title: VBI<br>Vertical Blank Int…
+#   img: VBI.png
+#   xex: VBI.xex
+#   src: https://github.com/X65/examples/blob/main/src/cgia/vbl.asm
 - title: Sprites
   img: sprites.png
   xex: sprites.xex
@@ -84,6 +84,10 @@
   img: pikoban.png
   xex: https://raw.githubusercontent.com/zbyti/x65-playground/master/bin/pikoban.xex&joystick=digital_1
   src: https://github.com/zbyti/x65-playground/tree/master/src/pascal/sokoban
+- title: Joystick & GamePad <br>test program
+  img: controller.png
+  xex: controller.xex
+  src: https://github.com/X65/examples/blob/main/src/io/controller.asm
 - title: SMON <br>(Machine Monitor)
   img: SMON.png
   xex: SMON.xex
