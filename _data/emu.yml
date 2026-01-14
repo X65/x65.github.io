@@ -86,7 +86,7 @@
   src: https://github.com/zbyti/x65-playground/tree/master/src/pascal/sokoban
 - title: Joystick & GamePad <br>test program
   img: controller.png
-  xex: controller.xex
+  xex: controller.xex&joystick=digital_1
   src: https://github.com/X65/examples/blob/main/src/io/controller.asm
 - title: SMON <br>(Machine Monitor)
   img: SMON.png
