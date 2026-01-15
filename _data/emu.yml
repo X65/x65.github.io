@@ -84,7 +84,7 @@
   img: pikoban.png
   xex: https://raw.githubusercontent.com/zbyti/x65-playground/master/bin/pikoban.xex&joystick=digital_1
   src: https://github.com/zbyti/x65-playground/tree/master/src/pascal/sokoban
-- title: Joystick & GamePad <br>test program
+- title: Joy, GamePad, Kbd <br>test program
   img: controller.png
   xex: controller.xex&joystick=digital_1
   src: https://github.com/X65/examples/blob/main/src/io/controller.asm
