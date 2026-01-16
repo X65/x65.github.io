@@ -2,11 +2,11 @@
   img: MODE2_hello-glyphs.png
   xex: MODE2_hello-glyphs.xex
   src: https://github.com/X65/firmware/blob/main/src/ria/misc/bins.c#L56
-- title: MODE2 (tiles)<br>Super Wonder Boy
+- title: MODE2 (tiles)
   img: MODE2_SWBoy.png
   xex: MODE2_SWBoy.xex
   src: https://github.com/X65/examples/blob/main/src/cgia/swboy.c
-- title: 80-column text
+- title: 80-column text<br>MODE2 4x8px font
   img: 80_columns.png
   xex: 80_columns.xex
   src: https://github.com/X65/examples/blob/main/src/cgia/text_80_columns.asm
@@ -68,10 +68,10 @@
 - title: Dune I<br>Chani encounter
   img: Dune_Chani.png
   xex: Dune_Chani.xex
-- title: LukHash - Raster Bar<br>tribute
-  img: raster_bar.png
-  xex: raster_bar.xex
-  src: https://github.com/X65/examples/blob/main/src/cgia/lkhs_raster_bar.asm
+# - title: LukHash - Raster Bar<br>tribute
+#   img: raster_bar.png
+#   xex: raster_bar.xex
+#   src: https://github.com/X65/examples/blob/main/src/cgia/lkhs_raster_bar.asm
 - title: Four-Byte Burger
   img: 4BB.png
   xex: 4BB.xex
