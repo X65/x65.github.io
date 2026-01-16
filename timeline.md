@@ -2,6 +2,26 @@
 ---
 # Timeline
 
+## 2025-12-29
+
+![2025-12-29](/media/2025-12-29_Gen2_proto.jpeg)
+
+## 2025-12-01
+
+![2025-12-01](/media/2025-12-01_Gen2_proto.jpeg)
+
+## 2025-11-14
+
+![2025-11-14](/media/2025-11-14_Gen2_proto.jpeg)
+
+## 2025-10-05
+
+![2025-10-05](/media/2025-10-05_EXPansion_breadboard.jpeg)
+
+## 2025-09-29
+
+![2025-09-29](/media/2025-09-29_EXPansion_breakout.jpeg)
+
 ## 2025-07-21
 
 ![2025-07-21](/media/2025-07-21_DEV-board.png)
