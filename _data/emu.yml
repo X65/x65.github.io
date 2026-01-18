@@ -88,6 +88,10 @@
   img: controller.png
   xex: controller.xex&joystick=digital_1
   src: https://github.com/X65/examples/blob/main/src/io/controller.asm
+- title: Font & Code-Page<br>test program
+  img: font_cp.png
+  xex: font_cp.xex
+  src: https://github.com/X65/examples/blob/main/src/cgia/font_cp.asm
 - title: SMON <br>(Machine Monitor)
   img: SMON.png
   xex: SMON.xex
