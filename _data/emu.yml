@@ -62,10 +62,10 @@
   img: Pokeymania.png
   xex: Pokeymania.xex
   src: https://csdb.dk/release/?id=148198
-# - title: OPL3 VGM playback<br>Tyrian, The Level
-#   img: opl.png
-#   xex: opl.xex
-#   src: https://github.com/X65/examples/blob/main/src/sound/opl.asm
+- title: OPL VGM playback<br>Tyrian, The Level
+  img: opl.png
+  xex: opl.xex
+  src: https://github.com/X65/examples/blob/main/src/sound/opl.asm
 - title: Aot… PETSCII Robots<br>Amiga title screen
   img: PetsciiRobots.png
   xex: PetsciiRobots.xex
