@@ -31,7 +31,7 @@ It blends the core principles of 8-bit computing with modern hardware components
       built-in multiplexing
   - Three types of programmable raster interrupts
 - **Audio**:
-  - [SGU-1][3]: subtractive synth, PCM sample, 8 channels
+  - [SGU-1][3]: FM+subtractive synth, PCM samples, 9 channels
   - 2× RCA out, 2× RCA in, 2 Exp-in
     via TI [AIC3268][13] audio codec
 - **I/O**:
@@ -75,7 +75,7 @@ With much of its hardware defined in software, it is uniquely easy to modify and
 
 [1]: https://en.wikipedia.org/wiki/WDC_65C816
 [2]: https://github.com/X65/X65/wiki/CGIA
-[3]: https://github.com/X65/emu/blob/main/src/chips/sgu1.h
+[3]: https://github.com/X65/firmware/blob/main/src/audio/snd/sgu.h#L31
 [4]: https://picocomputer.github.io/ria.html
 [5]: https://en.wikipedia.org/wiki/ESP32#ESP32-C3
 [6]: https://en.wikipedia.org/wiki/USB
