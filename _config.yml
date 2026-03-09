@@ -6,7 +6,7 @@ description: |
   X65 is a modern 8-bit microcomputer built around the W65C816 CPU, featuring 16 MB flat RAM, custom CGIA video with 256-color palette, sprites, layers, and scrolling, SGU-1 synth and PCM audio, USB and Wi-Fi/Bluetooth, and its native OS/816 for multitasking, shell access, and low-level programming.
 
 author:
-  twitter: X65pc
+  name: X65pc
 twitter:
   username: X65pc
   card: summary_large_image
@@ -32,7 +32,7 @@ plugins:
   - jekyll-seo-tag
 
 readme_index:
-  enabled:          true
+  enabled: true
   remove_originals: false
   with_frontmatter: true
 
@@ -42,8 +42,7 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-  -
-    scope:
+  - scope:
       path: ""
     values:
       layout: "default"
