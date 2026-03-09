@@ -57,13 +57,14 @@ jobs:
         # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v3
       - name: Deploy to S3
-        uses: reggionick/s3-deploy@v4
+        uses: kersvers/s3-sync-with-cloudfront-invalidation@v1.0.0
         with:
-          folder: _site
-          bucket: ${{ secrets.S3_BUCKET }}
-          bucket-region: ${{ secrets.S3_BUCKET_REGION }}
-          dist-id: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
-          invalidation: /*
+          args: --acl public-read --delete
+        env:
+          AWS_S3_BUCKET: ${{ secrets.S3_BUCKET }}
+          AWS_REGION: ${{ secrets.S3_BUCKET_REGION }}
+          DISTRIBUTION_ID: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
+          SOURCE_DIR: '_site'
 
   # Deployment job
   deploy:
