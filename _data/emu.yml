@@ -82,12 +82,10 @@
   src: https://github.com/X65/examples/blob/main/src/cgia/four_byte_burger.asm
 - title: Sokoban<br>by Zbyti
   img: sokoban.png
-  xex: https://raw.githubusercontent.com/zbyti/x65-playground/master/bin/sokoban.xex&joystick=digital_1
-  src: https://github.com/zbyti/x65-playground/tree/master/src/pascal/sokoban
+  xex: sokoban.xex&joystick=digital_1
 - title: Pikoban<br>by Zbyti
   img: pikoban.png
-  xex: https://raw.githubusercontent.com/zbyti/x65-playground/master/bin/pikoban.xex&joystick=digital_1
-  src: https://github.com/zbyti/x65-playground/tree/master/src/pascal/sokoban
+  xex: pikoban.xex&joystick=digital_1
 - title: Joy, GamePad, Kbd <br>test program
   img: controller.png
   xex: controller.xex&joystick=digital_1
