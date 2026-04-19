@@ -31,12 +31,13 @@ It blends the core principles of 8-bit computing with modern hardware components
       built-in multiplexing
   - Three types of programmable raster interrupts
 - **Audio**:
-  - [SGU-1][3]: FM+subtractive synth, PCM samples, 9 channels
+  - [SGU-1][3]: FM+subtractive synth, PCM samples, 9 channels  
+    with integrated TI [AIC3254][13] audio codec
   - 2× RCA out, 2× RCA in, 2 Exp-in
-    via TI [AIC3268][13] audio codec
 - **I/O**:
   - [RP816-RIA][4]: USB mass storage, HID
-  - [ESP32-C3][5]: Wi-Fi, Bluetooth, USB-UART
+  - SOUTH chip: USB-UART
+  - [Raspberry Pi Radio Module 2][5]: Wi-Fi, Bluetooth
 - **Ports & Expansion**:
   - 6× [USB][6] ports + 2× internal USB headers
   - 2× [DE-9 Joystick][7] / [GPIO][11] (via NXP [PCAL6416A][14])
@@ -77,12 +78,12 @@ With much of its hardware defined in software, it is uniquely easy to modify and
 [2]: https://github.com/X65/X65/wiki/CGIA
 [3]: https://github.com/X65/firmware/blob/main/src/audio/snd/sgu.h#L31
 [4]: https://picocomputer.github.io/ria.html
-[5]: https://en.wikipedia.org/wiki/ESP32#ESP32-C3
+[5]: https://www.raspberrypi.com/products/radio-module-2/
 [6]: https://en.wikipedia.org/wiki/USB
 [7]: http://wiki.icomp.de/wiki/DE-9_Joystick
 [10]: https://www.apmemory.com/products/psram-iot-ram/
 [11]: https://en.wikipedia.org/wiki/General-purpose_input/output
-[13]: https://www.ti.com/lit/ds/symlink/tlv320aic3268.pdf
+[13]: https://www.ti.com/lit/ds/symlink/tlv320aic3254.pdf
 [14]: https://www.nxp.com/docs/en/data-sheet/PCAL6416A.pdf
 [16]: https://www.youtube.com/watch?v=2H2mh8wLXco
 [17]: {% post_url 2024-03-07-VAB-memory-optimization %}
