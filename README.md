@@ -92,6 +92,5 @@ With much of its hardware defined in software, it is uniquely easy to modify and
 
 ## Contact
 
-Join 💬 [Discord Community](https://discord.gg/TuTe3kymgy),  
-Email 📨 [contact@x65.zone](mailto:contact@x65.zone?subject=X65)  
-Call 🖀 [X65.zone BBS](https://bbs.x65.zone/).
+Join 💬 [Matrix Community](https://matrix.to/#/#x65:chrome.pl),
+Email 📨 [contact@x65.zone](mailto:contact@x65.zone?subject=X65).
