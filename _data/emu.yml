@@ -1,3 +1,7 @@
+- title: MODE1 (bitmap,4bpp)<br>Lobo
+  img: MODE1_lobo_2.png
+  xex: MODE1_lobo_2.xex
+  src: https://github.com/zbyti/x65-mode1-converter
 - title: MODE2 (text)<br>glyphs &amp; colors
   img: MODE2_hello-glyphs.png
   xex: MODE2_hello-glyphs.xex
