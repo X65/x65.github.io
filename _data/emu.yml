@@ -29,7 +29,7 @@
 - title: MODE7 (affine)<br>X65 mascot
   img: MODE7_mascot.png
   xex: MODE7_mascot.xex
-  src: https://github.com/X65/firmware/blob/main/src/ria/misc/example_data.h#L71
+  src: https://github.com/X65/examples/blob/main/src/cgia/data/example_data.h#L71
 - title: Raster Bars
   img: raster_bars.png
   xex: raster_bars.xex
