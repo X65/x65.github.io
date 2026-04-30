@@ -1,3 +1,7 @@
+- title: MODE0 (text,palette)<br>(+ MODE2)
+  img: MODE0_text.png
+  xex: MODE0_text.xex
+  src: https://github.com/X65/examples/blob/main/src/cgia/text_modes.asm
 - title: MODE1 (bitmap,4bpp)<br>Lobo
   img: MODE1_lobo_2.png
   xex: MODE1_lobo_2.xex
