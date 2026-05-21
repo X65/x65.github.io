@@ -2,6 +2,14 @@
 ---
 # Timeline
 
+## 2026-05-06
+
+![2026-05-06](/media/2026-05-06_SGU-1-test-batch-1.png)
+
+## 2026-01-06
+
+![2026-01-06](/media/2026-01-06-SGU-1_breadboard_prototype.jpeg)
+
 ## 2025-12-29
 
 ![2025-12-29](/media/2025-12-29_Gen2_proto.jpeg)
