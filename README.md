@@ -13,7 +13,7 @@ Modern 8-bit Computer
 It blends the core principles of 8-bit computing with modern hardware components, making it practical and capable of handling everyday tasks.
 
 <div class="hero-split">
-<div><span class="emu-gallery"><iframe id="emu-gallery-frame" title="X65 Emu" src="/emu/emu.html?file=roms/mixed_modes.xex"></iframe><a id="emu-gallery-link" href="/emu/emu.html?file=roms/mixed_modes.xex" target="_blank" rel="noopener" aria-label="Open the X65 Emu in a new tab"></a></span></div>
+<div><span class="emu-gallery"><iframe id="emu-gallery-frame" title="X65 Emu" src="/emu/emu.html?disable-speaker-icon&disable-gui&file=roms/mixed_modes.xex"></iframe><a id="emu-gallery-link" href="/emu/emu.html?file=roms/mixed_modes.xex" target="_blank" rel="noopener" aria-label="Open the X65 Emu in a new tab"></a></span></div>
 <div><a href="/timeline.html"><img src="/media/2025-07-21_DEV-board.png" alt="X65 DEV-board"></a></div>
 </div>
 
@@ -31,7 +31,7 @@ It blends the core principles of 8-bit computing with modern hardware components
     do { next = demos[Math.floor(Math.random() * demos.length)]; }
     while (demos.length > 1 && next === current);
     current = next;
-    frame.src = '/emu/emu.html?file=' + next;
+    frame.src = '/emu/emu.html?disable-speaker-icon&disable-gui&file=' + next;
     link.href = '/emu/emu.html?file=' + next;
   }
   setInterval(swap, 30000);
