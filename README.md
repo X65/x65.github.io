@@ -25,7 +25,7 @@ It blends the core principles of 8-bit computing with modern hardware components
     - Background graphics Display List  
       *(ANTIC-style)*
     - 6 graphics modes  
-      *(C64-style + HAM + MODE7)*
+      *(A8/C64/+4-style + HAM6 + MODE7)*
     - Hardware scrolling
     - 8 sprites (per plane), up to 64px wide;  
       built-in multiplexing
