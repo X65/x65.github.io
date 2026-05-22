@@ -2,42 +2,52 @@
   img: MODE0_text.png
   xex: MODE0_text.xex
   src: https://github.com/X65/examples/blob/main/src/cgia/text_modes.asm
+  gallery: true
 - title: MODE1 (bitmap,4bpp)<br>Lobo
   img: MODE1_lobo_2.png
   xex: MODE1_lobo_2.xex
   src: https://github.com/zbyti/x65-mode1-converter
+  gallery: true
 - title: MODE2 (text)<br>glyphs &amp; colors
   img: MODE2_hello-glyphs.png
   xex: MODE2_hello-glyphs.xex
   src: https://github.com/X65/firmware/blob/main/src/ria/misc/bins.c#L56
+  gallery: true
 - title: MODE2 (tiles)
   img: MODE2_SWBoy.png
   xex: MODE2_SWBoy.xex
   src: https://github.com/X65/examples/blob/main/src/cgia/swboy.c
+  gallery: true
 - title: 80-column text<br>MODE2 4x8px font
   img: 80_columns.png
   xex: 80_columns.xex
   src: https://github.com/X65/examples/blob/main/src/cgia/text_80_columns.asm
+  gallery: true
 - title: MODE3 (hires)<br>Veto – The Mill
   img: MODE3_Veto-the_mill.png
   xex: MODE3_Veto-the_mill.xex
   src: https://csdb.dk/release/index.php?id=101528
+  gallery: true
 - title: MODE3 (multicolor)<br>Carrion – One Zak &amp;…
   img: MODE3_Carrion-One_Zak_And_His_Kracken.png
   xex: MODE3_Carrion-One_Zak_And_His_Kracken.xex
   src: https://plus4world.powweb.com/software/One_Zak_And_His_Kracken
+  gallery: true
 - title: MODE6 (HAM)<br>Farfar – perso1
   img: MODE6_Farfar-perso1.png
   xex: MODE6_Farfar-perso1.xex
   src: https://arnaud-carre.github.io/2022-12-30-amiga-ham/
+  gallery: true
 - title: MODE7 (affine)<br>X65 mascot
   img: MODE7_mascot.png
   xex: MODE7_mascot.xex
   src: https://github.com/X65/examples/blob/main/src/cgia/data/example_data.h#L71
+  gallery: true
 - title: Raster Bars
   img: raster_bars.png
   xex: raster_bars.xex
   src: https://github.com/X65/examples/blob/main/src/cgia/raster_bars.asm
+  gallery: true
 - title: RSI<br>Raster Interrupt
   img: RSI.png
   xex: RSI.xex
@@ -50,14 +60,17 @@
   img: sprites.png
   xex: sprites.xex
   src: https://github.com/X65/examples/blob/main/src/cgia/sprites.asm
+  gallery: true
 - title: Shadow Of The Beast
   img: SOTB.png
   xex: SOTB.xex
   src: https://github.com/X65/examples/blob/main/src/cgia/sotb.asm
+  gallery: true
 - title: Mixed Display Modes<br>…and affine rotator
   img: mixed_modes.png
   xex: mixed_modes.xex
   src: https://github.com/X65/examples/blob/main/src/cgia/mixed_modes.asm
+  gallery: true
 - title: Monty On The Run .sid<br>by Robert J. Hubbard
   img: MontyOnTheRun.png
   xex: MontyOnTheRun.xex
@@ -77,9 +90,11 @@
 - title: Aot… PETSCII Robots<br>Amiga title screen
   img: PetsciiRobots.png
   xex: PetsciiRobots.xex
+  gallery: true
 - title: Dune I<br>Chani encounter
   img: Dune_Chani.png
   xex: Dune_Chani.xex
+  gallery: true
 # - title: LukHash - Raster Bar<br>tribute
 #   img: raster_bar.png
 #   xex: raster_bar.xex
@@ -88,6 +103,7 @@
   img: 4BB.png
   xex: 4BB.xex
   src: https://github.com/X65/examples/blob/main/src/cgia/four_byte_burger.asm
+  gallery: true
 - title: Sokoban<br>by Zbyti
   img: sokoban.png
   xex: sokoban.xex&joystick=digital_1
