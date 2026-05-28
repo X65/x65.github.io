@@ -15,7 +15,7 @@ description: Emu is a browser-based emulator for the X65 microcomputer, showcasi
 
 <nav class="emu-nav">{% for item in site.data.emu %}
 <div>
-    <a href="emu.html?file={% unless item.xex contains 'http' %}roms/{% endunless %}{{ item.xex }}" target="Emu" class="screenshot"><img src="roms/{{ item.img }}">{{ item.title }}{% if item.src %}
+    <a href="emu.html?file={% unless item.xex contains 'http' %}roms/{% endunless %}{{ item.xex }}" target="Emu" class="screenshot"><img src="roms/{{ item.img }}"{% if item.gallery == true %} data-png="roms/{{ item.img }}" data-gif="roms/{{ item.img | replace: '.png', '.gif' }}"{% endif %}>{{ item.title }}{% if item.src %}
     <a href="{{ item.src }}" target="_blank" class="source"></a>{% endif %}</a>
 </div>{% endfor %}
 </nav>
@@ -47,6 +47,25 @@ description: Emu is a browser-based emulator for the X65 microcomputer, showcasi
     loadROM();
 
     for (var link of document.querySelectorAll('.emu-nav a.screenshot')) {
+        var image = link.querySelector('img[data-gif]');
+        if (image) {
+            link.addEventListener('mouseenter', function() {
+                var image = this.querySelector('img');
+                image.src = image.dataset.gif;
+            });
+            link.addEventListener('mouseleave', function() {
+                var image = this.querySelector('img');
+                image.src = image.dataset.png;
+            });
+            link.addEventListener('focus', function() {
+                var image = this.querySelector('img');
+                image.src = image.dataset.gif;
+            });
+            link.addEventListener('blur', function() {
+                var image = this.querySelector('img');
+                image.src = image.dataset.png;
+            });
+        }
         link.addEventListener('click', function(e) {
             e.preventDefault();
             params = new URL(document.location.origin + '/' + this.getAttribute('href')).searchParams;
