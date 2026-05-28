@@ -13,26 +13,32 @@ Modern 8-bit Computer
 It blends the core principles of 8-bit computing with modern hardware components, making it practical and capable of handling everyday tasks.
 
 <div class="hero-split">
-<div><span class="emu-gallery"><iframe id="emu-gallery-frame" title="X65 Emu" src="/emu/emu.html?disable-speaker-icon&disable-gui&file=roms/mixed_modes.xex"></iframe><a id="emu-gallery-link" href="/emu/?rom=roms/mixed_modes.xex#Emu"></a></span></div>
+<div><span class="emu-gallery"><img id="emu-gallery-image" src="/emu/roms/mixed_modes.gif" data-fallback="/emu/roms/mixed_modes.png" alt="X65 emulator demo"><a id="emu-gallery-link" href="/emu/?rom=roms/mixed_modes.xex#Emu"></a></span></div>
 <div><a href="/timeline.html"><img src="/media/2025-07-21_DEV-board.png" alt="X65 DEV-board"></a></div>
 </div>
 
 <script>
 (function () {
   var demos = [
-{% for item in site.data.emu %}{% if item.gallery %}    "{% unless item.xex contains 'http' %}roms/{% endunless %}{{ item.xex }}",
+{% for item in site.data.emu %}{% if item.gallery %}    {
+      rom: "{% unless item.xex contains 'http' %}roms/{% endunless %}{{ item.xex }}",
+      src: "/emu/roms/{% if item.gallery == true %}{{ item.img | replace: '.png', '.gif' }}{% else %}{{ item.img }}{% endif %}",
+      png: "/emu/roms/{{ item.img }}"
+    },
 {% endif %}{% endfor %}  ];
-  var frame = document.getElementById('emu-gallery-frame');
+  var image = document.getElementById('emu-gallery-image');
   var link = document.getElementById('emu-gallery-link');
   var current = 'roms/mixed_modes.xex';
+  image.onerror = function () { image.src = image.getAttribute('data-fallback'); };
   function swap() {
     if (demos.length === 0) return;
     var next;
     do { next = demos[Math.floor(Math.random() * demos.length)]; }
-    while (demos.length > 1 && next === current);
-    current = next;
-    frame.src = '/emu/emu.html?disable-speaker-icon&disable-gui&file=' + next;
-    link.href = '/emu/?rom=' + next + '#Emu';
+    while (demos.length > 1 && next.rom === current);
+    current = next.rom;
+    image.setAttribute('data-fallback', next.png);
+    image.src = next.src;
+    link.href = '/emu/?rom=' + next.rom + '#Emu';
   }
   setInterval(swap, 30000);
 })();

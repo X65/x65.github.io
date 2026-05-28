@@ -315,11 +315,12 @@ iframe#Emu {
   height: 240px;
   max-width: 100%;
 }
-.emu-gallery iframe {
+.emu-gallery img {
   width: 100%;
   height: 100%;
-  border: none;
   display: block;
+  object-fit: contain;
+  image-rendering: pixelated;
 }
 .emu-gallery a {
   position: absolute;

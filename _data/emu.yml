@@ -37,7 +37,7 @@
   img: MODE6_Farfar-perso1.png
   xex: MODE6_Farfar-perso1.xex
   src: https://arnaud-carre.github.io/2022-12-30-amiga-ham/
-  gallery: true
+  gallery: png
 - title: MODE7 (affine)<br>X65 mascot
   img: MODE7_mascot.png
   xex: MODE7_mascot.xex
@@ -93,7 +93,7 @@
 - title: Dune I<br>Chani encounter
   img: Dune_Chani.png
   xex: Dune_Chani.xex
-  gallery: true
+  gallery: png
 # - title: LukHash - Raster Bar<br>tribute
 #   img: raster_bar.png
 #   xex: raster_bar.xex
