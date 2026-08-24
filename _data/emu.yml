@@ -103,6 +103,10 @@
   xex: 4BB.xex
   src: https://github.com/X65/examples/blob/main/src/cgia/four_byte_burger.asm
   gallery: true
+- title: Peggles<br>MODE7 carting
+  img: peggles_mode7.png
+  xex: peggles_mode7.xex&joystick=digital_1
+  gallery: true
 - title: Sokoban<br>by Zbyti
   img: sokoban.png
   xex: sokoban.xex&joystick=digital_1
