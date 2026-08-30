@@ -89,6 +89,7 @@
 - title: Alloyrun<br>RAD tune by VOID
   img: alloyrun.png
   xex: alloyrun.xex
+  src: https://tracker.x65.zone/?import=reality:/Modules/RAD-v1/Void/Void%20-%20Alloyrun.rad
   gallery: true
 - title: FM-Tronikk<br>by Malfunction/Altair
   img: fm-troni.png
@@ -97,6 +98,7 @@
 - title: Pinball Illusions<br>by Olof Gustafsson
   img: pinball_illusions.png
   xex: pinball_illusions.xex
+  src: https://tracker.x65.zone/?import=modland:/Protracker/Blaizer/pinball%20illusions%20-%20intro.mod
   gallery: true
 - title: "E1M1: At Doom's Gate<br>by Bobby Prince"
   img: e1m1.png
