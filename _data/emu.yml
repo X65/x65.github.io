@@ -86,6 +86,22 @@
   img: opl.png
   xex: opl.xex
   src: https://github.com/X65/examples/blob/main/src/sound/opl.asm
+- title: Alloyrun<br>RAD tune by VOID
+  img: alloyrun.png
+  xex: alloyrun.xex
+  gallery: true
+- title: FM-Tronikk<br>by Malfunction/Altair
+  img: fm-troni.png
+  xex: fm-troni.xex
+  gallery: true
+- title: Pinball Illusions<br>by Olof Gustafsson
+  img: pinball_illusions.png
+  xex: pinball_illusions.xex
+  gallery: true
+- title: "E1M1: At Doom's Gate<br>by Bobby Prince"
+  img: e1m1.png
+  xex: e1m1.xex
+  gallery: true
 - title: Aot… PETSCII Robots<br>Amiga title screen
   img: PetsciiRobots.png
   xex: PetsciiRobots.xex
