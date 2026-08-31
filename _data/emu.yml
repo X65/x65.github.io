@@ -38,20 +38,20 @@
   xex: MODE6_Farfar-perso1.xex
   src: https://arnaud-carre.github.io/2022-12-30-amiga-ham/
   gallery: png
-- title: MODE7 (affine)<br>X65 mascot
-  img: MODE7_mascot.png
-  xex: MODE7_mascot.xex
-  src: https://github.com/X65/examples/blob/main/src/cgia/data/example_data.h#L71
-  gallery: true
+# - title: MODE7 (affine)<br>X65 mascot
+#   img: MODE7_mascot.png
+#   xex: MODE7_mascot.xex
+#   src: https://github.com/X65/examples/blob/main/src/cgia/data/example_data.h#L71
+#   gallery: true
 - title: Raster Bars
   img: raster_bars.png
   xex: raster_bars.xex
   src: https://github.com/X65/examples/blob/main/src/cgia/raster_bars.asm
   gallery: true
-- title: RSI<br>Raster Interrupt
-  img: RSI.png
-  xex: RSI.xex
-  src: https://github.com/X65/examples/blob/main/src/cgia/rsi.asm
+# - title: RSI<br>Raster Interrupt
+#   img: RSI.png
+#   xex: RSI.xex
+#   src: https://github.com/X65/examples/blob/main/src/cgia/rsi.asm
 # - title: VBI<br>Vertical Blank Int…
 #   img: VBI.png
 #   xex: VBI.xex

@@ -19,6 +19,9 @@ const fps = Number(process.env.FPS ?? 60);
 const seconds = Number(process.env.CAPTURE_SECONDS ?? process.env.SECONDS ?? 30);
 const startDelayMs = Number(process.env.START_DELAY_MS ?? 2500);
 const skipVisibleFrames = Number(process.env.SKIP_VISIBLE_FRAMES ?? 10);
+// GIF delays are whole centiseconds and both Chrome and Firefox stretch any delay of
+// 1 cs or less to 100 ms, so 2 cs (50 fps) is the fastest playback a browser honours.
+const maxGifFps = Number(process.env.MAX_GIF_FPS ?? 50);
 const chrome = process.env.CHROME ?? 'google-chrome';
 const port = Number(process.env.PORT ?? 8765);
 const cdpPort = Number(process.env.CDP_PORT ?? 9222);
@@ -425,13 +428,18 @@ async function captureRom(cdp, rom, tempRoot) {
     throw new Error(`Timed out waiting to skip ${skipVisibleFrames} visible emulator frames for ${rom}`);
   }
 
-  const frameCount = Math.max(1, Math.round(fps * seconds));
+  const maxFrames = Math.max(1, Math.round(fps * seconds));
   const frameHashes = [];
+  const frameTimesMs = [];
   const frameDurationMs = 1000 / fps;
   const captureStartMs = performance.now();
-  for (let index = 0; index < frameCount; index++) {
+  for (let index = 0; index < maxFrames; index++) {
     await waitUntil(captureStartMs + index * frameDurationMs);
+    // A screenshot round-trip can be slower than `fps`, so stop on the wall clock as well:
+    // CAPTURE_SECONDS is seconds of demo, not seconds divided by however far we fall behind.
+    if (index > 0 && performance.now() - captureStartMs >= seconds * 1000) break;
     const shot = await cdp.send('Page.captureScreenshot', { format: 'png', fromSurface: true });
+    frameTimesMs.push(performance.now());
     const frame = Buffer.from(shot.data, 'base64');
     frameHashes.push(hash(frame));
     await writeFile(
@@ -440,8 +448,19 @@ async function captureRom(cdp, rom, tempRoot) {
     );
   }
 
+  const frameCount = frameHashes.length;
   const loop = detectLoop(frameHashes);
-  console.log(`Encoding ${loop.count}/${frameCount} captured frames from frame ${loop.start}`);
+  // A screenshot round-trip is slower than `fps` on most machines and the emulator keeps
+  // running in between, so the frames we kept are spaced by the interval we *measured*,
+  // not the one we asked for. Encoding at `fps` would replay the demo at the wrong speed.
+  const loopTimesMs = frameTimesMs.slice(loop.start, loop.start + loop.count);
+  const capturedFps = loopTimesMs.length > 1
+    ? ((loopTimesMs.length - 1) * 1000) / (loopTimesMs.at(-1) - loopTimesMs[0])
+    : fps;
+  const encodeFps = Math.min(capturedFps, maxGifFps);
+  const outputFrames = Math.max(1, Math.round((loop.count * encodeFps) / capturedFps));
+  console.log(`Encoding ${loop.count}/${frameCount} captured frames from frame ${loop.start}`
+    + ` (captured ${capturedFps.toFixed(1)} fps, writing ${encodeFps.toFixed(1)} fps)`);
 
   if (loop.count === 1) {
     await spawnChecked('magick', [
@@ -459,7 +478,7 @@ async function captureRom(cdp, rom, tempRoot) {
     '-loglevel',
     'error',
     '-framerate',
-    String(fps),
+    capturedFps.toFixed(3),
     '-start_number',
     String(loop.start),
     '-i',
@@ -467,9 +486,11 @@ async function captureRom(cdp, rom, tempRoot) {
     '-i',
     palettePpm,
     '-frames:v',
-    String(loop.count),
+    String(outputFrames),
     '-filter_complex',
-    '[0:v][1:v]paletteuse=dither=none',
+    encodeFps < capturedFps
+      ? `[0:v]fps=${encodeFps}[v];[v][1:v]paletteuse=dither=none`
+      : '[0:v][1:v]paletteuse=dither=none',
     '-gifflags',
     '-offsetting',
     outputFile,
