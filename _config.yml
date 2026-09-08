@@ -21,6 +21,18 @@ social:
 logo: /assets/paw_logo_512.png
 timezone: Europe/Warsaw
 
+# `jekyll serve` only. The Wasm emulator is linked -sWASM_WORKERS/-sAUDIO_WORKLET, so its
+# memory is a shared WebAssembly.Memory; handing that to the AudioWorklet needs the page to
+# be cross-origin isolated. Without these the emulator still runs -- video and all -- and
+# only sound dies, with "AudioWorklet thread initialization failed" in the console.
+# Production (S3/CloudFront) already sends all three on every response; this mirrors them
+# so local pages behave like the deployed site. Ignored outside `jekyll serve`.
+webrick:
+  headers:
+    Cross-Origin-Opener-Policy: same-origin
+    Cross-Origin-Embedder-Policy: require-corp
+    Cross-Origin-Resource-Policy: cross-origin
+
 plugins:
   - jekyll-github-metadata
   - jekyll-paginate
