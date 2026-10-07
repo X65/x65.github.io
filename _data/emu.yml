@@ -86,12 +86,12 @@
   img: opl.png
   xex: opl.xex
   src: https://github.com/X65/examples/blob/main/src/sound/opl.asm
-- title: Alloyrun<br>RAD tune by VOID
+- title: Alloyrun<br>by VOID
   img: alloyrun.png
   xex: alloyrun.xex
   src: https://tracker.x65.zone/?import=reality:/Modules/RAD-v1/Void/Void%20-%20Alloyrun.rad
   gallery: true
-- title: FM-Tronikk<br>by Malfunction/Altair
+- title: FM-Tronikk<br>by Malfunction
   img: fm-troni.png
   xex: fm-troni.xex
   gallery: true
@@ -104,16 +104,16 @@
   img: e1m1.png
   xex: e1m1.xex
   gallery: true
-- title: Draconus (A8)<br>by Adam Gilmore
+- title: Draconus<br>by Adam Gilmore
   img: Draconus.png
   xex: Draconus.xex
   gallery: true
-- title: Supremacy .sid<br>by Jeroen Tel
+- title: Supremacy<br>by Jeroen Tel
   img: Supremacy.png
   xex: Supremacy.xex
   src: https://deepsid.chordian.net/?file=/MUSICIANS/T/Tel_Jeroen/Supremacy.sid&subtune=1
   gallery: true
-- title: Al-ya Trance… .pt3<br>by MmcM
+- title: Al-ya Trance…<br>by MmcM
   img: aLyaTrAn.png
   xex: aLyaTrAn.xex
   src: https://zxtunes.com/ru/authors/mmcm-sage?id=519&play=15839&md=1
