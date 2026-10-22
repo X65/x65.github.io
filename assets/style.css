@@ -188,6 +188,16 @@ a[href*="/github.com/X65"]::after {
   background-size: contain;
   display: inline-block;
 }
+a[href*="/git."]::after {
+  content: "";
+  width: 1em;
+  height: 1em;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' aria-hidden='true' viewBox='0 0 212 212'%3E%%3Cstyle%3Ecircle%2Cpath%7Bfill%3Anone%3Bstroke%3A%23000%3Bstroke-width%3A15%7Dpath%7Bstroke-width%3A25%7D.orange%7Bstroke%3Argb%28144%2C%20213%2C%20241%29%7D.red%7Bstroke%3Argb%2869%2C%20134%2C%20160%29%7D%3C%2Fstyle%3E%3Cg%20transform%3D%22translate%286%206%29%22%3E%3Cpath%20d%3D%22M58%20168V70a50%2050%200%200%201%2050-50h20%22%20class%3D%22orange%22%2F%3E%3Cpath%20d%3D%22M58%20168v-30a50%2050%200%200%201%2050-50h20%22%20class%3D%22red%22%2F%3E%3Ccircle%20cx%3D%22142%22%20cy%3D%2220%22%20r%3D%2218%22%20class%3D%22orange%22%2F%3E%3Ccircle%20cx%3D%22142%22%20cy%3D%2288%22%20r%3D%2218%22%20class%3D%22red%22%2F%3E%3Ccircle%20cx%3D%2258%22%20cy%3D%22180%22%20r%3D%2218%22%20class%3D%22red%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+}
 a[href*=".wikipedia.org/"]::after {
   content: "";
   width: 1em;
