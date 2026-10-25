@@ -1,1 +1,1 @@
-<script defer data-domain="x65.zone" src="https://plausible.io/js/script.js"></script>
+{% if jekyll.environment == "production" and site.rybbit.site_id %}<script src="{{ site.rybbit.url }}/api/script.js?siteId={{ site.rybbit.site_id }}" defer></script>{% endif %}
