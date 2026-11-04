@@ -233,7 +233,58 @@ a[href^="https://youtu.be/"]::after {
 a[href^="https://youtu.be/"]:hover::after {
   opacity: 1;
 }
+.film-strip {
+  display: flex;
+  align-items: center;
+  gap: 0.25em;
+  margin: 0.5em 0;
+}
+.film-viewport {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  cursor: grab;
+  touch-action: pan-y;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.film-viewport.dragging {
+  cursor: grabbing;
+}
+.film-viewport.dragging a {
+  pointer-events: none;
+}
+.film-viewport .emu-nav {
+  display: flex;
+  flex-wrap: nowrap;
+  column-gap: 0.5em;
+  width: max-content;
+  will-change: transform;
+}
+.film-arrow {
+  flex: 0 0 auto;
+  font: inherit;
+  font-size: 75%;
+  color: var(--main-fg-color);
+  background: transparent;
+  border: none;
+  padding: 0.5em 0.25em;
+  cursor: pointer;
+  align-self: stretch;
+}
+/* CSS escapes preserve the Atari ST font's C1 arrows; HTML entities remap them. */
+.film-prev::before {
+  content: "\0084";
+}
+.film-next::before {
+  content: "\0083";
+}
+.film-arrow:hover,
+.film-arrow:focus-visible {
+  color: var(--strong-fg-color);
+}
 .emu-nav > div {
+  flex: 0 0 auto;
   display: inline-flex;
   flex-direction: column;
   align-items: center;
@@ -250,6 +301,7 @@ a[href^="https://youtu.be/"]:hover::after {
 }
 .emu-nav a img {
   width: 192px;
+  height: auto;
   margin-bottom: 0.25em;
   border: 1px solid rgb(0 0 0 / 0.25);
   box-sizing: border-box;
@@ -270,6 +322,23 @@ a[href^="https://youtu.be/"]:hover::after {
 }
 .emu-nav > div:hover a.source::after {
   opacity: 1;
+}
+.rom-desc {
+  margin: 0.5em 0;
+  font-size: 75%;
+}
+.rom-desc p {
+  margin: 0.5em 0;
+}
+.rom-desc .rom-hint {
+  color: var(--strong-fg-color);
+}
+.emu-nav > div.current img {
+  outline: 2px solid var(--strong-fg-color);
+  outline-offset: -2px;
+}
+.emu-nav > div.current a.screenshot {
+  color: var(--strong-fg-color);
 }
 iframe#Emu {
   width: 1024px;

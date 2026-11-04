@@ -12,70 +12,328 @@ description: Emu is a browser-based emulator for the X65 microcomputer, showcasi
     <a href="https://marketplace.visualstudio.com/items?itemName=X65-Project.cc65-dbg" target="_blank">cc65-dbg</a>
 </span>
 
-<nav class="emu-nav">{% for item in site.data.emu %}
-<div>
-    <a href="emu.html?file={% unless item.xex contains 'http' %}roms/{% endunless %}{{ item.xex }}" target="Emu" class="screenshot"><img src="roms/{{ item.img }}"{% if item.gallery == true %} data-png="roms/{{ item.img }}" data-gif="roms/{{ item.img | replace: '.png', '.gif' }}"{% endif %}>{{ item.title }}{% if item.src %}
-    <a href="{{ item.src }}" target="_blank" class="source"></a>{% endif %}</a>
-</div>{% endfor %}
-</nav>
+<div class="film-strip" id="film-strip">
+    <button type="button" class="film-arrow film-prev" aria-label="Scroll left"></button>
+    <div class="film-viewport">
+        <nav class="emu-nav" aria-label="Demo ROMs"></nav>
+    </div>
+    <button type="button" class="film-arrow film-next" aria-label="Scroll right"></button>
+</div>
 
 <hr>
+
+<div class="rom-desc" id="rom-desc"></div>
 
 <iframe src="emu.html?file=roms/SOTB.xex" name="Emu" id="Emu"></iframe>
 
 <script>
+    // One copy of _data/emu.yml drives both the gallery strip and the description block.
+    var ROMS = {{ site.data.emu | jsonify }};
+
     var Emu = document.querySelector('#Emu');
+    var DEFAULT_ROM = new URL(Emu.src).searchParams.get('file');
+    var emuSrc = decodeURIComponent(Emu.getAttribute('src'));   // what the iframe shows; loadROM keeps it
     Emu.style.width = '100%';
-    Emu.style.height = (Emu.clientWidth / 1.6 + 48) + 'px';
+    function sizeEmu() { Emu.style.height = (Emu.clientWidth / 1.6 + 48) + 'px'; }   // 16:10 screen + menu bar
+    sizeEmu();
+    window.addEventListener('resize', sizeEmu);
 
     var orgTitle = document.title;
+    var romDesc = document.querySelector('#rom-desc');
+    var emuNav = document.querySelector('#film-strip .emu-nav');
 
-    function loadROM() {
+    // "roms/SOTB.xex&joystick=digital_1" -> "SOTB.xex"
+    function romName(file) { return file.split('&')[0].split('/').pop(); }
+    function romFile(item) { return 'roms/' + item.xex; }
+    var byName = {};
+    for (var item of ROMS) byName[romName(item.xex)] = item;
+
+    function showDesc(item) {
+        romDesc.hidden = !(item && item.desc);
+        if (romDesc.hidden) { romDesc.replaceChildren(); return; }
+        var strong = document.createElement('strong');
+        strong.innerHTML = item.title.replace(/<br>/g, ' ');
+        romDesc.replaceChildren(strong);
+        // Folded (>-) YAML is one paragraph; a literal (|) block gets one per line.
+        for (var text of item.desc.split('\n')) {
+            var p = document.createElement('p');
+            p.textContent = text;
+            romDesc.appendChild(p);
+        }
+        if (item.xex.indexOf('joystick=') !== -1) {
+            var hint = document.createElement('p');
+            hint.className = 'rom-hint';
+            hint.textContent = 'Joystick: arrows or WASD to move, Space, Z, X, C, V to fire.';
+            romDesc.appendChild(hint);
+        }
+        if (item.src) {
+            var links = document.createElement('p');
+            var a = document.createElement('a');
+            a.href = item.src;
+            a.target = '_blank';
+            a.textContent = sourceLabel(item.src);
+            links.appendChild(a);
+            romDesc.appendChild(links);
+        }
+    }
+
+    function sourceLabel(url) {
+        var host = new URL(url).hostname;
+        if (host === 'tracker.x65.zone') return 'Open in SGU Tracker';
+        if (host === 'git.chrome.pl' || host === 'github.com') return 'Source code';
+        return 'Original at ' + host.replace(/^www\./, '');
+    }
+
+    // Load whatever ROM the address bar names, or the default one. `reveal` scrolls the strip to it.
+    function loadROM(reveal) {
         var params = new URL(document.location).searchParams;
         var ROM = params.get('rom');
-        if (ROM) {
-            if (!ROM.endsWith('.xex')) ROM += '.xex';
-            params.set('file', ROM);
-            params.delete('rom');
-            Emu.setAttribute('src', 'emu.html?' + params.toString());
-            ROM = ROM.split('/').pop();
-            document.title = ROM + ' - ' + orgTitle;
-            Emu.focus();
+        var explicit = !!ROM;
+        if (!ROM) ROM = DEFAULT_ROM;
+        if (!ROM.endsWith('.xex')) ROM += '.xex';
+        params.set('file', ROM);
+        params.delete('rom');
+        var src = 'emu.html?' + params.toString();
+        if (emuSrc !== decodeURIComponent(src)) {
+            emuSrc = decodeURIComponent(src);
+            // Swap the iframe's page in place, so it does not add its own entry to the
+            // session history - otherwise Back first steps the iframe, not the page.
+            if (Emu.contentWindow) Emu.contentWindow.location.replace(src);
+            else Emu.setAttribute('src', src);
+        }
+        var name = romName(ROM);
+        showDesc(byName[name]);
+        markCurrent(name);
+        if (reveal) filmStrip.reveal(name);
+        document.title = explicit ? name + ' - ' + orgTitle : orgTitle;
+        if (explicit) Emu.focus();
+    }
+
+    function markCurrent(name) {
+        for (var cell of emuNav.children) {
+            var on = cell.dataset.rom === name;
+            cell.classList.toggle('current', on);
+            var link = cell.querySelector('a.screenshot');
+            if (on) link.setAttribute('aria-current', 'true'); else link.removeAttribute('aria-current');
         }
     }
-    loadROM();
 
-    for (var link of document.querySelectorAll('.emu-nav a.screenshot')) {
-        var image = link.querySelector('img[data-gif]');
-        if (image) {
-            link.addEventListener('mouseenter', function() {
-                var image = this.querySelector('img');
-                image.src = image.dataset.gif;
-            });
-            link.addEventListener('mouseleave', function() {
-                var image = this.querySelector('img');
-                image.src = image.dataset.png;
-            });
-            link.addEventListener('focus', function() {
-                var image = this.querySelector('img');
-                image.src = image.dataset.gif;
-            });
-            link.addEventListener('blur', function() {
-                var image = this.querySelector('img');
-                image.src = image.dataset.png;
-            });
+    window.addEventListener('popstate', function () { loadROM(true); });
+
+    function selectROM(item) {
+        window.history.pushState(null, '', '?rom=' + romFile(item) + '#Emu');
+        loadROM();
+    }
+
+    function buildItem(item) {
+        var div = document.createElement('div');
+        div.dataset.rom = romName(item.xex);
+        var link = document.createElement('a');
+        link.href = 'emu.html?file=' + romFile(item);
+        link.target = 'Emu';
+        link.className = 'screenshot';
+        link.draggable = false;
+        var image = document.createElement('img');
+        image.loading = 'lazy';
+        image.decoding = 'async';
+        image.width = 192;
+        image.height = 120;
+        image.src = 'roms/' + item.img;
+        image.draggable = false;
+        if (item.gallery === true) {
+            image.dataset.png = image.src;
+            image.dataset.gif = 'roms/' + item.img.replace('.png', '.gif');
         }
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            params = new URL(document.location.origin + '/' + this.getAttribute('href')).searchParams;
-            params.set('rom', params.get('file'));
-            params.delete('file');
-            const LINK = new URL(document.location)
-            LINK.search = params.toString();
-            LINK.hash = '#Emu';
-            window.history.pushState(null, '', decodeURIComponent(LINK.toString()));
-            loadROM();
+        link.appendChild(image);
+        link.insertAdjacentHTML('beforeend', item.title);
+        div.appendChild(link);
+        if (item.src) {
+            var source = document.createElement('a');
+            source.href = item.src;
+            source.target = '_blank';
+            source.className = 'source';
+            div.appendChild(source);
+        }
+        return div;
+    }
+
+    for (var item of ROMS) emuNav.appendChild(buildItem(item));
+    // A second lap for the seamless wrap: clickable when it wraps into view, but kept out
+    // of the accessibility tree and the tab order. Handlers are delegated, so plain clones work.
+    for (var cell of Array.from(emuNav.children)) {
+        var copy = cell.cloneNode(true);
+        copy.setAttribute('aria-hidden', 'true');
+        for (var a of copy.querySelectorAll('a')) a.tabIndex = -1;
+        emuNav.appendChild(copy);
+    }
+
+    // Animated preview while a thumbnail is hovered or focused.
+    function swapImage(toGif) {
+        return function (e) {
+            var link = e.target.closest('a.screenshot');
+            if (!link || link.contains(e.relatedTarget)) return;
+            var image = link.querySelector('img[data-gif]');
+            if (image) image.src = toGif ? image.dataset.gif : image.dataset.png;
+        };
+    }
+    emuNav.addEventListener('mouseover', swapImage(true));
+    emuNav.addEventListener('mouseout', swapImage(false));
+    emuNav.addEventListener('focusin', swapImage(true));
+    emuNav.addEventListener('focusout', swapImage(false));
+    emuNav.addEventListener('click', function (e) {
+        var link = e.target.closest('a.screenshot');
+        if (!link) return;
+        e.preventDefault();
+        selectROM(byName[link.parentNode.dataset.rom]);
+    });
+
+    // Film-strip gallery: slow self-scroll, arrows, pointer/touch drag, seamless wrap.
+    var filmStrip = (function (nav) {
+        var strip = document.querySelector('#film-strip');
+        var viewport = strip.querySelector('.film-viewport');
+        var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        var AUTO_SPEED = 12;        // px per second
+        var IDLE_AFTER = 4000;      // ms of no interaction before self-scroll resumes
+        var DRAG_THRESHOLD = 6;     // px before a press becomes a drag
+
+        // The first half of the children is one full lap; the second half is its copy.
+        var lap = nav.children.length / 2;
+        var originals = Array.prototype.slice.call(nav.children, 0, lap);
+
+        var offset = 0, target = null, loopWidth = 0, idleUntil = 0, hover = false;
+        var pointerId = null, startX = 0, startOffset = 0, dragged = false;
+        var running = false, last = 0, idleTimer = 0;
+
+        function measure() { loopWidth = nav.children[lap].offsetLeft - nav.children[0].offsetLeft; }
+        function wrap(x) {
+            if (!loopWidth) return x;
+            x %= loopWidth;
+            return x < 0 ? x + loopWidth : x;
+        }
+        function apply() {
+            var wrapped = wrap(offset);
+            if (wrapped !== offset) {
+                // Keep a running tween or drag consistent across the wrap point.
+                if (target !== null) target += wrapped - offset;
+                startOffset += wrapped - offset;
+                offset = wrapped;
+            }
+            nav.style.transform = 'translateX(' + (-offset) + 'px)';
+        }
+        function canDrift() {
+            return !reduceMotion && !hover && pointerId === null && performance.now() > idleUntil
+                && document.activeElement !== Emu;
+        }
+        // The frame loop only runs while something moves; every event that can let it
+        // move again calls kick().
+        function kick() {
+            if (running || (target === null && !canDrift())) return;
+            running = true;
+            last = performance.now();
+            requestAnimationFrame(tick);
+        }
+        function tick(now) {
+            var dt = Math.min(now - last, 100) / 1000;
+            last = now;
+            if (target !== null) {
+                var d = target - offset;
+                if (Math.abs(d) < 0.5) { offset = target; target = null; }
+                else offset += d * Math.min(1, dt * 8);
+                apply();
+            } else if (canDrift()) {
+                offset += AUTO_SPEED * dt;
+                apply();
+            } else {
+                running = false;
+                return;
+            }
+            requestAnimationFrame(tick);
+        }
+        function touch() {
+            idleUntil = performance.now() + IDLE_AFTER;
+            clearTimeout(idleTimer);
+            idleTimer = setTimeout(kick, IDLE_AFTER + 1);
+        }
+        function scrollTo(to) { touch(); target = to; kick(); }
+        function scrollBy(px) { scrollTo((target !== null ? target : offset) + px); }
+        function pageWidth() { return Math.max(viewport.clientWidth * 0.8, 1); }
+
+        strip.querySelector('.film-prev').addEventListener('click', function () { scrollBy(-pageWidth()); });
+        strip.querySelector('.film-next').addEventListener('click', function () { scrollBy(pageWidth()); });
+        function setHover(on) { return function () { hover = on; kick(); }; }
+        strip.addEventListener('mouseenter', setHover(true));
+        strip.addEventListener('mouseleave', setHover(false));
+        strip.addEventListener('focusin', setHover(true));
+        strip.addEventListener('focusout', setHover(false));
+        window.addEventListener('focus', kick);   // focus came back from the emulator iframe
+        viewport.addEventListener('keydown', function (e) {
+            if (e.key === 'ArrowLeft') { scrollBy(-pageWidth() / 2); e.preventDefault(); }
+            if (e.key === 'ArrowRight') { scrollBy(pageWidth() / 2); e.preventDefault(); }
         });
-    }
+        viewport.addEventListener('wheel', function (e) {
+            if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) { scrollBy(e.deltaX); e.preventDefault(); }
+        }, { passive: false });
 
+        // Pointer drag (mouse, pen and touch alike).
+        viewport.addEventListener('pointerdown', function (e) {
+            if (e.button !== 0) return;
+            pointerId = e.pointerId;
+            startX = e.clientX;
+            startOffset = offset;
+            target = null;
+            dragged = false;
+            touch();
+        });
+        viewport.addEventListener('pointermove', function (e) {
+            if (e.pointerId !== pointerId) return;
+            var dx = e.clientX - startX;
+            if (!dragged && Math.abs(dx) > DRAG_THRESHOLD) {
+                dragged = true;
+                viewport.setPointerCapture(e.pointerId);
+                viewport.classList.add('dragging');
+            }
+            if (dragged) { offset = startOffset - dx; apply(); }
+        });
+        function release(e) {
+            if (e.pointerId !== pointerId) return;
+            pointerId = null;
+            viewport.classList.remove('dragging');
+            touch();
+        }
+        viewport.addEventListener('pointerup', release);
+        viewport.addEventListener('pointercancel', release);
+        // The click that ends a drag must not select a ROM.
+        viewport.addEventListener('click', function (e) {
+            if (!dragged) return;
+            dragged = false;
+            e.preventDefault();
+            e.stopPropagation();
+        }, true);
+
+        window.addEventListener('resize', measure);
+        window.addEventListener('load', function () {
+            measure();
+            // Visible thumbnails load first; fetch the rest in the background so arrow jumps
+            // and the self-scroll never show an empty cell.
+            for (var img of nav.querySelectorAll('img[loading=lazy]')) img.loading = 'eager';
+        });
+        measure();
+        touch();
+
+        return {
+            // Bring the cell for ROM `name` to the middle of the viewport, the short way round.
+            reveal: function (name) {
+                var cell = originals.find(function (c) { return c.dataset.rom === name; });
+                if (!cell || !loopWidth) return;
+                var want = cell.offsetLeft - originals[0].offsetLeft
+                         - (viewport.clientWidth - cell.offsetWidth) / 2;
+                var from = target !== null ? target : offset;
+                var d = wrap(want - from);
+                if (d > loopWidth / 2) d -= loopWidth;
+                scrollTo(from + d);
+            }
+        };
+    })(emuNav);
+
+    loadROM(true);
 </script>

@@ -1,159 +1,267 @@
 - title: MODE0 (text,palette)<br>(+ MODE2)
   img: MODE0_text.png
   xex: MODE0_text.xex
-  src: https://github.com/X65/examples/blob/main/src/cgia/text_modes.asm
+  src: https://git.chrome.pl/X65/examples/src/commit/06a600/src/cgia/text_modes.asm
   gallery: true
+  desc: >-
+    CGIA's text modes side by side: MODE0 with a register palette and MODE2 with
+    per-cell colours. Includes different bit depths, double-width and multicolor
+    text, using a font fetched from RIA.
 - title: MODE1 (bitmap,4bpp)<br>Lobo
   img: MODE1_lobo_2.png
   xex: MODE1_lobo_2.xex
   src: https://github.com/zbyti/x65-mode1-converter
   gallery: true
+  desc: >-
+    Lobo converted to a 384x240, 4 bpp bitmap by zbyti's x65-mode1-converter. Eight
+    base colours plus half-bright shades give it 16 colours in 46 kB. The converter
+    handles palette selection and dithering.
 - title: MODE2 (text)<br>glyphs &amp; colors
   img: MODE2_hello-glyphs.png
   xex: MODE2_hello-glyphs.xex
-  src: https://github.com/X65/firmware/blob/main/src/ria/misc/bins.c#L56
+  src: https://git.chrome.pl/X65/examples/src/commit/fc8de1/src/cgia/data/example_data.h#L7
   gallery: true
+  desc: >-
+    Our oldest demo: a screen full of glyphs and colours, with a "Hello World!" band
+    in the middle. It's all memory blocks and a MODE2 display list; there's no CPU
+    program to run.
 - title: MODE2 (tiles)
   img: MODE2_SWBoy.png
   xex: MODE2_SWBoy.xex
-  src: https://github.com/X65/examples/blob/main/src/cgia/swboy.c
+  src: https://git.chrome.pl/X65/examples/src/commit/4ddd77/src/cgia/swboy.c
   gallery: true
+  desc: >-
+    A Wonder Boy style level made from 8x8 tiles in double-width, multicolor MODE2.
+    About 40 lines of C set up the tile map, colours and display list.
 - title: 80-column text<br>MODE2 4x8px font
   img: 80_columns.png
   xex: 80_columns.xex
-  src: https://github.com/X65/examples/blob/main/src/cgia/text_80_columns.asm
+  src: https://git.chrome.pl/X65/examples/src/commit/adcd27/src/cgia/text_80_columns.asm
   gallery: true
+  desc: >-
+    80 columns on a 320-pixel screen, using a 4x8 font in MODE2 multicolor. Each
+    character still takes one byte and has its own colour attributes.
 - title: MODE3 (hires)<br>Veto – The Mill
   img: MODE3_Veto-the_mill.png
   xex: MODE3_Veto-the_mill.xex
   src: https://csdb.dk/release/index.php?id=101528
   gallery: true
+  desc: >-
+    Veto's C64 hires picture from LCP 2011, converted to MODE3. Each 8-pixel-wide
+    cell has a foreground and background colour, chosen from X65's 256-colour
+    palette.
 - title: MODE3 (multicolor)<br>Carrion – One Zak &amp;…
   img: MODE3_Carrion-One_Zak_And_His_Kracken.png
   xex: MODE3_Carrion-One_Zak_And_His_Kracken.xex
   src: https://plus4world.powweb.com/software/One_Zak_And_His_Kracken
   gallery: true
+  desc: >-
+    Carrion's Plus/4 FLI picture from Riverwash 2014. A MODE3 display list changes
+    the colour cells every raster line, doing the work FLI needed the CPU for. Some
+    shared colours clash in the conversion.
 - title: MODE6 (HAM)<br>Farfar – perso1
   img: MODE6_Farfar-perso1.png
   xex: MODE6_Farfar-perso1.xex
   src: https://arnaud-carre.github.io/2022-12-30-amiga-ham/
   gallery: png
+  desc: >-
+    Farfar/lns, from Arnaud Carré's Amiga HAM article, converted to MODE6. X65's
+    Hold-And-Modify mode packs four pixels into three bytes, fitting this 320x240
+    photo into one 64 kB bank.
 # - title: MODE7 (affine)<br>X65 mascot
 #   img: MODE7_mascot.png
 #   xex: MODE7_mascot.xex
-#   src: https://github.com/X65/examples/blob/main/src/cgia/data/example_data.h#L71
+#   src: https://git.chrome.pl/X65/examples/src/commit/fc8de1/src/cgia/data/example_data.h#L71
 #   gallery: true
 - title: Raster Bars
   img: raster_bars.png
   xex: raster_bars.xex
-  src: https://github.com/X65/examples/blob/main/src/cgia/raster_bars.asm
+  src: https://git.chrome.pl/X65/examples/src/commit/7db42d/src/cgia/raster_bars.asm
   gallery: true
+  desc: >-
+    Scrolling raster bars in under 40 lines of assembly. The CPU watches the raster
+    register and changes the background colour on each line.
 # - title: RSI<br>Raster Interrupt
 #   img: RSI.png
 #   xex: RSI.xex
-#   src: https://github.com/X65/examples/blob/main/src/cgia/rsi.asm
+#   src: https://git.chrome.pl/X65/examples/src/commit/deb9b5/src/cgia/rsi.asm
 # - title: VBI<br>Vertical Blank Int…
 #   img: VBI.png
 #   xex: VBI.xex
-#   src: https://github.com/X65/examples/blob/main/src/cgia/vbl.asm
+#   src: https://git.chrome.pl/X65/examples/src/commit/f20bfc/src/cgia/vbl.asm
 - title: Sprites
   img: sprites.png
   xex: sprites.xex
-  src: https://github.com/X65/examples/blob/main/src/cgia/sprites.asm
+  src: https://git.chrome.pl/X65/examples/src/commit/fc8de1/src/cgia/sprites.asm
+  desc: >-
+    Eight hardware sprites, moving during vertical blank. The demo tries clipping
+    at the screen edges, mirroring and 1 bpp rendering. Each sprite's descriptor can
+    link to another for multiplexing.
 - title: Shadow Of The Beast
   img: SOTB.png
   xex: SOTB.xex
-  src: https://github.com/X65/examples/blob/main/src/cgia/sotb.asm
+  src: https://git.chrome.pl/X65/examples/src/commit/fc8de1/src/cgia/sotb.asm
   gallery: true
+  desc: >-
+    The parallax scene from Shadow of the Beast, with graphics converted from the Amiga
+    original. Three background planes and 19 raster splits handle the scenery and
+    sky; two overlaid sprites give the beast six colours.
 - title: Mixed Display Modes<br>…and affine rotator
   img: mixed_modes.png
   xex: mixed_modes.xex
-  src: https://github.com/X65/examples/blob/main/src/cgia/mixed_modes.asm
+  src: https://git.chrome.pl/X65/examples/src/commit/ba4215/src/cgia/mixed_modes.asm
   gallery: true
+  desc: >-
+    A rotating MODE7 mascot above MODE2 text, with a transparent HUD on another
+    plane. The display list handles the split; a vertical blank handler updates the
+    rotation from a sine table.
 - title: Monty On The Run .sid<br>by Robert J. Hubbard
   img: MontyOnTheRun.png
   xex: MontyOnTheRun.xex
-  src: https://github.com/X65/examples/blob/main/src/sound/MontyOnTheRun.asm
+  src: https://git.chrome.pl/X65/examples/src/commit/68ba45/src/sound/MontyOnTheRun.asm
+  desc: >-
+    Rob Hubbard's original 1985 SID player, with its register writes translated to
+    SGU-1 each frame. An early experiment in playing SID music on X65.
 - title: Mystery Cannon .sid<br>by Zack Maxis
   img: Mystery_Cannon.png
   xex: Mystery_Cannon.xex
   src: https://deepsid.chordian.net/?file=/MUSICIANS/M/Manganoid/Mystery_Cannon_2SID.sid
+  desc: >-
+    Zack Maxis's (Manganoid) 2SID tune, played on six SGU-1 channels. This was the
+    first music played on the breadboard prototype. The SID translation is still
+    rough.
 - title: PokeyMania<br>by 4-Mat
   img: Pokeymania.png
   xex: Pokeymania.xex
   src: https://csdb.dk/release/?id=148198
+  desc: >-
+    4-Mat's 2016 C64 take on Rob Hubbard's Atari tunes. SID imitating POKEY, now
+    played through SGU-1's SID translation. Even the squares lost track of which chip they came from.
 - title: OPL VGM playback<br>Tyrian, The Level
   img: opl.png
   xex: opl.xex
-  src: https://github.com/X65/examples/blob/main/src/sound/opl.asm
+  src: https://git.chrome.pl/X65/examples/src/commit/4e0fe5/src/sound/opl.asm
+  desc: >-
+    "The Level" from Tyrian, played from an OPL2 VGM log. Uses karmic64's 64vgmplay,
+    adapted from the C64 Sound Expander to drive SGU-1 FM.
 - title: Alloyrun<br>by VOID
   img: alloyrun.png
   xex: alloyrun.xex
   src: https://tracker.x65.zone/?import=reality:/Modules/RAD-v1/Void/Void%20-%20Alloyrun.rad
   gallery: true
+  desc: >-
+    VOID's Reality AdLib Tracker tune, imported through SGU Tracker and exported
+    with the SGM player. The original FM instruments map directly to SGU-1's
+    operators.
 - title: FM-Tronikk<br>by Malfunction
   img: fm-troni.png
   xex: fm-troni.xex
   gallery: true
+  desc: >-
+    Malfunction's FM-Tronikk, also known as Altair Street Dancer. Imported from
+    AdLib Tracker II through SGU Tracker, with its four-operator FM instruments.
 - title: Pinball Illusions<br>by Olof Gustafsson
   img: pinball_illusions.png
   xex: pinball_illusions.xex
   src: https://tracker.x65.zone/?import=modland:/Protracker/Blaizer/pinball%20illusions%20-%20intro.mod
   gallery: true
+  desc: >-
+    Olof Gustafsson's Amiga intro music, imported from ProTracker through SGU
+    Tracker. The four sample channels play from SGU-1's 64 kB PCM memory.
 - title: "E1M1: At Doom's Gate<br>by Bobby Prince"
   img: e1m1.png
   xex: e1m1.xex
   gallery: true
+  desc: >-
+    Doom's first level music by Bobby Prince, imported from a General MIDI file.
+    Uses SGU Tracker's built-in GM instrument bank across nine channels.
 - title: Draconus<br>by Adam Gilmore
   img: Draconus.png
   xex: Draconus.xex
   gallery: true
+  desc: >-
+    Adam Gilmore's Atari 8-bit tune, imported from SAP through SGU Tracker. POKEY's
+    distortions and high-pass sounds are recreated with SGU-1 FM.
 - title: Supremacy<br>by Jeroen Tel
   img: Supremacy.png
   xex: Supremacy.xex
   src: https://deepsid.chordian.net/?file=/MUSICIANS/T/Tel_Jeroen/Supremacy.sid&subtune=1
   gallery: true
+  desc: >-
+    Jeroen Tel's 1990 C64 title tune, first subtune, imported through SGU Tracker.
 - title: Al-ya Trance…<br>by MmcM
   img: aLyaTrAn.png
   xex: aLyaTrAn.xex
   src: https://zxtunes.com/ru/authors/mmcm-sage?id=519&play=15839&md=1
   gallery: true
+  desc: >-
+    "Al-ya Trance from me for you" by MmcM of Sage, a ZX Spectrum PT3 module from
+    2000. Three AY channels, with their envelopes and noise, imported through SGU
+    Tracker.
 - title: Aot… PETSCII Robots<br>Amiga title screen
   img: PetsciiRobots.png
   xex: PetsciiRobots.xex
   gallery: true
+  desc: >-
+    The Amiga title screen from Attack of the PETSCII Robots, converted to X65's
+    palette. This is a still image; the menu isn't interactive.
 - title: Dune I<br>Chani encounter
   img: Dune_Chani.png
   xex: Dune_Chani.xex
   gallery: png
+  desc: >-
+    Chani from Cryo's Dune (1992), converted to MODE6 HAM. A still picture with the
+    original's desert colours and sky gradient.
 # - title: LukHash - Raster Bar<br>tribute
 #   img: raster_bar.png
 #   xex: raster_bar.xex
-#   src: https://github.com/X65/examples/blob/main/src/cgia/lkhs_raster_bar.asm
+#   src: https://git.chrome.pl/X65/examples/src/commit/deb9b5/src/cgia/lkhs_raster_bar.asm
 - title: Four-Byte Burger
   img: 4BB.png
   xex: 4BB.xex
-  src: https://github.com/X65/examples/blob/main/src/cgia/four_byte_burger.asm
+  src: https://git.chrome.pl/X65/examples/src/commit/d0b646/src/cgia/four_byte_burger.asm
   gallery: true
+  desc: >-
+    Senn's Four-Byte Burger, scrolling up and down. The picture is taller than the
+    screen; the demo moves it by changing display list offsets during vertical
+    blank, without copying the bitmap.
 - title: Peggles<br>MODE7 carting
   img: peggles_mode7.png
   xex: peggles_mode7.xex&joystick=digital_1
   gallery: true
+  desc: >-
+    A karting demo with a MODE7 floor. Use a gamepad or joystick to drive.
 - title: Sokoban<br>by Zbyti
   img: sokoban.png
   xex: sokoban.xex&joystick=digital_1
+  desc: >-
+    The first game to run on X65: zbyti's Sokoban, written in Mad Pascal with its
+    own tile engine. Play with a joystick.
 - title: Pikoban<br>by Zbyti
   img: pikoban.png
   xex: pikoban.xex&joystick=digital_1
+  desc: >-
+    Zbyti's compact µSoukoban, ported from Neo6502 to X65. Written in Mad Pascal,
+    with small levels and joystick controls.
 - title: Joy, GamePad, Kbd <br>test program
   img: controller.png
   xex: controller.xex&joystick=digital_1
-  src: https://github.com/X65/examples/blob/main/src/io/controller.asm
+  src: https://git.chrome.pl/X65/examples/src/commit/3f0fc4/src/io/controller.asm
+  desc: >-
+    A live input test for both DE-9 joysticks, USB gamepad and keyboard. Press a
+    button or key to see its state on screen.
 - title: Font & Code-Page<br>test program
   img: font_cp.png
   xex: font_cp.xex
-  src: https://github.com/X65/examples/blob/main/src/cgia/font_cp.asm
+  src: https://git.chrome.pl/X65/examples/src/commit/5daf1e/src/cgia/font_cp.asm
+  desc: >-
+    Browse the system font and its code pages. Press
+    SPACE to switch pages.
 - title: SMON <br>(Machine Monitor)
   img: SMON.png
   xex: SMON.xex
   src: https://github.com/X65/smon
+  desc: >-
+    The machine language monitor from 64'er magazine (1984), ported to X65. Includes
+    a memory editor, assembler, disassembler and debugger. Open the emulator UART console
+    and type `h` for help.
