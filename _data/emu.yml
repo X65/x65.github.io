@@ -122,7 +122,7 @@
   desc: >-
     Rob Hubbard's original 1985 SID player, with its register writes translated to
     SGU-1 each frame. An early experiment in playing SID music on X65.
-- title: Mystery Cannon .sid<br>by Zack Maxis
+- title: Mystery Cannon .sid<br>🎶 by Zack Maxis
   img: Mystery_Cannon.png
   xex: Mystery_Cannon.xex
   src: https://deepsid.chordian.net/?file=/MUSICIANS/M/Manganoid/Mystery_Cannon_2SID.sid
@@ -130,21 +130,21 @@
     Zack Maxis's (Manganoid) 2SID tune, played on six SGU-1 channels. This was the
     first music played on the breadboard prototype. The SID translation is still
     rough.
-- title: PokeyMania<br>by 4-Mat
+- title: PokeyMania<br>🎶 by 4-Mat
   img: Pokeymania.png
   xex: Pokeymania.xex
   src: https://csdb.dk/release/?id=148198
   desc: >-
     4-Mat's 2016 C64 take on Rob Hubbard's Atari tunes. SID imitating POKEY, now
     played through SGU-1's SID translation. Even the squares lost track of which chip they came from.
-- title: OPL VGM playback<br>Tyrian, The Level
+- title: OPL VGM playback<br>🎶 Tyrian, The Level
   img: opl.png
   xex: opl.xex
   src: https://git.chrome.pl/X65/examples/src/commit/4e0fe5/src/sound/opl.asm
   desc: >-
     "The Level" from Tyrian, played from an OPL2 VGM log. Uses karmic64's 64vgmplay,
     adapted from the C64 Sound Expander to drive SGU-1 FM.
-- title: Alloyrun<br>by VOID
+- title: Alloyrun<br>🎶 by VOID
   img: alloyrun.png
   xex: alloyrun.xex
   src: https://tracker.x65.zone/?import=reality:/Modules/RAD-v1/Void/Void%20-%20Alloyrun.rad
@@ -153,14 +153,14 @@
     VOID's Reality AdLib Tracker tune, imported through SGU Tracker and exported
     with the SGM player. The original FM instruments map directly to SGU-1's
     operators.
-- title: FM-Tronikk<br>by Malfunction
+- title: FM-Tronikk<br>🎶 by Malfunction
   img: fm-troni.png
   xex: fm-troni.xex
   gallery: true
   desc: >-
     Malfunction's FM-Tronikk, also known as Altair Street Dancer. Imported from
     AdLib Tracker II through SGU Tracker, with its four-operator FM instruments.
-- title: Pinball Illusions<br>by Olof Gustafsson
+- title: Pinball Illusions<br>🎶 by Olof Gustafsson
   img: pinball_illusions.png
   xex: pinball_illusions.xex
   src: https://tracker.x65.zone/?import=modland:/Protracker/Blaizer/pinball%20illusions%20-%20intro.mod
@@ -168,21 +168,21 @@
   desc: >-
     Olof Gustafsson's Amiga intro music, imported from ProTracker through SGU
     Tracker. The four sample channels play from SGU-1's 64 kB PCM memory.
-- title: "E1M1: At Doom's Gate<br>by Bobby Prince"
+- title: "E1M1: At Doom's Gate<br>🎶 by Bobby Prince"
   img: e1m1.png
   xex: e1m1.xex
   gallery: true
   desc: >-
     Doom's first level music by Bobby Prince, imported from a General MIDI file.
     Uses SGU Tracker's built-in GM instrument bank across nine channels.
-- title: Draconus<br>by Adam Gilmore
+- title: Draconus<br>🎶 by Adam Gilmore
   img: Draconus.png
   xex: Draconus.xex
   gallery: true
   desc: >-
     Adam Gilmore's Atari 8-bit tune, imported from SAP through SGU Tracker. POKEY's
     distortions and high-pass sounds are recreated with SGU-1 FM.
-- title: Black Lamp<br>by Richard Munns
+- title: Black Lamp<br>🎶 by Richard Munns
   img: black_lamp.png
   xex: black_lamp.xex
   src: https://asma.atari.org/asmadb/#/Composers/Munns_Richard/Black_Lamp_Ingame.sap
@@ -190,14 +190,14 @@
   desc: >-
     Richard Munns's in-game music from Firebird's Black Lamp, an Atari 8-bit SAP
     tune imported through SGU Tracker and exported with the SGM player.
-- title: Supremacy<br>by Jeroen Tel
+- title: Supremacy<br>🎶 by Jeroen Tel
   img: Supremacy.png
   xex: Supremacy.xex
   src: https://deepsid.chordian.net/?file=/MUSICIANS/T/Tel_Jeroen/Supremacy.sid&subtune=1
   gallery: true
   desc: >-
     Jeroen Tel's 1990 C64 title tune, first subtune, imported through SGU Tracker.
-- title: Al-ya Trance…<br>by MmcM
+- title: Al-ya Trance…<br>🎶 by MmcM
   img: aLyaTrAn.png
   xex: aLyaTrAn.xex
   src: https://zxtunes.com/ru/authors/mmcm-sage?id=519&play=15839&md=1
