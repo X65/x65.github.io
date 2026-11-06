@@ -182,6 +182,14 @@
   desc: >-
     Adam Gilmore's Atari 8-bit tune, imported from SAP through SGU Tracker. POKEY's
     distortions and high-pass sounds are recreated with SGU-1 FM.
+- title: Black Lamp<br>by Richard Munns
+  img: black_lamp.png
+  xex: black_lamp.xex
+  src: https://asma.atari.org/asmadb/#/Composers/Munns_Richard/Black_Lamp_Ingame.sap
+  gallery: true
+  desc: >-
+    Richard Munns's in-game music from Firebird's Black Lamp, an Atari 8-bit SAP
+    tune imported through SGU Tracker and exported with the SGM player.
 - title: Supremacy<br>by Jeroen Tel
   img: Supremacy.png
   xex: Supremacy.xex
